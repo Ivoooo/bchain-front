@@ -1,0 +1,48 @@
+{
+  "1": {
+    "Title": "Telemetry",
+    "QuestionContainer": {
+      "1": {
+        "Question": "Bevor wir starten würde die Universität Zürich um den Blockchain zu verbessern und Statistiken zu erheben gerne ihre Daten in komplett anonymer Form sammeln. Sind Sie damit einverstanden?",
+        "Options": {
+          "1": "yes",
+          "2": "no"
+        },
+        "Answer": null,
+        "Notes": null
+      },
+      "2": {
+        "Question": "Bevor wir starten würde die Universität Zürich um den Blockchain zu verbessern und Statistiken zu erheben gerne ihre Daten in komplett anonymer Form sammeln. Sind Sie damit einverstanden?",
+        "Options": {
+          "1": "yes",
+          "2": "no"
+        },
+        "Answer": null,
+        "Notes": null
+      }
+    }
+  },
+  "2": {
+    "Title": "Telemetry",
+    "QuestionContainer": {
+      "1": {
+        "Question": "Bevor wir starten würde die Universität Zürich um den Blockchain zu verbessern und Statistiken zu erheben gerne ihre Daten in komplett anonymer Form sammeln. Sind Sie damit einverstanden?",
+        "Options": {
+          "1": "yes",
+          "2": "no"
+        },
+        "Answer": null,
+        "Notes": null
+      },
+      "2": {
+        "Question": "Bevor wir starten würde die Universität Zürich um den Blockchain zu verbessern und Statistiken zu erheben gerne ihre Daten in komplett anonymer Form sammeln. Sind Sie damit einverstanden?",
+        "Options": {
+          "1": "yes",
+          "2": "no"
+        },
+        "Answer": null,
+        "Notes": null
+      }
+    }
+  }
+}

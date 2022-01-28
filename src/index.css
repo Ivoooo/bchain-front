@@ -16,13 +16,13 @@ code {
   text-align: center;
 }
 
-.grid-container {
+.yes-no-grid-container {
   display: grid;
   grid-template-columns: auto auto;
   grid-gap: 20px;
   padding: 10px;
 }
 
-.grid-container > button {
+.yes-no-grid-container > button {
   padding: 15px 0;
 }
