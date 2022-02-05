@@ -1,22 +1,12 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import Toast from 'react-bootstrap/Toast';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import './App.css';
 import DataJSON from './components/data.json';
+import {TwoOptionQuestion} from "./views/TwoOptionQuestion";
+import {SingleChoiceQuestion} from "./views/SingleChoiceQuestion";
 
-class BlockLevelButtons extends React.Component {
-    render() {
-        return <div className="d-grid gap-2">
-            <Button variant="outline-primary" size="lg">
-                Block level button
-            </Button>
-            <Button variant="outline-primary" size="lg">
-                Block level button
-            </Button>
-        </div>;
-    }
-}
 
 class App extends React.Component {
     constructor(props) {
@@ -24,7 +14,6 @@ class App extends React.Component {
         this.state = {
             current: DataJSON["1"],
             next: null,
-            test: 0
         }
 
         this.goNext = this.goNext.bind(this)
@@ -46,17 +35,32 @@ class App extends React.Component {
         this.setState({data: localStorage.getItem("data")})
     }
 
+    getTwoOptionQuestion() {
+        return null
+        return(
+            TwoOptionQuestion(this.state.current.QuestionContainer[1].Question,
+                this.state.current.QuestionContainer[1].Options[1],
+                this.state.current.QuestionContainer[1].Options[2],
+                this.goNext
+            )
+        )
+    }
+
+    getSingleChoiceQuestion() {
+        return(
+            SingleChoiceQuestion(this.state.current.QuestionContainer[1].Question,
+            this.state.current.QuestionContainer[1].Options,
+            this.goNext
+            )
+        )
+    }
+
     render() {
         return <Container className="p-3">
             <Container className="p-5 mb-4 white rounded-3">
                 <h1 className="header">{this.state.current.Title}</h1>
-                {getYesNoQuestion(this.state.current.QuestionContainer[1].Question,
-                    this.state.current.QuestionContainer[1].Options[1],
-                    this.state.current.QuestionContainer[1].Options[2],
-                    this.state.next,
-                    this.goNext
-                )}
-                <BlockLevelButtons/>
+                {this.getTwoOptionQuestion()}
+                {this.getSingleChoiceQuestion()}
 
                 <ExampleToast>
                     We now have Toasts
@@ -82,28 +86,5 @@ const ExampleToast = ({ children }) => {
       </>
   );
 };
-
-const getYesNoQuestion=(question, option1, option2, answer, handleClick) =>{
-    return(
-        <>
-            <h2 className="text-center">{question}</h2>
-
-            <div className="yes-no-grid-container" onClick={(e) =>{
-                console.log(e.target.value)
-                handleClick(e.target.value)
-            }}>
-                <Button
-                    variant="outline-primary"
-                    value={option1}
-                >{option1}</Button>
-                <Button
-                    variant="outline-primary"
-                    value={option2}
-                >{option2}</Button>
-            </div>
-            <div> {answer} </div>
-        </>
-)
-}
 
 export default App;

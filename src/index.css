@@ -15,14 +15,3 @@ code {
 .header {
   text-align: center;
 }
-
-.yes-no-grid-container {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-gap: 20px;
-  padding: 10px;
-}
-
-.yes-no-grid-container > button {
-  padding: 15px 0;
-}

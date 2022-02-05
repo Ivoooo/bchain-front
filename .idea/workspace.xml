@@ -1,14 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="40410a09-9383-4c8c-9e9e-3798d94570f9" name="Changes" comment="connecting parent with children">
+    <list default="true" id="40410a09-9383-4c8c-9e9e-3798d94570f9" name="Changes" comment="yes no question class based component">
+      <change afterPath="$PROJECT_DIR$/src/components/AButton.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/SingleChoiceQuestion.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/SingleChoiceQuestion.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/TwoOptionQuestion.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/TwoOptionQuestion.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -30,6 +44,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="$USER_HOME$/.nvm/versions/node/v16.13.1/bin/node" />
@@ -37,6 +52,17 @@
     <property name="settings.editor.selected.configurable" value="settings.nodejs" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/views" />
+      <recent name="$PROJECT_DIR$/src/components" />
+      <recent name="$PROJECT_DIR$/twoOptionQuestion" />
+    </key>
+    <key name="es6.move.members.recent.items">
+      <recent name="$PROJECT_DIR$/src/SingleChoiceButtons.js" />
+      <recent name="$PROJECT_DIR$/src/TwoOptionQuestion.js" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
@@ -59,7 +85,7 @@
       <workItem from="1639706270913" duration="755000" />
       <workItem from="1639760579330" duration="631000" />
       <workItem from="1643383191452" duration="7559000" />
-      <workItem from="1644074448801" duration="7482000" />
+      <workItem from="1644074448801" duration="13810000" />
     </task>
     <task id="LOCAL-00001" summary="updates Versions">
       <created>1639761190096</created>
@@ -89,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644077516453</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="yes no question class based component">
+      <created>1644081957279</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1644081957279</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -101,7 +134,8 @@
     <MESSAGE value="Started with Bootstrap" />
     <MESSAGE value="Started with QuestionJSON Data" />
     <MESSAGE value="connecting parent with children" />
-    <option name="LAST_COMMIT_MESSAGE" value="connecting parent with children" />
+    <MESSAGE value="yes no question class based component" />
+    <option name="LAST_COMMIT_MESSAGE" value="yes no question class based component" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
