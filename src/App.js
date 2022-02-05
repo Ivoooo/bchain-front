@@ -23,9 +23,16 @@ class App extends React.Component {
         super(props)
         this.state = {
             current: DataJSON["1"],
-            next: "no",
+            next: null,
             test: 0
         }
+
+        this.goNext = this.goNext.bind(this)
+    }
+
+    goNext(newNext) {
+        this.setState({next: newNext})
+        console.log(newNext)
     }
 
     componentDidMount() {
@@ -43,9 +50,12 @@ class App extends React.Component {
         return <Container className="p-3">
             <Container className="p-5 mb-4 white rounded-3">
                 <h1 className="header">{this.state.current.Title}</h1>
-                <YesNoQuestion message={"Bevor wir starten würde die Universität Zürich um den Blockchain zu verbessern\n" +
-                    "                und Statistiken zu erheben gerne ihre Daten in komplett anonymer Form sammeln.\n" +
-                    "                Sind Sie damit einverstanden?"}></YesNoQuestion>
+                {getYesNoQuestion(this.state.current.QuestionContainer[1].Question,
+                    this.state.current.QuestionContainer[1].Options[1],
+                    this.state.current.QuestionContainer[1].Options[2],
+                    this.state.next,
+                    this.goNext
+                )}
                 <BlockLevelButtons/>
 
                 <ExampleToast>
@@ -73,38 +83,27 @@ const ExampleToast = ({ children }) => {
   );
 };
 
-class YesNoQuestion extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            answer: undefined
-        }
-    }
+const getYesNoQuestion=(question, option1, option2, answer, handleClick) =>{
+    return(
+        <>
+            <h2 className="text-center">{question}</h2>
 
-    render() {
-        const handleClick=(e)=>{
-            console.log(e.target.value)
-            this.setState({"answer": e.target.value})
-        }
-        return <>
-            <h2 className="text-center">{this.props.message}</h2>
-            <div className="yes-no-grid-container" onClick={handleClick}>
+            <div className="yes-no-grid-container" onClick={(e) =>{
+                console.log(e.target.value)
+                handleClick(e.target.value)
+            }}>
                 <Button
                     variant="outline-primary"
-                    value="yes"
-                >Yes</Button>
+                    value={option1}
+                >{option1}</Button>
                 <Button
                     variant="outline-primary"
-                    value="no"
-                >No</Button>
+                    value={option2}
+                >{option2}</Button>
             </div>
-            <div> {this.state.answer} </div>
+            <div> {answer} </div>
         </>
-    }
+)
 }
-
-//const App = () => (
-//    <Questions></Questions>
-//);
 
 export default App;
