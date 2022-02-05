@@ -5,11 +5,26 @@ import Button from 'react-bootstrap/Button';
 import './App.css';
 import DataJSON from './components/data.json';
 
-class Questions extends React.Component {
+class BlockLevelButtons extends React.Component {
+    render() {
+        return <div className="d-grid gap-2">
+            <Button variant="outline-primary" size="lg">
+                Block level button
+            </Button>
+            <Button variant="outline-primary" size="lg">
+                Block level button
+            </Button>
+        </div>;
+    }
+}
+
+class App extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            data: DataJSON,
+            current: DataJSON["1"],
+            next: "no",
+            test: 0
         }
     }
 
@@ -25,7 +40,20 @@ class Questions extends React.Component {
     }
 
     render() {
-        return <></>;
+        return <Container className="p-3">
+            <Container className="p-5 mb-4 white rounded-3">
+                <h1 className="header">{this.state.current.Title}</h1>
+                <YesNoQuestion message={"Bevor wir starten würde die Universität Zürich um den Blockchain zu verbessern\n" +
+                    "                und Statistiken zu erheben gerne ihre Daten in komplett anonymer Form sammeln.\n" +
+                    "                Sind Sie damit einverstanden?"}></YesNoQuestion>
+                <BlockLevelButtons/>
+
+                <ExampleToast>
+                    We now have Toasts
+                    <span role="img" aria-label="tada">🎉</span>
+                </ExampleToast>
+            </Container>
+        </Container>
     }
 }
 
@@ -49,18 +77,17 @@ class YesNoQuestion extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            answer: null
+            answer: undefined
         }
     }
 
     render() {
         const handleClick=(e)=>{
             console.log(e.target.value)
+            this.setState({"answer": e.target.value})
         }
         return <>
-            <h2 className="text-center">Bevor wir starten würde die Universität Zürich um den Blockchain zu verbessern
-                und Statistiken zu erheben gerne ihre Daten in komplett anonymer Form sammeln.
-                Sind Sie damit einverstanden?</h2>
+            <h2 className="text-center">{this.props.message}</h2>
             <div className="yes-no-grid-container" onClick={handleClick}>
                 <Button
                     variant="outline-primary"
@@ -71,33 +98,13 @@ class YesNoQuestion extends React.Component {
                     value="no"
                 >No</Button>
             </div>
-        </>;
+            <div> {this.state.answer} </div>
+        </>
     }
 }
 
-const App = () => (
-    <Container className="p-3">
-        <Container className="p-5 mb-4 white rounded-3">
-            <h1 className="header">Telemetry</h1>
-            <YesNoQuestion/>
-            <Questions></Questions>
-            <div className="d-grid gap-2">
-                <Button variant="outline-primary" size="lg">
-                    Block level button
-                </Button>
-                <Button variant="outline-primary" size="lg">
-                    Block level button
-                </Button>
-            </div>
-
-            <ExampleToast>
-                We now have Toasts
-                <span role="img" aria-label="tada">
-          🎉
-        </span>
-            </ExampleToast>
-        </Container>
-    </Container>
-);
+//const App = () => (
+//    <Questions></Questions>
+//);
 
 export default App;
