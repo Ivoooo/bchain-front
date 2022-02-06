@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="40410a09-9383-4c8c-9e9e-3798d94570f9" name="Changes" comment="yes no question class based component">
-      <change afterPath="$PROJECT_DIR$/src/components/AButton.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/SingleChoiceQuestion.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/SingleChoiceQuestion.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/TwoOptionQuestion.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/TwoOptionQuestion.js" afterDir="false" />
+    <list default="true" id="40410a09-9383-4c8c-9e9e-3798d94570f9" name="Changes" comment="SingleChoiceQuestion.js rudimentarily finished">
+      <change afterPath="$PROJECT_DIR$/src/views/MultipleChoiceQuestion.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +14,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -85,7 +80,8 @@
       <workItem from="1639706270913" duration="755000" />
       <workItem from="1639760579330" duration="631000" />
       <workItem from="1643383191452" duration="7559000" />
-      <workItem from="1644074448801" duration="13810000" />
+      <workItem from="1644074448801" duration="14534000" />
+      <workItem from="1644140890130" duration="3043000" />
     </task>
     <task id="LOCAL-00001" summary="updates Versions">
       <created>1639761190096</created>
@@ -122,7 +118,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644081957279</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="SingleChoiceQuestion.js rudimentarily finished">
+      <created>1644092240630</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1644092240630</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,7 +138,8 @@
     <MESSAGE value="Started with QuestionJSON Data" />
     <MESSAGE value="connecting parent with children" />
     <MESSAGE value="yes no question class based component" />
-    <option name="LAST_COMMIT_MESSAGE" value="yes no question class based component" />
+    <MESSAGE value="SingleChoiceQuestion.js rudimentarily finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="SingleChoiceQuestion.js rudimentarily finished" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

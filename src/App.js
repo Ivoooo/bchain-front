@@ -6,6 +6,7 @@ import './App.css';
 import DataJSON from './components/data.json';
 import {TwoOptionQuestion} from "./views/TwoOptionQuestion";
 import {SingleChoiceQuestion} from "./views/SingleChoiceQuestion";
+import {MultipleChoiceQuestion} from "./views/MultipleChoiceQuestion";
 
 
 class App extends React.Component {
@@ -47,6 +48,7 @@ class App extends React.Component {
     }
 
     getSingleChoiceQuestion() {
+        return null
         return(
             SingleChoiceQuestion(this.state.current.QuestionContainer[1].Question,
             this.state.current.QuestionContainer[1].Options,
@@ -55,12 +57,20 @@ class App extends React.Component {
         )
     }
 
+    getMultipleChoiceQuestion() {
+        return <MultipleChoiceQuestion
+            question={this.state.current.QuestionContainer[1].Question}
+            options={this.state.current.QuestionContainer[1].Options}
+        />;
+    }
+
     render() {
         return <Container className="p-3">
             <Container className="p-5 mb-4 white rounded-3">
                 <h1 className="header">{this.state.current.Title}</h1>
                 {this.getTwoOptionQuestion()}
                 {this.getSingleChoiceQuestion()}
+                {this.getMultipleChoiceQuestion()}
 
                 <ExampleToast>
                     We now have Toasts
