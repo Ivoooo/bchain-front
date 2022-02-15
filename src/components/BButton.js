@@ -1,6 +1,6 @@
 import Button from "react-bootstrap/Button";
 
-export const BButton = (txt, onClick=null, isClicked=false) => (
+export const BButton = (txt="e", onClick=null, isClicked=false) => (
     <Button
         variant={isClicked ? "outline-primary" : "primary"}
         size="lg"

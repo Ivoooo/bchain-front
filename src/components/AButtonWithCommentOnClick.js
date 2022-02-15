@@ -8,6 +8,7 @@ export const AButtonWithCommentOnClick = ({ txt="c" }) => {
 
     function change() {
         toggleShow(!show);
+        console.log(show);
     }
 
     return (

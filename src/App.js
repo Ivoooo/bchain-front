@@ -6,6 +6,8 @@ import {TwoOptionQuestion} from "./views/TwoOptionQuestion";
 import {SingleChoiceQuestion} from "./views/SingleChoiceQuestion";
 import {MultipleChoiceQuestion} from "./views/MultipleChoiceQuestion";
 import {Header} from "./views/Header";
+import {BButton} from "./components/BButton";
+import {AButton} from "./components/AButton";
 
 class App extends React.Component {
     constructor(props) {
@@ -62,6 +64,16 @@ class App extends React.Component {
         />;
     }
 
+    getNextButton() {
+        return <div style={{float: "right"}}>
+            {BButton("Next", this.goNext, false)}
+        </div>
+    }
+
+    getWelcome() {
+        BButton("Start!!", this.goNext, false)
+    }
+
     render() {
         return <Container>
             <Header className="head" now={20}/>
@@ -72,6 +84,7 @@ class App extends React.Component {
                     {this.getSingleChoiceQuestion()}
                     {this.getMultipleChoiceQuestion()}
                 </Container>
+                {this.getNextButton()}
             </Container>
         </Container>
     }
