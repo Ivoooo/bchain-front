@@ -71,30 +71,9 @@ class App extends React.Component {
                 {this.getTwoOptionQuestion()}
                 {this.getSingleChoiceQuestion()}
                 {this.getMultipleChoiceQuestion()}
-
-                <ExampleToast>
-                    We now have Toasts
-                    <span role="img" aria-label="tada">🎉</span>
-                </ExampleToast>
             </Container>
         </Container>
     }
 }
-
-const ExampleToast = ({ children }) => {
-  const [show, toggleShow] = useState(true);
-
-  return (
-      <>
-        {!show && <Button onClick={() => toggleShow(true)}>Show Toast</Button>}
-        <Toast show={show} onClose={() => toggleShow(false)}>
-          <Toast.Header>
-            <strong className="mr-auto">React-Bootstrap</strong>
-          </Toast.Header>
-          <Toast.Body>{children}</Toast.Body>
-        </Toast>
-      </>
-  );
-};
 
 export default App;

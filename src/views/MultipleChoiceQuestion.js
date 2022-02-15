@@ -1,11 +1,12 @@
-import {AButton} from "../components/AButton";
 import React from "react";
+import {AButtonWithCommentOnClick} from "../components/AButtonWithCommentOnClick";
 
 export class MultipleChoiceQuestion extends React.Component{
     constructor(props) {
         super(props)
         this.state = {
             options: [],
+            question1: true,
         }
     }
 
@@ -26,13 +27,9 @@ export class MultipleChoiceQuestion extends React.Component{
             <div className="d-grid gap-2" onClick={(e) => {
                 this.handleClick(e.target.value)
             }}>
-                <>
-                    {this.state.options.map(option =>
-                        AButton(option[1]))
-                    }
-                    <textarea className="form-control" id="exampleFormControlTextarea1" rows="2"
-                              placeholder="Please add a note to explain your answer"/>
-                </>
+                {this.state.options.map(option =>
+                    <AButtonWithCommentOnClick txt={option[1]}/>
+                )}
             </div>
         </>
     }
