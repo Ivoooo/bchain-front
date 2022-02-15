@@ -1,5 +1,4 @@
 import {AButton} from "../components/AButton";
-import "./SingleChoiceQuestion.css";
 
 export const SingleChoiceQuestion = (question, options, handleClick) => {
     //convert answer 'options' into an iterable list to be able to apply .map

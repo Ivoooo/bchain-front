@@ -1,13 +1,11 @@
 import React, {useState} from 'react';
-import Toast from 'react-bootstrap/Toast';
 import Container from 'react-bootstrap/Container';
-import Button from 'react-bootstrap/Button';
 import './App.css';
 import DataJSON from './components/data.json';
 import {TwoOptionQuestion} from "./views/TwoOptionQuestion";
 import {SingleChoiceQuestion} from "./views/SingleChoiceQuestion";
 import {MultipleChoiceQuestion} from "./views/MultipleChoiceQuestion";
-
+import {Header} from "./views/Header";
 
 class App extends React.Component {
     constructor(props) {
@@ -65,12 +63,15 @@ class App extends React.Component {
     }
 
     render() {
-        return <Container className="p-3">
-            <Container className="p-5 mb-4 white rounded-3">
+        return <Container>
+            <Header className="head" now={20}/>
+            <Container className="p-3">
                 <h1 className="header">{this.state.current.Title}</h1>
-                {this.getTwoOptionQuestion()}
-                {this.getSingleChoiceQuestion()}
-                {this.getMultipleChoiceQuestion()}
+                <Container className="p-5 mb-4 white rounded-3">
+                    {this.getTwoOptionQuestion()}
+                    {this.getSingleChoiceQuestion()}
+                    {this.getMultipleChoiceQuestion()}
+                </Container>
             </Container>
         </Container>
     }
