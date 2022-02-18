@@ -13,7 +13,9 @@ export const NotePage = (question, option, handleClick) => {
             {question.map(q =>
                 <h4 className="text-center">{q}</h4>
             )}
-            {ATextArea("Bitte geben Sie hier Ihren Geschäftsfall an.")}
+            <div style={{maxWidth: 800, margin:"auto"}}>
+                {ATextArea("Bitte geben Sie hier Ihren Geschäftsfall an.")}
+            </div>
             <div style={{float: "right", padding: "12px"}}>
                 {BButton(option, handleClick, true)}
             </div>

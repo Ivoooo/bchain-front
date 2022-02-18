@@ -12,6 +12,8 @@ import {NotePage} from "./views/NotePage";
 import {HeaderFrontPage} from "./views/HeaderFrontPage";
 import './views/Views.css';
 import {wait} from "@testing-library/user-event/dist/utils";
+import {NaviPage} from "./views/NaviPage";
+import {Telemetry} from "./views/Telemetry";
 
 class App extends React.Component {
     constructor(props) {
@@ -22,7 +24,7 @@ class App extends React.Component {
             current: {"Question": "Willkommmen beim Blockchainguide der Universität Zürich. Dieser Fragebogen ist ein Tool für staatliche und private Einrichtungen um zu evaluieren ob für einen bestimmten Anwendungsfall die Benützung einer Blochchain einen Vorteil bringen könnte. \n Der Blockchainguide basiert auf dem von der Universität und Kanton Zürich erarbeiteten Blockchain Guide (todo hyperlink). Eine kurze Zusammenfassung finden sie hier (todo). Wir empfehlen die Zusammenfassung zu lesen für ein besseres Verständnis aber es nicht nicht essenziell.",
                 "Options": "Zur Umfrage"},
             next: null,
-            qqs: [[0,1],[1,1],[1,1.5],[1,2],[1,3],[2,1],[3,1],[3,2],[3,3],[3,4],[3,5],[3,6],[3,7],[3,8],[3,9],[4,1],[4,2],[4,3],[4,4],[4,5],[4,6],[4,7],[4,8],[4,9],[4,10],[5,1]],
+            qqs: [[0,1],[1,1],[1,1.5],[1,2],[1,3],[2,1],[3,1],[3,2],[3,3],[3,4],[3,5],[3,6],[3,7],[3,8],[3,9],[4,1],[4,2],[4,3],[4,4],[4,5],[4,6],[4,7],[4,8],[4,9],[4,10],[5,1],[5,2],[5,3],[5,4],[5,5],[5,6],[5,7],[5,8],[5,9],[5,10],[6,1]],
             data: null,
             questionType: "Front Page",
             title: "a",
@@ -35,17 +37,18 @@ class App extends React.Component {
 
     findNextPage() {
         let q = this.state.qqs[this.state.position+1]
-        this.setState({questionType: DataJSON[q[0]]["Fragen"][q[1]]["Type"],
-            current: DataJSON[q[0]]["Fragen"][q[1]],
+        this.setState({current: DataJSON[q[0]]["Fragen"][q[1]],
             title: DataJSON[q[0]]["Title"]["Deutsch"]
         })
+
         if(this.state.furthestPosition < this.state.position) {
             this.setState({furthestPosition: this.state.position})
         }
 
         //this is needed because otherwise it will log the old state.
-        wait(100).then(r =>
-        console.log("Next Page loaded " + this.state.position, this.state.questionType, this.state.title, this.state.current))
+            //this needs to be changed at last otherwise page might not rerender with new artefacts
+        this.setState({questionType: DataJSON[q[0]]["Fragen"][q[1]]["Type"]})
+        console.log("Next Page loaded " + this.state.position, this.state.questionType, this.state.title, this.state.current)
     }
 
     goNext(newNext) {
@@ -54,8 +57,14 @@ class App extends React.Component {
     }
 
     goTo(pageId) {
-        this.setState({position: pageId});
-        this.findNextPage();
+        if(pageId === "Navi") {
+            this.setState({questionType: "Navi", title: "Navigation"});
+        }
+        else {
+            this.setState({position: pageId});
+            this.findNextPage();
+
+        }
     }
 
     componentDidMount() {
@@ -125,6 +134,13 @@ class App extends React.Component {
         );
     }
 
+    getNaviPage() {
+        return NaviPage(
+            this.state.furthestPosition+50,
+            this.goTo
+        )
+    }
+
     getNextPage() {
         if(this.state.questionType === "Front Page") return this.getFrontPage()
         if(this.state.questionType === "Text") return this.getNotePage()
@@ -133,11 +149,17 @@ class App extends React.Component {
         if(this.state.questionType === "Single Choice") return this.getSingleChoiceQuestion()
         if(this.state.questionType === "Multiple Choice") return this.getMultipleChoiceQuestion()
         if(this.state.questionType === "Multiple Choice or none") return this.getMultipleChoiceQuestion()
+        if(this.state.questionType === "Navi") return this.getNaviPage();
+        if(this.state.questionType === "Telemetry") return this.getTelemetry();
+    }
+
+    getTelemetry() {
+        return <Telemetry/>;
     }
 
     render() {
         return <Container>
-            {this.state.position === 0 ? <HeaderFrontPage/> : <Header className="head" now={this.state.position} max={this.state.qqs.length} goTo={this.goTo}/>}
+            {this.state.position === 0 || this.state.questionType === "Navi"  ? <HeaderFrontPage/> : <Header className="head" now={this.state.position} max={this.state.qqs.length} goTo={this.goTo}/>}
             <div className="p-3">
                 <h1 className="header">{this.state.title}</h1>
                 <div className="p-5 mb-4 white rounded-3">
