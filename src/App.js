@@ -15,10 +15,11 @@ class App extends React.Component {
         super(props)
         this.state = {
             position: -1,
+            furthestPosition: -1,
             current: {"Question": "Willkommmen beim Blockchainguide der Universität Zürich. Dieser Fragebogen ist ein Tool für staatliche und private Einrichtungen um zu evaluieren ob für einen bestimmten Anwendungsfall die Benützung einer Blochchain einen Vorteil bringen könnte. \n Der Blockchainguide basiert auf dem von der Universität und Kanton Zürich erarbeiteten Blockchain Guide (todo hyperlink). Eine kurze Zusammenfassung finden sie hier (todo). Wir empfehlen die Zusammenfassung zu lesen für ein besseres Verständnis aber es nicht nicht essenziell.",
                 "Options": "Zur Umfrage"},
             next: null,
-            qqs: [[0,1],[1,1],[1,2],[1,3],[2,1],[2,2],[3,1],[3,2],[3,3],[3,4],[3,5],[3,6],[3,7],[3,8],[3,9],[4,1],[4,2],[4,3],[4,4],[4,5],[4,6],[4,7],[4,8],[4,9],[4,10],[5,1]],
+            qqs: [[0,1],[1,1],[1,2],[1,3],[2,1],[3,1],[3,2],[3,3],[3,4],[3,5],[3,6],[3,7],[3,8],[3,9],[4,1],[4,2],[4,3],[4,4],[4,5],[4,6],[4,7],[4,8],[4,9],[4,10],[5,1]],
             data: null,
             questionType: "Front Page",
             title: "a",
@@ -28,20 +29,18 @@ class App extends React.Component {
     }
 
     goNext(newNext) {
-        console.log("AAAAAAAAa")
-        console.log(this.state.position, this.state.qqs, this.state.questionType, this.state.title, this.state.current)
-        this.setState({next: newNext})
-        let tmp = this.state.position + 1
-        this.setState({position: tmp})
-        let q = this.state.qqs[tmp]
-        console.log(this.state.qqs[this.state.position])
+        this.setState({next: newNext, position: this.state.position + 1})
+
+        let q = this.state.qqs[this.state.position + 1]
         this.setState({questionType: DataJSON[q[0]]["Fragen"][q[1]]["Type"],
             current: DataJSON[q[0]]["Fragen"][q[1]],
             title: DataJSON[q[0]]["Title"]["Deutsch"]
         })
-        console.log(newNext)
+        if(this.state.furthestPosition < this.state.position) {
+            this.setState({furthestPosition: this.state.position})
+        }
 
-        console.log("dddd")
+        console.log(newNext)
         console.log(this.state.position, this.state.qqs, this.state.questionType, this.state.title, this.state.current)
     }
 
@@ -112,9 +111,13 @@ class App extends React.Component {
         if(this.state.questionType === "Multiple Choice or none") return this.getMultipleChoiceQuestion()
     }
 
+    getProgress() {
+        return Math.round(100 * this.state.position / this.state.qqs.length)
+    }
+
     render() {
         return <Container>
-            <Header className="head" now={20}/>
+            <Header className="head" now={this.getProgress()}/>
             <Container className="p-3">
                 <h1 className="header">{this.state.title}</h1>
                 <Container className="p-5 mb-4 white rounded-3">
