@@ -7,7 +7,7 @@ import "./Header.css"
 export class Header extends React.Component{
     render() {
         return <Stack className="Stack" direction="horizontal" gap={3}>
-            <Button variant="outline-secondary"> Go..</Button>
+            <Button variant="outline-secondary">Navi</Button>
             <ProgressBar className="ProgressBar" now={this.props.now} label={`${this.props.now}%`} style={{ width: "70rem" }}/>
             <Button variant="outline-secondary">DE</Button>
         </Stack>;

@@ -37,7 +37,6 @@ class App extends React.Component {
     }
 
     getTwoOptionQuestion() {
-        return null
         return(
             TwoOptionQuestion(this.state.current.QuestionContainer[1].Question,
                 this.state.current.QuestionContainer[1].Options[1],
@@ -58,6 +57,7 @@ class App extends React.Component {
     }
 
     getMultipleChoiceQuestion() {
+        return null
         return <MultipleChoiceQuestion
             question={this.state.current.QuestionContainer[1].Question}
             options={this.state.current.QuestionContainer[1].Options}
