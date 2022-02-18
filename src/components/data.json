@@ -30,7 +30,7 @@
         "Type": "Text"
       },
       "2": {
-        "Question": "Sind sie Teil einer Staatlichen Institution (Bsp. Gemeinte, Kantonsamt), eine Privatperson oder Teil eines Geschäftes",
+        "Question": "Sind sie Teil einer staatlichen Institution, eine Privatperson oder Teil eines Geschäftes",
         "Options": {
           "1": "Staatlich",
           "2": "Geschäft oder Privatperson"
@@ -78,7 +78,7 @@
       },
     "Fragen": {
       "1": {
-        "Question": "Den Geschäftsfall haben wir jetzt fertig vorgestellt und kategorisiert. Als nächstes müssen wir die organisatorische Perspektive prüfen. \n Welche Ziele verfolgen Sie? Sie können so viele Optinen anklicken wie Sie möchten. Bitte bachten sie auch, dass <keine Option> auch eine Option ist",
+        "Question": "Den Geschäftsfall haben wir jetzt fertig vorgestellt und kategorisiert. Als nächstes müssen wir die organisatorische Perspektive prüfen. \n Welche Ziele verfolgen Sie? Sie können so viele Optinen anklicken wie Sie möchten.",
         "Options": {
           "1": "Organisationsübergreifende Zusammenarbeit",
           "2": "Dezentrale Verwaltung von Daten und Prozessen",

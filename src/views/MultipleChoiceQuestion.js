@@ -11,6 +11,7 @@ export class MultipleChoiceQuestion extends React.Component{
             answers: [],
             disabled: true,
             incorrect: false,
+            question: [""],
         }
     }
 
@@ -21,7 +22,7 @@ export class MultipleChoiceQuestion extends React.Component{
             x.push(this.props.options[i]);
             y.push(false);
         }
-        this.setState({options: x, answers: y})
+        this.setState({options: x, answers: y, question: this.props.question.split("\n")})
     }
 
     handleClick(e) {
@@ -46,7 +47,10 @@ export class MultipleChoiceQuestion extends React.Component{
 
     render() {
         return <>
-            <h2 className="text-center">{this.props.question}</h2>
+            {this.state.question.map(q =>
+                <h2 className="text-center">{q}</h2>
+            )}
+
             <div className="d-grid gap-2" onClick={(e) => {
                 this.handleClick(e.target.value)
             }}>

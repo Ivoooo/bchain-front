@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40410a09-9383-4c8c-9e9e-3798d94570f9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/LanguageButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ATextArea.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ATextArea.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/BButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/HeaderFrontPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HeaderFrontPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/MultipleChoiceQuestion.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/MultipleChoiceQuestion.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/data.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +93,7 @@
       <workItem from="1645010772081" duration="3189000" />
       <workItem from="1645099911191" duration="1675000" />
       <workItem from="1645135381429" duration="14838000" />
-      <workItem from="1645177491234" duration="3151000" />
+      <workItem from="1645177491234" duration="3466000" />
     </task>
     <task id="LOCAL-00001" summary="updates Versions">
       <created>1639761190096</created>
@@ -214,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645151769422</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="New LanguageButton.js&#10;Updated MultipleChoiceQuestion.js">
+      <created>1645180880703</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1645180880703</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,7 +237,8 @@
     <MESSAGE value="Improved Progress Bar" />
     <MESSAGE value="Improved Front and NotePage" />
     <MESSAGE value="New Header for FrontPage" />
-    <option name="LAST_COMMIT_MESSAGE" value="New Header for FrontPage" />
+    <MESSAGE value="New LanguageButton.js&#10;Updated MultipleChoiceQuestion.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="New LanguageButton.js&#10;Updated MultipleChoiceQuestion.js" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
