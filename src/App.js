@@ -9,6 +9,7 @@ import {Header} from "./views/Header";
 import {BButton} from "./components/BButton";
 import {AButton} from "./components/AButton";
 import {FrontPage} from "./views/FrontPage";
+import {NotePage} from "./views/NotePage";
 
 class App extends React.Component {
     constructor(props) {
@@ -19,7 +20,7 @@ class App extends React.Component {
             current: {"Question": "Willkommmen beim Blockchainguide der Universität Zürich. Dieser Fragebogen ist ein Tool für staatliche und private Einrichtungen um zu evaluieren ob für einen bestimmten Anwendungsfall die Benützung einer Blochchain einen Vorteil bringen könnte. \n Der Blockchainguide basiert auf dem von der Universität und Kanton Zürich erarbeiteten Blockchain Guide (todo hyperlink). Eine kurze Zusammenfassung finden sie hier (todo). Wir empfehlen die Zusammenfassung zu lesen für ein besseres Verständnis aber es nicht nicht essenziell.",
                 "Options": "Zur Umfrage"},
             next: null,
-            qqs: [[0,1],[1,1],[1,2],[1,3],[2,1],[3,1],[3,2],[3,3],[3,4],[3,5],[3,6],[3,7],[3,8],[3,9],[4,1],[4,2],[4,3],[4,4],[4,5],[4,6],[4,7],[4,8],[4,9],[4,10],[5,1]],
+            qqs: [[0,1],[1,1],[1,1.5],[1,2],[1,3],[2,1],[3,1],[3,2],[3,3],[3,4],[3,5],[3,6],[3,7],[3,8],[3,9],[4,1],[4,2],[4,3],[4,4],[4,5],[4,6],[4,7],[4,8],[4,9],[4,10],[5,1]],
             data: null,
             questionType: "Front Page",
             title: "a",
@@ -101,9 +102,18 @@ class App extends React.Component {
         );
     }
 
+    getNotePage() {
+        return(
+            NotePage(this.state.current.Question,
+                this.state.current.Options,
+                this.goNext
+            )
+        );
+    }
+
     getNextPage() {
         if(this.state.questionType === "Front Page") return this.getFrontPage()
-        if(this.state.questionType === "Text") return this.getFrontPage()
+        if(this.state.questionType === "Text") return this.getNotePage()
         if(this.state.questionType === "Dual Choice") return this.getTwoOptionQuestion()
         if(this.state.questionType === "Single Choice with Other") return this.getSingleChoiceQuestion()
         if(this.state.questionType === "Single Choice") return this.getSingleChoiceQuestion()
