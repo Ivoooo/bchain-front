@@ -16,7 +16,7 @@ export const NotePage = (question, option, handleClick) => {
                 <h4 className="text-center">{q}</h4>
             )}
             {ATextArea()}
-            <div style={{float: "right"}}>
+            <div style={{float: "right", padding: "12px"}}>
                 {BButton(option, handleClick, true)}
             </div>
         </>

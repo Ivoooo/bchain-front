@@ -1,7 +1,8 @@
 import React from "react";
-import {ProgressBar, Stack} from "react-bootstrap";
+import {Image, ProgressBar, Stack} from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import "./Header.css"
+import "../components/UZH_logo.gif"
 
 //requires Progress Bar percentage to be given as "now" props
 export class Header extends React.Component{

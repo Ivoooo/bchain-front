@@ -10,6 +10,7 @@ import {BButton} from "./components/BButton";
 import {AButton} from "./components/AButton";
 import {FrontPage} from "./views/FrontPage";
 import {NotePage} from "./views/NotePage";
+import {HeaderFrontPage} from "./views/HeaderFrontPage";
 
 class App extends React.Component {
     constructor(props) {
@@ -125,9 +126,14 @@ class App extends React.Component {
         return Math.round(100 * this.state.position / this.state.qqs.length)
     }
 
+    getHeader() {
+        if (this.state.position === 0) return <HeaderFrontPage/>
+        return <Header className="head" now={this.getProgress()}/>
+    }
+
     render() {
         return <Container>
-            <Header className="head" now={this.getProgress()}/>
+            {this.getHeader()}
             <Container className="p-3">
                 <h1 className="header">{this.state.title}</h1>
                 <Container className="p-5 mb-4 white rounded-3">
