@@ -1,7 +1,5 @@
-import {AButton} from "../components/AButton";
 import {BButton} from "../components/BButton";
 import React from "react";
-import './FrontPage.css';
 
 export const FrontPage = (question, option, handleClick) => {
     question = question.split("\n");

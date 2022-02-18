@@ -7,7 +7,7 @@
     },
     "Fragen": {
       "1": {
-        "Question": "Willkommmen beim Blockchainguide der Universität Zürich. Dieser Fragebogen ist ein Tool für staatliche und private Einrichtungen um zu evaluieren ob für einen bestimmten Anwendungsfall die Benützung einer Blochchain einen Vorteil bringen könnte. \n Der Blockchainguide basiert auf dem von der Universität und Kanton Zürich erarbeiteten Blockchain Guide (todo hyperlink). Eine kurze Zusammenfassung finden sie hier (todo). Wir empfehlen die Zusammenfassung zu lesen für ein besseres Verständnis aber es nicht nicht essenziell.",
+        "Question": "Willkommmen beim Blockchainguide der Universität Zürich. Dieser Fragebogen ist ein Tool für staatliche und private Einrichtungen um zu evaluieren ob für einen bestimmten Anwendungsfall die Benützung einer Blochchain einen Vorteil bringen könnte. \n Der Blockchainguide basiert auf dem von der Universität und Kanton Zürich erarbeiteten Blockchain Guide. Eine kurze Zusammenfassung finden sie hier. Wir empfehlen die Zusammenfassung zu lesen für ein besseres Verständnis aber es nicht nicht essenziell.",
         "Options": "Zur Umfrage",
         "Type": "Front Page"
       }
@@ -20,12 +20,12 @@
     },
     "Fragen": {
       "1": {
-        "Question": "Der Blockchainguide ist in 5 unterschiedlich lange Teile unterteilt und es braucht total ungefähr 15 (todo) Minuten um ihn auszufüllen. Am Ende werden sie erfahren ob für ihren speziefischen Geschäftsfall den Gebrauch einer Blockchain Sinn ergeben würde. Zudem bekommen Sie Hinweise wie Sie als nächstes vorgehen könnten.",
+        "Question": "Der Blockchainguide ist in 5 unterschiedlich lange Teile unterteilt und es braucht total ungefähr Minuten um ihn auszufüllen. Am Ende werden sie erfahren ob für ihren speziefischen Geschäftsfall den Gebrauch einer Blockchain Sinn ergeben würde. Zudem bekommen Sie Hinweise wie Sie als nächstes vorgehen könnten.",
         "Options": "Weiter",
         "Type": "Front Page"
       },
       "1.5": {
-        "Question": "Bevor wir aber starten müssen Sie zuerst einen genauen Geschäftsfall bestimmen bei dem Sie prüfen möchten ob die Benützung einer Blockchain sie unterstüten könnte. \n Beispiele dazu wären: \n Kund*innen möchten sich bei uns anmelden und beziehen eine Leistung. \n Kund*innen sollen sich einfacher in öffnentliche Verzeichnisse eintragen können. \n Wir möchten die Zugriffsrechte auf Daten besser handhaben können.",
+        "Question": "Bevor wir aber starten müssen Sie zuerst einen genauen Geschäftsfall bestimmen bei dem Sie prüfen möchten ob die Benützung einer Blockchain sie unterstützen könnte. \n Beispiele dazu wären: \n Kund*innen möchten sich bei uns anmelden und beziehen eine Leistung. \n Kund*innen sollen sich einfacher in öffnentliche Verzeichnisse eintragen können. \n Wir möchten die Zugriffsrechte auf Daten besser handhaben können.",
         "Options": "Weiter",
         "Type": "Text"
       },

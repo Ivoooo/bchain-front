@@ -1,7 +1,6 @@
 import React from "react";
 import {AButtonWithCommentOnClick} from "../components/AButtonWithCommentOnClick";
 import {BButton} from "../components/BButton";
-import {ATextArea} from "../components/ATextArea";
 
 export class MultipleChoiceQuestion extends React.Component{
     constructor(props) {

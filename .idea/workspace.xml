@@ -1,8 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="40410a09-9383-4c8c-9e9e-3798d94570f9" name="Changes" comment="">
+    <list default="true" id="40410a09-9383-4c8c-9e9e-3798d94570f9" name="Changes" comment="New LanguageButton.js&#10;Updated MultipleChoiceQuestion.js">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ATextArea.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ATextArea.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/FrontPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Views.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/FrontPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/FrontPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Header.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/HeaderFrontPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HeaderFrontPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/MultipleChoiceQuestion.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/MultipleChoiceQuestion.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/NotePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/NotePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/SingleChoiceQuestion.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/SingleChoiceQuestion.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/SingleChoiceQuestion.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/TwoOptionQuestion.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/TwoOptionQuestion.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/TwoOptionQuestion.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +107,7 @@
       <workItem from="1645010772081" duration="3189000" />
       <workItem from="1645099911191" duration="1675000" />
       <workItem from="1645135381429" duration="14838000" />
-      <workItem from="1645177491234" duration="3466000" />
+      <workItem from="1645177491234" duration="8624000" />
     </task>
     <task id="LOCAL-00001" summary="updates Versions">
       <created>1639761190096</created>
@@ -214,7 +228,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645180880703</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Minor fixes">
+      <created>1645181257358</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1645181257358</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,7 +259,8 @@
     <MESSAGE value="Improved Front and NotePage" />
     <MESSAGE value="New Header for FrontPage" />
     <MESSAGE value="New LanguageButton.js&#10;Updated MultipleChoiceQuestion.js" />
-    <option name="LAST_COMMIT_MESSAGE" value="New LanguageButton.js&#10;Updated MultipleChoiceQuestion.js" />
+    <MESSAGE value="Minor fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor fixes" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -1,7 +1,6 @@
-import React, {useState} from "react";
-import {Image, ProgressBar, Stack} from "react-bootstrap";
+import React from "react";
+import {ProgressBar, Stack} from "react-bootstrap";
 import Button from "react-bootstrap/Button";
-import "./Header.css"
 import "../components/UZH_logo.gif"
 import {LanguageButton} from "../components/LanguageButton";
 
@@ -9,8 +8,10 @@ import {LanguageButton} from "../components/LanguageButton";
 export class Header extends React.Component{
     render() {
         return <Stack className="Stack" direction="horizontal" gap={3}>
+            <Button variant="outline-secondary" onClick={() => this.props.goTo(this.props.now-1)}>Zurück</Button>
             <Button variant="outline-secondary">Navi</Button>
-            <ProgressBar className="ProgressBar" now={this.props.now} label={`${this.props.now}%`} style={{ width: "70rem" }}/>
+            <ProgressBar className="ProgressBar" now={Math.round(100 * this.props.now / this.props.max)}
+                         label={`${Math.round(100 * this.props.now / this.props.max)}%`} style={{ width: "70rem" }}/>
             <LanguageButton/>
         </Stack>;
     }

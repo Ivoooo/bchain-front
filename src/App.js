@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Container from 'react-bootstrap/Container';
 import './App.css';
 import DataJSON from './components/data.json';
@@ -7,17 +7,18 @@ import {SingleChoiceQuestion} from "./views/SingleChoiceQuestion";
 import {MultipleChoiceQuestion} from "./views/MultipleChoiceQuestion";
 import {Header} from "./views/Header";
 import {BButton} from "./components/BButton";
-import {AButton} from "./components/AButton";
 import {FrontPage} from "./views/FrontPage";
 import {NotePage} from "./views/NotePage";
 import {HeaderFrontPage} from "./views/HeaderFrontPage";
+import './views/Views.css';
+import {wait} from "@testing-library/user-event/dist/utils";
 
 class App extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
             position: -1,
-            furthestPosition: -1,
+            furthestPosition: 0,
             current: {"Question": "Willkommmen beim Blockchainguide der Universität Zürich. Dieser Fragebogen ist ein Tool für staatliche und private Einrichtungen um zu evaluieren ob für einen bestimmten Anwendungsfall die Benützung einer Blochchain einen Vorteil bringen könnte. \n Der Blockchainguide basiert auf dem von der Universität und Kanton Zürich erarbeiteten Blockchain Guide (todo hyperlink). Eine kurze Zusammenfassung finden sie hier (todo). Wir empfehlen die Zusammenfassung zu lesen für ein besseres Verständnis aber es nicht nicht essenziell.",
                 "Options": "Zur Umfrage"},
             next: null,
@@ -25,15 +26,15 @@ class App extends React.Component {
             data: null,
             questionType: "Front Page",
             title: "a",
+            goTo: 0,
         }
 
         this.goNext = this.goNext.bind(this)
+        this.goTo = this.goTo.bind(this)
     }
 
-    goNext(newNext) {
-        this.setState({next: newNext, position: this.state.position + 1})
-
-        let q = this.state.qqs[this.state.position + 1]
+    findNextPage() {
+        let q = this.state.qqs[this.state.position+1]
         this.setState({questionType: DataJSON[q[0]]["Fragen"][q[1]]["Type"],
             current: DataJSON[q[0]]["Fragen"][q[1]],
             title: DataJSON[q[0]]["Title"]["Deutsch"]
@@ -42,8 +43,19 @@ class App extends React.Component {
             this.setState({furthestPosition: this.state.position})
         }
 
+        //this is needed because otherwise it will log the old state.
+        wait(100).then(r =>
+        console.log("Next Page loaded " + this.state.position, this.state.questionType, this.state.title, this.state.current))
+    }
+
+    goNext(newNext) {
         console.log(newNext)
-        console.log(this.state.position, this.state.qqs, this.state.questionType, this.state.title, this.state.current)
+        this.goTo(this.state.position + 1);
+    }
+
+    goTo(pageId) {
+        this.setState({position: pageId});
+        this.findNextPage();
     }
 
     componentDidMount() {
@@ -123,24 +135,15 @@ class App extends React.Component {
         if(this.state.questionType === "Multiple Choice or none") return this.getMultipleChoiceQuestion()
     }
 
-    getProgress() {
-        return Math.round(100 * this.state.position / this.state.qqs.length)
-    }
-
-    getHeader() {
-        if (this.state.position === 0) return <HeaderFrontPage/>
-        return <Header className="head" now={this.getProgress()}/>
-    }
-
     render() {
         return <Container>
-            {this.getHeader()}
-            <Container className="p-3">
+            {this.state.position === 0 ? <HeaderFrontPage/> : <Header className="head" now={this.state.position} max={this.state.qqs.length} goTo={this.goTo}/>}
+            <div className="p-3">
                 <h1 className="header">{this.state.title}</h1>
-                <Container className="p-5 mb-4 white rounded-3">
+                <div className="p-5 mb-4 white rounded-3">
                     {this.getNextPage()}
-                </Container>
-            </Container>
+                </div>
+            </div>
         </Container>
     }
 }

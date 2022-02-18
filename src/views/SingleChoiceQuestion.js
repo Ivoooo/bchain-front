@@ -1,5 +1,5 @@
 import {AButton} from "../components/AButton";
-import './SingleChoiceQuestion.css'
+import {ATextArea} from "../components/ATextArea";
 
 export const SingleChoiceQuestion = (question, options, handleClick) => {
     //convert answer 'options' into an iterable list to be able to apply .map
@@ -17,6 +17,7 @@ export const SingleChoiceQuestion = (question, options, handleClick) => {
                 {x.map(option =>
                 AButton(option[1]))
                 }
+                {ATextArea("Falls Sie wollen können Sie hier ihre Antwort erläutern.")}
             </div>
         </>
     )

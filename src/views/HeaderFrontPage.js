@@ -1,9 +1,7 @@
 import React from "react";
-import {Col, Image, Nav, Navbar, ProgressBar, Row, Stack} from "react-bootstrap";
-import Button from "react-bootstrap/Button";
-import "./Header.css"
+import {Col, Image, Nav, Navbar} from "react-bootstrap";
+import "./Views.css"
 import "../components/UZH_logo.gif"
-import {BButton} from "../components/BButton";
 import Container from "react-bootstrap/Container";
 import {LanguageButton} from "../components/LanguageButton";
 
