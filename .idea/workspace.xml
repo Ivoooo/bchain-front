@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="40410a09-9383-4c8c-9e9e-3798d94570f9" name="Changes" comment="Implemented Next Button">
-      <change afterPath="$PROJECT_DIR$/src/views/FrontPage.js" afterDir="false" />
+    <list default="true" id="40410a09-9383-4c8c-9e9e-3798d94570f9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/FrontPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/FrontPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +94,7 @@
       <workItem from="1644925297586" duration="14656000" />
       <workItem from="1645010772081" duration="3189000" />
       <workItem from="1645099911191" duration="1675000" />
-      <workItem from="1645135381429" duration="9118000" />
+      <workItem from="1645135381429" duration="9738000" />
     </task>
     <task id="LOCAL-00001" summary="updates Versions">
       <created>1639761190096</created>
@@ -172,7 +173,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645142873369</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Basic Navigation">
+      <created>1645146336591</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1645146336591</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,7 +198,8 @@
     <MESSAGE value="MultipleChoiceQuestion.js layout finished" />
     <MESSAGE value="Header finished" />
     <MESSAGE value="Implemented Next Button" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented Next Button" />
+    <MESSAGE value="Basic Navigation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Basic Navigation" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
