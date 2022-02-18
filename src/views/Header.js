@@ -1,8 +1,9 @@
-import React from "react";
+import React, {useState} from "react";
 import {Image, ProgressBar, Stack} from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import "./Header.css"
 import "../components/UZH_logo.gif"
+import {LanguageButton} from "../components/LanguageButton";
 
 //requires Progress Bar percentage to be given as "now" props
 export class Header extends React.Component{
@@ -10,7 +11,7 @@ export class Header extends React.Component{
         return <Stack className="Stack" direction="horizontal" gap={3}>
             <Button variant="outline-secondary">Navi</Button>
             <ProgressBar className="ProgressBar" now={this.props.now} label={`${this.props.now}%`} style={{ width: "70rem" }}/>
-            <Button variant="outline-secondary">DE</Button>
+            <LanguageButton/>
         </Stack>;
     }
 }

@@ -85,6 +85,7 @@ class App extends React.Component {
         return <MultipleChoiceQuestion
             question={this.state.current.Question}
             options={this.state.current.Options}
+            goNext={this.goNext}
         />;
     }
 
@@ -139,8 +140,6 @@ class App extends React.Component {
                 <Container className="p-5 mb-4 white rounded-3">
                     {this.getNextPage()}
                 </Container>
-                {this.state.questionType === "Multiple Choice" ? this.getNextButton() : null}
-                {this.state.questionType === "Multiple Choice or none" ? this.getNextButton() : null}
             </Container>
         </Container>
     }
