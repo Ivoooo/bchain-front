@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="40410a09-9383-4c8c-9e9e-3798d94570f9" name="Changes" comment="">
+    <list default="true" id="40410a09-9383-4c8c-9e9e-3798d94570f9" name="Changes" comment="Deleted UZH logo">
+      <change afterPath="$PROJECT_DIR$/src/Router.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/HeaderFrontPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HeaderFrontPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +98,8 @@
       <workItem from="1645177491234" duration="18130000" />
       <workItem from="1645277332786" duration="1414000" />
       <workItem from="1645344176780" duration="600000" />
-      <workItem from="1645360191023" duration="379000" />
+      <workItem from="1645360191023" duration="1947000" />
+      <workItem from="1645392057914" duration="4022000" />
     </task>
     <task id="LOCAL-00001" summary="updates Versions">
       <created>1639761190096</created>
@@ -239,7 +241,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645194992305</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Deleted UZH logo">
+      <created>1645360863740</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1645360863740</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -266,7 +275,8 @@
     <MESSAGE value="Minor fixes" />
     <MESSAGE value="Unified CSS&#10;Added Back button" />
     <MESSAGE value="Implemented NaviPage.js&#10;Basic implementation of Telemetry.js" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented NaviPage.js&#10;Basic implementation of Telemetry.js" />
+    <MESSAGE value="Deleted UZH logo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Deleted UZH logo" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

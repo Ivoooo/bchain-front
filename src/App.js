@@ -11,9 +11,9 @@ import {FrontPage} from "./views/FrontPage";
 import {NotePage} from "./views/NotePage";
 import {HeaderFrontPage} from "./views/HeaderFrontPage";
 import './views/Views.css';
-import {wait} from "@testing-library/user-event/dist/utils";
 import {NaviPage} from "./views/NaviPage";
 import {Telemetry} from "./views/Telemetry";
+import {Router} from "./Router";
 
 class App extends React.Component {
     constructor(props) {
@@ -49,6 +49,7 @@ class App extends React.Component {
             //this needs to be changed at last otherwise page might not rerender with new artefacts
         this.setState({questionType: DataJSON[q[0]]["Fragen"][q[1]]["Type"]})
         console.log("Next Page loaded " + this.state.position, this.state.questionType, this.state.title, this.state.current)
+        //this.forceUpdate();
     }
 
     goNext(newNext) {
@@ -141,16 +142,28 @@ class App extends React.Component {
         )
     }
 
-    getNextPage() {
-        if(this.state.questionType === "Front Page") return this.getFrontPage()
-        if(this.state.questionType === "Text") return this.getNotePage()
-        if(this.state.questionType === "Dual Choice") return this.getTwoOptionQuestion()
-        if(this.state.questionType === "Single Choice with Other") return this.getSingleChoiceQuestion()
-        if(this.state.questionType === "Single Choice") return this.getSingleChoiceQuestion()
-        if(this.state.questionType === "Multiple Choice") return this.getMultipleChoiceQuestion()
-        if(this.state.questionType === "Multiple Choice or none") return this.getMultipleChoiceQuestion()
-        if(this.state.questionType === "Navi") return this.getNaviPage();
-        if(this.state.questionType === "Telemetry") return this.getTelemetry();
+    getNextPage(question, option, goNext) {
+        if(this.state.questionType === "Front Page") return FrontPage(question, option, goNext);
+        if(this.state.questionType === "Text") return NotePage(question, option, goNext);
+        if(this.state.questionType === "Dual Choice") return TwoOptionQuestion(question, this.state.current.Options[1],
+            this.state.current.Options[2], goNext);
+        if(this.state.questionType === "Single Choice with Other") return SingleChoiceQuestion(question, option, goNext);
+        if(this.state.questionType === "Single Choice") return SingleChoiceQuestion(question, option, goNext);
+        if(this.state.questionType === "Multiple Choice") return <MultipleChoiceQuestion
+            question={question}
+            options={option}
+            goNext={goNext}
+        />;
+        if(this.state.questionType === "Multiple Choice or none") return <MultipleChoiceQuestion
+            question={question}
+            options={option}
+            goNext={goNext}
+        />;
+        if(this.state.questionType === "Navi") return NaviPage(
+            this.state.furthestPosition+50,
+            this.goTo
+        )
+        if(this.state.questionType === "Telemetry") return <Telemetry/>;
     }
 
     getTelemetry() {
@@ -163,7 +176,8 @@ class App extends React.Component {
             <div className="p-3">
                 <h1 className="header">{this.state.title}</h1>
                 <div className="p-5 mb-4 white rounded-3">
-                    {this.getNextPage()}
+                    {this.state.questionType === "Navi" && this.getNaviPage()}
+                    <Router questionType={this.state.questionType} question={this.state.current.Question} option={this.state.current.Options} goNext={this.goNext} goTo={this.goTo}/>
                 </div>
             </div>
         </Container>
