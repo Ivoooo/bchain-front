@@ -13,14 +13,6 @@ export class HeaderFrontPage extends React.Component {
             <Container>
 
                 <Navbar.Brand href="#home">Blockchainguide</Navbar.Brand>
-                <Nav>
-                    <img
-                        src='https://www.cd.uzh.ch/dam/jcr:79ffe4ce-bbe9-498e-94a8-d7d5b66400b2/UZH_logo_pos_d_e.gif'
-                        className='img-fluid hover-shadow'
-                        alt=''
-                        style={{maxWidth: '24rem', float: "left"}}
-                    />
-                </Nav>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
                 <Nav>
                     <LanguageButton/>

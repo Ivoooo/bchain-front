@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40410a09-9383-4c8c-9e9e-3798d94570f9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/views/NaviPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Telemetry.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/data.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/NotePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/NotePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/SingleChoiceQuestion.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/SingleChoiceQuestion.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/HeaderFrontPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HeaderFrontPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +94,10 @@
       <workItem from="1645010772081" duration="3189000" />
       <workItem from="1645099911191" duration="1675000" />
       <workItem from="1645135381429" duration="14838000" />
-      <workItem from="1645177491234" duration="16405000" />
+      <workItem from="1645177491234" duration="18130000" />
+      <workItem from="1645277332786" duration="1414000" />
+      <workItem from="1645344176780" duration="600000" />
+      <workItem from="1645360191023" duration="379000" />
     </task>
     <task id="LOCAL-00001" summary="updates Versions">
       <created>1639761190096</created>
@@ -235,7 +232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645187174139</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Implemented NaviPage.js&#10;Basic implementation of Telemetry.js">
+      <created>1645194992305</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1645194992305</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,7 +265,8 @@
     <MESSAGE value="New LanguageButton.js&#10;Updated MultipleChoiceQuestion.js" />
     <MESSAGE value="Minor fixes" />
     <MESSAGE value="Unified CSS&#10;Added Back button" />
-    <option name="LAST_COMMIT_MESSAGE" value="Unified CSS&#10;Added Back button" />
+    <MESSAGE value="Implemented NaviPage.js&#10;Basic implementation of Telemetry.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented NaviPage.js&#10;Basic implementation of Telemetry.js" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
