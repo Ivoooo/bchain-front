@@ -1,4 +1,4 @@
-import {BButton} from "../components/BButton";
+import {AButton} from "../components/AButton";
 import React from "react";
 
 export const FrontPage = ({question, option, handleClick}) => {
@@ -9,7 +9,7 @@ export const FrontPage = ({question, option, handleClick}) => {
                 <h2 className="text-center">{qs}</h2>
             )}
             <div style={{float: "right"}}>
-                {BButton(option, handleClick, true)}
+                <AButton txt={option} onClick={handleClick}/>
             </div>
         </>
     )

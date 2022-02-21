@@ -1,6 +1,6 @@
 import React from "react";
 import {AButtonWithCommentOnClick} from "../components/AButtonWithCommentOnClick";
-import {BButton} from "../components/BButton";
+import {AButton} from "../components/AButton";
 
 export class MultipleChoiceQuestion extends React.Component{
     constructor(props) {
@@ -59,7 +59,7 @@ export class MultipleChoiceQuestion extends React.Component{
             </div>
             <div style={{float: "right"}}>
                 {this.state.incorrect && <h4 className="text-center">{"Die letzte Option und alle anderes sind exklusiv. Bitte ändern sie ihre Auswahl."}</h4>}
-                {!this.state.incorrect && BButton("Next", this.props.goNext, false, !this.state.enabled)}
+                {!this.state.incorrect && <AButton txt={"Next"} onClick={this.props.goNext} disabled={!this.state.enabled} />}
             </div>
         </>
     }

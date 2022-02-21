@@ -1,10 +1,9 @@
-import {AButton} from "../components/AButton";
-import {ATextArea} from "../components/ATextArea";
 import React from "react";
 import DataJSON from "../components/data.json";
+import {AButton} from "../components/AButton";
 
 export const NaviPage = ({progress, goTo}) => {
-    const x = [1,5,6,16,25,34];
+    const x = [1,5,6,16,25,34]; //todo make this generate automatically
 
     function jump(e) {
         for(let i = 0; i < x.length; i++) {
@@ -22,18 +21,17 @@ export const NaviPage = ({progress, goTo}) => {
                 jump(e.target.value)
             }}>
                 <div className="yes-no-grid-container">
-                    {AButton("Zurück zur jetzigen Frage")}
-                    {AButton("Weit entfernteste beantwortete Frage")}
+                    <AButton txt={"Zurück zur jetzigen Frage"} />
+                    <AButton txt={"Weit entfernteste beantwortete Frage"} />
                 </div>
                 <h3 className="text-center">Zum Kapitel:</h3>
-                {progress > x[0] && AButton(DataJSON[1]["Title"]["Deutsch"])}
-                {progress > x[1] && AButton(DataJSON[2]["Title"]["Deutsch"])}
-                {progress > x[2] && AButton(DataJSON[3]["Title"]["Deutsch"])}
-                {progress > x[3] && AButton(DataJSON[4]["Title"]["Deutsch"])}
-                {progress > x[4] && AButton(DataJSON[5]["Title"]["Deutsch"])}
-                {progress > x[5] && AButton(DataJSON[6]["Title"]["Deutsch"])}
+                {progress > x[0] && <AButton txt={DataJSON[1]["Title"]["Deutsch"]} /> }
+                {progress > x[1] && <AButton txt={DataJSON[2]["Title"]["Deutsch"]} /> }
+                {progress > x[2] && <AButton txt={DataJSON[3]["Title"]["Deutsch"]} /> }
+                {progress > x[3] && <AButton txt={DataJSON[4]["Title"]["Deutsch"]} /> }
+                {progress > x[4] && <AButton txt={DataJSON[5]["Title"]["Deutsch"]} /> }
+                {progress > x[5] && <AButton txt={DataJSON[6]["Title"]["Deutsch"]} /> }
             </div>
-
         </>
     )
 }

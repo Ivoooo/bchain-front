@@ -43,7 +43,8 @@ class App extends React.Component {
     }
 
     goNext(newNext) {
-        console.log(newNext)
+        console.log("Given answer is: ")
+        if(newNext !== null) console.log(newNext.target.value)
         this.goTo(this.state.position + 1);
     }
 
