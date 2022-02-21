@@ -9,7 +9,7 @@ import {NaviPage} from "./views/NaviPage";
 import {BButton} from "./components/BButton";
 
 export class Router extends React.Component {
-    
+
     render() {
         //todo make option and options consistent!
         console.log("Loading..." +  this.props.questionType, this.props.option, this.props.goNext, this.props.question)
