@@ -3,17 +3,15 @@ import {Nav, Navbar} from "react-bootstrap";
 import "./Views.css"
 import "../components/UZH_logo.gif"
 import Container from "react-bootstrap/Container";
-import {LanguageButton} from "../components/LanguageButton";
+import {HeaderButton} from "../components/HeaderButton";
 
-export class HeaderFrontPage extends React.Component {
-    render() {
-        return <Navbar>
+export const HeaderFrontPage = ({language, changeLanguage}) => {
+    return <Navbar>
             <Container>
                 <Navbar.Brand href="/">Blockchainguide</Navbar.Brand>
                 <Nav>
-                    <LanguageButton/>
+                    <HeaderButton txt={language} onClick={changeLanguage} />
                 </Nav>
             </Container>
         </Navbar>
-    }
 }

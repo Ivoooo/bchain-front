@@ -21,10 +21,12 @@ class App extends React.Component {
             questionType: "Front Page",
             title: "a",
             goTo: 0,
+            language: "DE"
         }
 
         this.goNext = this.goNext.bind(this)
         this.goTo = this.goTo.bind(this)
+        this.changeLanguage = this.changeLanguage.bind(this)
     }
 
     findNextPage(pageId) {
@@ -42,12 +44,6 @@ class App extends React.Component {
         }
     }
 
-    goNext(newNext) {
-        console.log("Given answer is: ")
-        if(newNext !== null) console.log(newNext.target.value)
-        this.goTo(this.state.position + 1);
-    }
-
     goTo(pageId) {
         if(pageId === "Navi") {
             this.setState({questionType: "Navi", title: "Navigation"});
@@ -55,6 +51,17 @@ class App extends React.Component {
         else {
             this.findNextPage(pageId);
         }
+    }
+
+    goNext(newNext) {
+        console.log("Given answer is: ")
+        if(newNext !== null) console.log(newNext.target.value)
+        this.goTo(this.state.position + 1);
+    }
+
+    changeLanguage() {
+        if(this.state.language === "DE") this.setState({language: "EN"})
+        else this.setState({language: "DE"})
     }
 
     componentDidMount() {
@@ -75,7 +82,18 @@ class App extends React.Component {
 
     render() {
         return <Container>
-            {(this.state.position === 0 || this.state.questionType === "Navi")  ? <HeaderFrontPage/> : <Header className="head" now={this.state.position} max={this.state.qqs.length} goTo={this.goTo}/>}
+            {(this.state.position === 0 || this.state.questionType === "Navi")  ?
+                <HeaderFrontPage language={this.state.language}
+                                 changeLanguage={this.changeLanguage}
+                />
+                : <Header className="head"
+                          now={this.state.position}
+                          max={this.state.qqs.length}
+                          goTo={this.goTo}
+                          language={this.state.language}
+                          changeLanguage={this.changeLanguage}
+                />
+            }
             <div className="p-3">
                 <h1 className="header">{this.state.title}</h1>
                 <div className="p-5 mb-4 white rounded-3">
