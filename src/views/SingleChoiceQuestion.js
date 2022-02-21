@@ -2,7 +2,7 @@ import {AButton} from "../components/AButton";
 import {ATextArea} from "../components/ATextArea";
 import React from "react";
 
-export const SingleChoiceQuestion = (question, options, handleClick) => {
+export const SingleChoiceQuestion = ({question, options, handleClick}) => {
     //convert answer 'options' into an iterable list to be able to apply .map
     //returns array like: [ ['1', 'yes'], ['2', 'no'] , ..]
     let x = [];

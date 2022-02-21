@@ -1,12 +1,12 @@
 import {BButton} from "../components/BButton";
 import React from "react";
 
-export const FrontPage = (question, option, handleClick) => {
-    question = question.split("\n");
+export const FrontPage = ({question, option, handleClick}) => {
+    let q = question.split("\n");
     return (
         <>
-            {question.map(q =>
-                <h2 className="text-center">{q}</h2>
+            {q.map(qs =>
+                <h2 className="text-center">{qs}</h2>
             )}
             <div style={{float: "right"}}>
                 {BButton(option, handleClick, true)}

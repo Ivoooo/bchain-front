@@ -3,7 +3,7 @@ import {ATextArea} from "../components/ATextArea";
 import React from "react";
 import DataJSON from "../components/data.json";
 
-export const NaviPage = (progress, goTo) => {
+export const NaviPage = ({progress, goTo}) => {
     const x = [1,5,6,16,25,34];
 
     function jump(e) {

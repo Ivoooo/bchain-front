@@ -36,6 +36,7 @@ class App extends React.Component {
     }
 
     findNextPage() {
+        console.log("Previous Page loaded " + this.state.position, this.state.questionType, this.state.title, this.state.current)
         let q = this.state.qqs[this.state.position+1]
         this.setState({current: DataJSON[q[0]]["Fragen"][q[1]],
             title: DataJSON[q[0]]["Title"]["Deutsch"]
@@ -176,7 +177,7 @@ class App extends React.Component {
             <div className="p-3">
                 <h1 className="header">{this.state.title}</h1>
                 <div className="p-5 mb-4 white rounded-3">
-                    {this.state.questionType === "Navi" && this.getNaviPage()}
+                    {this.state.questionType === "Navi" && <NaviPage progress={this.state.furthestPosition+50} goTo={this.goTo}/>}
                     <Router questionType={this.state.questionType} question={this.state.current.Question} option={this.state.current.Options} goNext={this.goNext} goTo={this.goTo}/>
                 </div>
             </div>
