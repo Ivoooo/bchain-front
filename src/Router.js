@@ -8,37 +8,30 @@ import {Telemetry} from "./views/Telemetry";
 import {NaviPage} from "./views/NaviPage";
 import {BButton} from "./components/BButton";
 
-export class Router extends React.Component {
+export const Router = ({questionType, question, option, goNext, goTo, furthestPosition}) => {
+    //todo make option and options consistent!
+    console.log("Loading..." +  questionType, option, goNext, question)
 
-    render() {
-        //todo make option and options consistent!
-        console.log("Loading..." +  this.props.questionType, this.props.option, this.props.goNext, this.props.question)
+    if (questionType === "Front Page") return <FrontPage question={question} option={option} handleClick={goNext}/>
+    if (questionType === "Text") return NotePage(question, option, goNext)
+    if (questionType === "Dual Choice") return TwoOptionQuestion(question, option[1], option[2], goNext)
+    if (questionType === "Single Choice with Other") return <SingleChoiceQuestion question={question} options={option} handleClick={goNext}/>
+    if (questionType === "Single Choice") return <SingleChoiceQuestion question={question} options={option} handleClick={goNext}/>
+    if (questionType === "Multiple Choice") return <MultipleChoiceQuestion
+        question={question}
+        options={option}
+        goNext={goNext}
+    />
+    if (questionType === "Multiple Choice or none") return <MultipleChoiceQuestion
+        question={question}
+        options={option}
+        goNext={goNext}
+    />
+    if (questionType === "Telemetry") return <Telemetry/>
+    if(questionType === "Navi") return <NaviPage progress={furthestPosition+50} goTo={goTo}/> //todo remove +50
 
-        if(this.props.questionType === "Front Page") return <FrontPage question={this.props.question} option={this.props.option} handleClick={this.props.goNext}/>;
-        if(this.props.questionType === "Text") return NotePage(this.props.question, this.props.option, this.props.goNext);
-        if(this.props.questionType === "Dual Choice") return TwoOptionQuestion(this.props.question, this.props.option[1],
-            this.props.option[2], this.props.goNext);
-        if(this.props.questionType === "Single Choice with Other") return <SingleChoiceQuestion question={this.props.question} options={this.props.option} handleClick={this.props.goNext}/>;
-        if(this.props.questionType === "Single Choice") return <SingleChoiceQuestion question={this.props.question} options={this.props.option} handleClick={this.props.goNext}/>;
-        if(this.props.questionType === "Multiple Choice") return <MultipleChoiceQuestion
-            question={this.props.question}
-            options={this.props.option}
-            goNext={this.props.goNext}
-        />;
-        if(this.props.questionType === "Multiple Choice or none") return <MultipleChoiceQuestion
-            question={this.props.question}
-            options={this.props.option}
-            goNext={this.props.goNext}
-        />;
-        if(this.props.questionType === "Telemetry") return <Telemetry/>;
-        if(this.props.questionType === "Navi") return NaviPage(
-            50,
-            this.props.goTo
-        )
-
-        return <>
-            <h1> {this.props.questionType} </h1>
-            {BButton("Error missing Question Type (above) not detected", this.props.goNext, true)}
-        </>
-    }
+    return <>
+        <h1> {questionType} </h1>
+        {BButton("Error missing Question Type (above) not detected", goNext, true)}
+    </>
 }

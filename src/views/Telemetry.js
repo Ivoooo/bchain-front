@@ -1,8 +1,5 @@
 import React from "react";
-import {AButtonWithCommentOnClick} from "../components/AButtonWithCommentOnClick";
-import {BButton} from "../components/BButton";
 import {AButton} from "../components/AButton";
-import {ATextArea} from "../components/ATextArea";
 import Container from "react-bootstrap/Container";
 
 export class Telemetry extends React.Component{
