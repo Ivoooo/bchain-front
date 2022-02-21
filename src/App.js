@@ -34,6 +34,7 @@ class App extends React.Component {
         console.log("Previous Page loaded " + this.state.position, this.state.questionType, this.state.title, this.state.current)
 
         let q = this.state.qqs[pageId];
+
         this.setState({current: DataJSON[q[0]]["Fragen"][q[1]],
             title: DataJSON[q[0]]["Title"]["Deutsch"],
             position: pageId,
@@ -50,7 +51,7 @@ class App extends React.Component {
             this.setState({questionType: "Navi", title: "Navigation"});
         }
         else {
-            this.findNextPage(pageId);
+            this.findNextPage(parseInt(pageId));
         }
     }
 

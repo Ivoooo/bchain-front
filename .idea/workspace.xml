@@ -1,23 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="40410a09-9383-4c8c-9e9e-3798d94570f9" name="Changes" comment="Added keys to most components to improve react performance&#10;Updated NaviPage.js&#10;Minor updates to FrontPage.js">
-      <change afterPath="$PROJECT_DIR$/src/views/InfoPage.js" afterDir="false" />
+    <list default="true" id="40410a09-9383-4c8c-9e9e-3798d94570f9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/HeaderButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HeaderButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UZH_logo.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/data.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/FrontPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/FrontPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/HeaderFrontPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HeaderFrontPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/MultipleChoiceQuestion.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/MultipleChoiceQuestion.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/NaviPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/NaviPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/NotePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/NotePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/TwoOptionQuestion.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/TwoOptionQuestion.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Views.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Views.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +110,7 @@
       <workItem from="1645392057914" duration="4043000" />
       <workItem from="1645400121942" duration="7420000" />
       <workItem from="1645449706463" duration="6443000" />
-      <workItem from="1645474977948" duration="10768000" />
+      <workItem from="1645474977948" duration="11700000" />
     </task>
     <task id="LOCAL-00001" summary="updates Versions">
       <created>1639761190096</created>
@@ -328,7 +315,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645477497605</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Added keys to most components to improve react performance&#10;Updated NaviPage.js&#10;Minor updates to FrontPage.js">
+      <created>1645486110521</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1645486110521</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -336,7 +330,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="yes no question class based component" />
     <MESSAGE value="SingleChoiceQuestion.js rudimentarily finished" />
     <MESSAGE value="MultipleChoiceQuestion.js rudimentarily finished" />
     <MESSAGE value="MultipleChoiceQuestion.js layout finished" />
@@ -361,7 +354,8 @@
     <MESSAGE value="Updated most classes to functional components" />
     <MESSAGE value="Updated header component" />
     <MESSAGE value="Added keys to most components to improve react performance&#10;Refactored Navi to App.js&#10;Minor updates to FrontPage.js" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added keys to most components to improve react performance&#10;Refactored Navi to App.js&#10;Minor updates to FrontPage.js" />
+    <MESSAGE value="Added keys to most components to improve react performance&#10;Updated NaviPage.js&#10;Minor updates to FrontPage.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added keys to most components to improve react performance&#10;Updated NaviPage.js&#10;Minor updates to FrontPage.js" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

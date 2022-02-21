@@ -22,6 +22,7 @@ export const NaviPage = ({progress, maxProgress, goTo, chapter, language}) => {
                     return (maxProgress > chapter[ch]) && <AButton txt={DataJSON[ch+1]["Title"]["Deutsch"]}
                                                                    onClick={(e) => goTo(e.target.value)}
                                                                    value={chapter[ch]}
+                                                                   key={ch}
                     />
                 })}
             </div>
