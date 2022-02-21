@@ -35,22 +35,20 @@ class App extends React.Component {
         this.goTo = this.goTo.bind(this)
     }
 
-    findNextPage() {
+    findNextPage(pageId) {
+        console.log("Loading new Page")
         console.log("Previous Page loaded " + this.state.position, this.state.questionType, this.state.title, this.state.current)
-        let q = this.state.qqs[this.state.position+1]
+
+        let q = this.state.qqs[pageId];
         this.setState({current: DataJSON[q[0]]["Fragen"][q[1]],
-            title: DataJSON[q[0]]["Title"]["Deutsch"]
+            title: DataJSON[q[0]]["Title"]["Deutsch"],
+            position: pageId,
+            questionType: DataJSON[q[0]]["Fragen"][q[1]]["Type"]
         })
 
-        if(this.state.furthestPosition < this.state.position) {
+        if(this.state.furthestPosition < pageId) {
             this.setState({furthestPosition: this.state.position})
         }
-
-        //this is needed because otherwise it will log the old state.
-            //this needs to be changed at last otherwise page might not rerender with new artefacts
-        this.setState({questionType: DataJSON[q[0]]["Fragen"][q[1]]["Type"]})
-        console.log("Next Page loaded " + this.state.position, this.state.questionType, this.state.title, this.state.current)
-        //this.forceUpdate();
     }
 
     goNext(newNext) {
@@ -63,9 +61,7 @@ class App extends React.Component {
             this.setState({questionType: "Navi", title: "Navigation"});
         }
         else {
-            this.setState({position: pageId});
-            this.findNextPage();
-
+            this.findNextPage(pageId);
         }
     }
 
@@ -173,11 +169,11 @@ class App extends React.Component {
 
     render() {
         return <Container>
-            {this.state.position === 0 || this.state.questionType === "Navi"  ? <HeaderFrontPage/> : <Header className="head" now={this.state.position} max={this.state.qqs.length} goTo={this.goTo}/>}
+            {(this.state.position === 0 || this.state.questionType === "Navi")  ? <HeaderFrontPage/> : <Header className="head" now={this.state.position} max={this.state.qqs.length} goTo={this.goTo}/>}
             <div className="p-3">
                 <h1 className="header">{this.state.title}</h1>
                 <div className="p-5 mb-4 white rounded-3">
-                    {this.state.questionType === "Navi" && <NaviPage progress={this.state.furthestPosition+50} goTo={this.goTo}/>}
+                    {this.state.questionType === "Navi" && <NaviPage progress={this.state.furthestPosition+50} goTo={this.goBack}/>}
                     <Router questionType={this.state.questionType} question={this.state.current.Question} option={this.state.current.Options} goNext={this.goNext} goTo={this.goTo}/>
                 </div>
             </div>

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="40410a09-9383-4c8c-9e9e-3798d94570f9" name="Changes" comment="Working on fixing back button issues">
+    <list default="true" id="40410a09-9383-4c8c-9e9e-3798d94570f9" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Header.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +100,7 @@
       <workItem from="1645344176780" duration="600000" />
       <workItem from="1645360191023" duration="1947000" />
       <workItem from="1645392057914" duration="4043000" />
-      <workItem from="1645400121942" duration="3749000" />
+      <workItem from="1645400121942" duration="7109000" />
     </task>
     <task id="LOCAL-00001" summary="updates Versions">
       <created>1639761190096</created>
@@ -262,7 +263,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645403696475</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Header is now a functional component">
+      <created>1645404085009</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1645404085009</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -292,7 +300,8 @@
     <MESSAGE value="Deleted UZH logo" />
     <MESSAGE value="Exported logic to Router" />
     <MESSAGE value="Working on fixing back button issues" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working on fixing back button issues" />
+    <MESSAGE value="Header is now a functional component" />
+    <option name="LAST_COMMIT_MESSAGE" value="Header is now a functional component" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
