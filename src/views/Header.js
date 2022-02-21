@@ -1,6 +1,5 @@
 import React from "react";
 import {ProgressBar, Stack} from "react-bootstrap";
-import "../components/UZH_logo.gif"
 import {HeaderButton} from "../components/HeaderButton";
 
 //requires Progress Bar percentage to be given as "now" props

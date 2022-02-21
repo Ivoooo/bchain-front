@@ -6,5 +6,6 @@ export const HeaderButton = ({txt = "placeholder HeaderButton", onClick = null})
         variant={"outline-secondary"}
         value={txt}
         onClick={onClick}
+        key={txt}
     >{txt}</Button>
 )

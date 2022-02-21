@@ -54,12 +54,12 @@ export class MultipleChoiceQuestion extends React.Component{
                 this.handleClick(e.target.value)
             }}>
                 {this.state.options.map(option =>
-                    <AButtonWithCommentOnClick txt={option}/>
+                    <AButtonWithCommentOnClick txt={option} key={option}/>
                 )}
             </div>
             <div style={{float: "right"}}>
                 {this.state.incorrect && <h4 className="text-center">{"Die letzte Option und alle anderes sind exklusiv. Bitte ändern sie ihre Auswahl."}</h4>}
-                {!this.state.incorrect && <AButton txt={"Next"} onClick={this.props.goNext} disabled={!this.state.enabled} />}
+                {!this.state.incorrect && <AButton txt={"Next"} onClick={this.props.goNext} disabled={!this.state.enabled} key={"Next"}/>}
             </div>
         </>
     }

@@ -6,6 +6,7 @@ import {Header} from "./views/Header";
 import {HeaderFrontPage} from "./views/HeaderFrontPage";
 import './views/Views.css';
 import {Router} from "./Router";
+import {NaviPage} from "./views/NaviPage";
 
 class App extends React.Component {
     constructor(props) {
@@ -40,7 +41,7 @@ class App extends React.Component {
         })
 
         if(this.state.furthestPosition < pageId) {
-            this.setState({furthestPosition: this.state.position})
+            this.setState({furthestPosition: pageId})
         }
     }
 
@@ -82,7 +83,7 @@ class App extends React.Component {
 
     render() {
         return <Container>
-            {(this.state.position === 0 || this.state.questionType === "Navi")  ?
+            {this.state.position === 0 || this.state.questionType === "Navi"  ?
                 <HeaderFrontPage language={this.state.language}
                                  changeLanguage={this.changeLanguage}
                 />
@@ -97,13 +98,19 @@ class App extends React.Component {
             <div className="p-3">
                 <h1 className="header">{this.state.title}</h1>
                 <div className="p-5 mb-4 white rounded-3">
-                    <Router questionType={this.state.questionType}
-                            question={this.state.current.Question}
-                            option={this.state.current.Options}
-                            goNext={this.goNext}
-                            goTo={this.goTo}
-                            furthestPosition={this.state.furthestPosition}
-                    />
+                    {this.state.questionType === "Navi" ?
+                        <NaviPage progress={this.state.position}
+                                  chapter={[1,5,6,15,25,35]/*todo make this generate automatically*/}
+                                  maxProgress={this.state.furthestPosition}
+                                  goTo={this.goTo}
+                                  language={this.state.language}
+                        />
+                        : <Router questionType={this.state.questionType}
+                                  question={this.state.current.Question}
+                                  option={this.state.current.Options}
+                                  goNext={this.goNext}
+                        />
+                    }
                 </div>
             </div>
         </Container>
