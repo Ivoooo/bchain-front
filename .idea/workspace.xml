@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="40410a09-9383-4c8c-9e9e-3798d94570f9" name="Changes" comment="Working on refactoring question.json's">
-      <change afterPath="$PROJECT_DIR$/src/views/NewMultipleChoiceQuestion.js" afterDir="false" />
+    <list default="true" id="40410a09-9383-4c8c-9e9e-3798d94570f9" name="Changes" comment="Trying to make MultipleChoiceQuestion a functional component.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AButtonWithCommentOnClick.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AButtonWithCommentOnClick.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/NewMultipleChoiceQuestion.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/NewMultipleChoiceQuestion.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +117,7 @@
       <workItem from="1645487279434" duration="74000" />
       <workItem from="1645487761477" duration="317000" />
       <workItem from="1645525128665" duration="755000" />
-      <workItem from="1645525891052" duration="6582000" />
+      <workItem from="1645525891052" duration="9160000" />
     </task>
     <task id="LOCAL-00001" summary="updates Versions">
       <created>1639761190096</created>
@@ -350,7 +350,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645527513673</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Trying to make MultipleChoiceQuestion a functional component.">
+      <created>1645532615902</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1645532615902</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -358,7 +365,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Header finished" />
     <MESSAGE value="Implemented Next Button" />
     <MESSAGE value="Basic Navigation" />
     <MESSAGE value="Cleanup" />
@@ -383,7 +389,8 @@
     <MESSAGE value="Fixed findNextPage() bug." />
     <MESSAGE value="Minor NaviPage.js fix" />
     <MESSAGE value="Working on refactoring question.json's" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working on refactoring question.json's" />
+    <MESSAGE value="Trying to make MultipleChoiceQuestion a functional component." />
+    <option name="LAST_COMMIT_MESSAGE" value="Trying to make MultipleChoiceQuestion a functional component." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

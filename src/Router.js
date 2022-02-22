@@ -6,7 +6,6 @@ import {MultipleChoiceQuestion} from "./views/MultipleChoiceQuestion";
 import {Telemetry} from "./views/Telemetry";
 import {AButton} from "./components/AButton";
 import {InfoPage} from "./views/InfoPage";
-import {NewMultipleChoiceQuestion} from "./views/NewMultipleChoiceQuestion";
 
 export const Router = ({questionType, question, option, goNext}) => {
     //todo make option and options consistent!
@@ -17,16 +16,8 @@ export const Router = ({questionType, question, option, goNext}) => {
     if (questionType === "Dual Choice") return <TwoOptionQuestion question={question} option={option} handleClick={goNext}/>
     if (questionType === "Single Choice with Other") return <SingleChoiceQuestion question={question} option={option} handleClick={goNext}/>
     if (questionType === "Single Choice") return <SingleChoiceQuestion question={question} option={option} handleClick={goNext}/>
-    if (questionType === "Multiple Choice") return <NewMultipleChoiceQuestion
-        question={question}
-        option={option}
-        goNext={goNext}
-    />
-    if (questionType === "Multiple Choice or none") return <NewMultipleChoiceQuestion
-        question={question}
-        option={option}
-        goNext={goNext}
-    />
+    if (questionType === "Multiple Choice") return <MultipleChoiceQuestion question={question} option={option} goNext={goNext}/>
+    if (questionType === "Multiple Choice or none") return <MultipleChoiceQuestion question={question} option={option} goNext={goNext}/>
     if (questionType === "Telemetry") return <Telemetry/>
 
     return <>

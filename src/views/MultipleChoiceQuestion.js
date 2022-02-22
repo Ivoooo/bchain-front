@@ -1,66 +1,68 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import {AButtonWithCommentOnClick} from "../components/AButtonWithCommentOnClick";
 import {AButton} from "../components/AButton";
 
-export class MultipleChoiceQuestion extends React.Component{
-    constructor(props) {
-        super(props)
-        this.state = {
-            options: [],
-            answers: [],
-            disabled: true,
-            incorrect: false,
-            question: [""],
-        }
-    }
+export const MultipleChoiceQuestion = ({question, option, goNext}) =>{
+    //states
+    const [answer, toggleAnswer] = useState([]);
+    const [disabled, toggleDisabled] = useState(true);
+    const [incorrect, toggleIncorrect] = useState(false);
+    const [newOption, toggleNewOption] = useState([]);
+    const [newQuestion, toggleQuestion] = useState([])
 
-    componentDidMount() {
-        let x = [];
-        let y = [];
-        for (let i in this.props.options){
-            x.push(this.props.options[i]);
+    //this is the equivalent to ComponentDidMount of classes.
+    useEffect(() => {
+        //building iterable Option, Answer & Question
+        let x = [], y = [];
+        for (let i in option) {
+            x.push(option[i]);
             y.push(false);
         }
-        this.setState({options: x, answers: y, question: this.props.question.split("\n")})
-    }
+        toggleNewOption(x);
+        toggleAnswer(y);
+        toggleQuestion(question.split("\n"));
+    }, [option, question]);
 
-    handleClick(e) {
-        let idx = this.state.options.indexOf(e);
-        let a = this.state.answers;
+    function handleClick(e) {
+        let idx = newOption.indexOf(e);
+        let a = answer;
         a[idx] = !a[idx];
-        this.setState({answers: a})
-        console.log(e, idx, this.state.answers)
-        this.checkDisabled();
+        toggleAnswer(a);
+
+        checkDisabled();
     }
 
-    checkDisabled() {
+    function checkDisabled() {
         //check if options are allowed
-        let hasTrues = false
-        for(let i=0; i < this.state.answers.length-1; i++) {
-            if(this.state.answers[i]) hasTrues = true;
+        //todo use includes
+        let hasTrues = false;
+        for(let i=0; i < answer.length-1; i++) {
+            if(answer[i]) {
+                hasTrues = true;
+                break;
+            }
         }
-        let last = this.state.answers[this.state.answers.length-1]
-        //this.state.answers.every(element => !element)
-        this.setState({enabled: hasTrues + last, incorrect: last && hasTrues})
+        let last = answer[answer.length-1]
+        console.log(answer, hasTrues, last)
+        console.log(hasTrues && last)
+        toggleIncorrect(hasTrues && last);
+        toggleDisabled(!hasTrues && !last);
     }
 
-    render() {
-        return <>
-            {this.state.question.map(q =>
-                <h2 className="text-center">{q}</h2>
+    return <>
+        {newQuestion.map(qs =>
+            <h2 className="text-center">{qs}</h2>
+        )}
+
+        <div className="d-grid gap-2">
+            {newOption.map(o =>
+                <AButtonWithCommentOnClick txt={o} key={o} handleClick={handleClick}/>
             )}
-
-            <div className="d-grid gap-2" onClick={(e) => {
-                this.handleClick(e.target.value)
-            }}>
-                {this.state.options.map(option =>
-                    <AButtonWithCommentOnClick txt={option} key={option}/>
-                )}
-            </div>
-            <div style={{float: "right"}}>
-                {this.state.incorrect && <h4 className="text-center">{"Die letzte Option und alle anderes sind exklusiv. Bitte ändern sie ihre Auswahl."}</h4>}
-                {!this.state.incorrect && <AButton txt={"Next"} onClick={this.props.goNext} disabled={!this.state.enabled} key={"Next"}/>}
-            </div>
-        </>
-    }
+        </div>
+        <div style={{float: "right"}}>
+            {incorrect ? <h4 className="text-center">{"Die letzte Option und alle anderes sind exklusiv. Bitte ändern sie ihre Auswahl."}</h4>
+                : <AButton txt={"Next"} onClick={goNext} disabled={disabled} key={"Next"}/>
+            }
+        </div>
+    </>
 }
