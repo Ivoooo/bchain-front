@@ -1,0 +1,85 @@
+{
+  "Title": {
+    "English": "Check Usability of Blockchain",
+    "Deutsch": "Eignung der Blockchain prüfen"
+  },
+  "Fragen": {
+    "1": {
+      "Question": "Bis jetzt ergibt die Benützung einer Blockchain Sinn für Sie. Für eine definitive Entscheidung müssen nur noch ein paar wenige Fragen beantworten.",
+      "Options": "Weiter",
+      "Type": "Front Page"
+    },
+    "2": {
+      "Question": "Sind mehrere Parteien beteiligt?",
+      "Options": {
+        "1": "Ja",
+        "2": "Nein"
+      },
+      "Type": "Dual Choice"
+    },
+    "3": {
+      "Question": "Werden zwischen den Beteiligten Parteien Daten ausgetauscht?",
+      "Options": {
+        "1": "Ja",
+        "2": "Nein"
+      },
+      "Type": "Dual Choice"
+    },
+    "4": {
+      "Question": "Haben die beteiligten Parteien Interessenskonflikte oder Vertrauensprobleme?",
+      "Options": {
+        "1": "Ja",
+        "2": "Nein"
+      },
+      "Type": "Dual Choice"
+    },
+    "5": {
+      "Question": "Können oder wollen die beteiligten Parteien den Einbezug einer dritten Stelle vermeiden?",
+      "Options": {
+        "1": "Ja",
+        "2": "Nein"
+      },
+      "Type": "Dual Choice"
+    },
+    "6": {
+      "Question": "Haben die beteiligten Parteien unterschiedliche Berechtigungen bezüglich der Prozessdaten?",
+      "Options": {
+        "1": "Ja",
+        "2": "Nein"
+      },
+      "Type": "Dual Choice"
+    },
+    "7": {
+      "Question": "Ist der Ablauf für die Abwicklung des Verfahrens weitgehend unverändert?",
+      "Options": {
+        "1": "Ja",
+        "2": "Nein"
+      },
+      "Type": "Dual Choice"
+    },
+    "8": {
+      "Question": "Haben die beteiligten Parteien Bedarf an einer nachvollziehbaren, unveränderlichen Datenspeicherung?",
+      "Options": {
+        "1": "Ja",
+        "2": "Nein"
+      },
+      "Type": "Dual Choice"
+    },
+    "9": {
+      "Question": "Sind die Transaktionen bzw. Daten öffentlich einsehbar?",
+      "Options": {
+        "1": "Ja",
+        "2": "Nein"
+      },
+      "Type": "Dual Choice"
+    },
+    "10": {
+      "Question": "Darf jeder der beteiligten Parteien Daten eintragen?",
+      "Options": {
+        "1": "Ja",
+        "2": "Nein"
+      },
+      "Type": "Dual Choice"
+    }
+  }
+}

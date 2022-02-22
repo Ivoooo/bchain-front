@@ -1,0 +1,19 @@
+{
+  "Title": {
+    "English": "Telemetry",
+    "Deutsch": "Telemetrie"
+  },
+  "Fragen": {
+    "1": {
+      "Question": "Den Geschäftsfall haben wir jetzt fertig vorgestellt und kategorisiert. Als nächstes müssen wir die organisatorische Perspektive prüfen. \n Welche Ziele verfolgen Sie? Sie können so viele Option anklicken wie Sie möchten.",
+      "Options": {
+        "1": "Organisationsübergreifende Zusammenarbeit",
+        "2": "Dezentrale Verwaltung von Daten und Prozessen",
+        "3": "Verteilte Kontrolle",
+        "4": "Verstärktes Vertrauen",
+        "5": "Keine der oben genannten Optionen"
+      },
+      "Type": "Telemetry"
+    }
+  }
+}

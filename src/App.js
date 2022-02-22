@@ -17,7 +17,7 @@ class App extends React.Component {
             current: {"Question": "The question will load shorty.",
                 "Options": "Zur Umfrage"},
             next: null,
-            qqs: [[0,1],[1,1],[1,1.5],[1,2],[1,3],[2,1],[3,1],[3,2],[3,3],[3,4],[3,5],[3,6],[3,7],[3,8],[3,9],[4,1],[4,2],[4,3],[4,4],[4,5],[4,6],[4,7],[4,8],[4,9],[4,10],[5,1],[5,2],[5,3],[5,4],[5,5],[5,6],[5,7],[5,8],[5,9],[5,10],[6,1]],
+            qqs: [[0,1]],
             data: null,
             questionType: "Front Page",
             title: "a",
@@ -46,6 +46,12 @@ class App extends React.Component {
         }
     }
 
+    constructQuestions() {
+
+        let qqs =  [[0,1],[1,1],[1,1.5],[1,2],[1,3],[2,1],[3,1],[3,2],[3,3],[3,4],[3,5],[3,6],[3,7],[3,8],[3,9],[4,1],[4,2],[4,3],[4,4],[4,5],[4,6],[4,7],[4,8],[4,9],[4,10],[5,1],[5,2],[5,3],[5,4],[5,5],[5,6],[5,7],[5,8],[5,9],[5,10],[6,1]];
+        this.setState({qqs: qqs})
+    }
+
     goTo(pageId) {
         if(pageId === "Navi") {
             this.setState({questionType: "Navi", title: "Navigation"});
@@ -67,6 +73,8 @@ class App extends React.Component {
     }
 
     componentDidMount() {
+        this.constructQuestions();
+
         //todo remove state
         console.log(this.state.data)
         localStorage.clear() // todo REMOVE

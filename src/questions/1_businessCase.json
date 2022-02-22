@@ -1,0 +1,58 @@
+{
+    "Title": {
+      "English": "Analyzing & Categorizing Business Case",
+      "Deutsch": "Geschäftsfälle vorstellen & Kategorisieren"
+    },
+    "Fragen": {
+      "1": {
+        "Question": "Der Blockchainguide ist in 5 unterschiedlich lange Teile unterteilt und es braucht total ungefähr Minuten um ihn auszufüllen. Am Ende werden sie erfahren ob für ihren spezifischen Geschäftsfall den Gebrauch einer Blockchain Sinn ergeben würde. Zudem bekommen Sie Hinweise wie Sie als nächstes vorgehen könnten.",
+        "Options": "Weiter",
+        "Type": "Front Page"
+      },
+      "1.5": {
+        "Question": "Bevor wir aber starten müssen Sie zuerst einen genauen Geschäftsfall bestimmen bei dem Sie prüfen möchten ob der Gebrauch einer Blockchain sie unterstützen könnte. \n Beispiele dazu wären: \n Kund*innen möchten sich bei uns anmelden und beziehen eine Leistung. \n Kund*innen sollen sich einfacher in öffentliche Verzeichnisse eintragen können. \n Wir möchten die Zugriffsrechte auf Daten besser handhaben können.",
+        "Options": "Weiter",
+        "Type": "Text"
+      },
+      "2": {
+        "Question": "Sind sie Teil einer staatlichen Institution, eine Privatperson oder Teil eines Geschäftes",
+        "Options": {
+          "1": "Staatlich",
+          "2": "Geschäft oder Privatperson"
+        },
+        "Type": "Dual Choice"
+      },
+      "3": {
+        "Question": "Bitte wählen Sie die Kategorie, welche am besten zu Ihrem Geschäftsfall passt",
+        "Options": {
+          "1": "Anmeldeverfahren",
+          "2": "Antragsverfahren",
+          "3": "Deklarationsverfahren",
+          "4": "Verträge, Verfügungen und Gesetze:",
+          "5": "Registerwesen",
+          "6": "Anderes"
+        },
+        "Type": "Single Choice with Other"
+      }
+    },
+    "Questions": {
+      "1": {
+        "Question": "Bevor wir starten würde die Universität Zürich um den Blockchain zu verbessern und Statistiken zu erheben gerne ihre Daten in komplett anonymer Form sammeln. Sind Sie damit einverstanden?",
+        "Options": {
+          "1": "yes",
+          "2": "no"
+        },
+        "Answer": null,
+        "Notes": null
+      },
+      "2": {
+        "Question": "Bevor wir starten würde die Universität Zürich um den Blockchain zu verbessern und Statistiken zu erheben gerne ihre Daten in komplett anonymer Form sammeln. Sind Sie damit einverstanden?",
+        "Options": {
+          "1": "yes",
+          "2": "no"
+        },
+        "Answer": null,
+        "Notes": null
+      }
+    }
+  }
