@@ -8,7 +8,6 @@ import {AButton} from "./components/AButton";
 import {InfoPage} from "./views/InfoPage";
 
 export const Router = ({questionType, question, option, goNext}) => {
-    //todo make option and options consistent!
     console.log("Loading..." +  questionType, option, goNext, question)
 
     if (questionType === "Front Page") return <InfoPage question={question} option={option} handleClick={goNext}/>

@@ -7,6 +7,7 @@ import {HeaderFrontPage} from "./views/HeaderFrontPage";
 import './views/Views.css';
 import {Router} from "./Router";
 import {NaviPage} from "./views/NaviPage";
+import {QuestionHandler} from "./questions/QuestionHandler";
 
 class App extends React.Component {
     constructor(props) {
@@ -72,6 +73,7 @@ class App extends React.Component {
     }
 
     componentDidMount() {
+        console.log("Next Step" + QuestionHandler.getNextStep([1,1]));
         this.constructQuestions();
 
         //todo remove state

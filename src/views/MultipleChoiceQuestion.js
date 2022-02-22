@@ -4,11 +4,11 @@ import {AButton} from "../components/AButton";
 
 export const MultipleChoiceQuestion = ({question, option, goNext}) =>{
     //states
-    const [answer, toggleAnswer] = useState([]);
-    const [disabled, toggleDisabled] = useState(true);
-    const [incorrect, toggleIncorrect] = useState(false);
-    const [newOption, toggleNewOption] = useState([]);
-    const [newQuestion, toggleQuestion] = useState([])
+    const [answer, setAnswer] = useState([]);
+    const [disabled, setDisabled] = useState(true);
+    const [incorrect, setIncorrect] = useState(false);
+    const [newOption, setNewOption] = useState([]);
+    const [newQuestion, setNewQuestion] = useState([])
 
     //this is the equivalent to ComponentDidMount of classes.
     useEffect(() => {
@@ -18,23 +18,21 @@ export const MultipleChoiceQuestion = ({question, option, goNext}) =>{
             x.push(option[i]);
             y.push(false);
         }
-        toggleNewOption(x);
-        toggleAnswer(y);
-        toggleQuestion(question.split("\n"));
+        setNewOption(x);
+        setAnswer(y);
+        setNewQuestion(question.split("\n"));
     }, [option, question]);
 
     function handleClick(e) {
         let idx = newOption.indexOf(e);
         let a = answer;
         a[idx] = !a[idx];
-        toggleAnswer(a);
+        setAnswer(a);
 
         checkDisabled();
     }
 
     function checkDisabled() {
-        //check if options are allowed
-        //todo use includes
         let hasTrues = false;
         for(let i=0; i < answer.length-1; i++) {
             if(answer[i]) {
@@ -45,8 +43,8 @@ export const MultipleChoiceQuestion = ({question, option, goNext}) =>{
         let last = answer[answer.length-1]
         console.log(answer, hasTrues, last)
         console.log(hasTrues && last)
-        toggleIncorrect(hasTrues && last);
-        toggleDisabled(!hasTrues && !last);
+        setIncorrect(hasTrues && last);
+        setDisabled(!hasTrues && !last);
     }
 
     return <>

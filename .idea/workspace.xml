@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="40410a09-9383-4c8c-9e9e-3798d94570f9" name="Changes" comment="Trying to make MultipleChoiceQuestion a functional component.">
+    <list default="true" id="40410a09-9383-4c8c-9e9e-3798d94570f9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/questions/QuestionHandler.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AButtonWithCommentOnClick.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AButtonWithCommentOnClick.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/NewMultipleChoiceQuestion.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/NewMultipleChoiceQuestion.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/MultipleChoiceQuestion.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/MultipleChoiceQuestion.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +35,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectId" id="22Mr2Ok9jeUplapgVIYAmnd3sMw" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -54,6 +58,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="$USER_HOME$/.nvm/versions/node/v16.13.1/bin/node" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -117,7 +122,7 @@
       <workItem from="1645487279434" duration="74000" />
       <workItem from="1645487761477" duration="317000" />
       <workItem from="1645525128665" duration="755000" />
-      <workItem from="1645525891052" duration="9160000" />
+      <workItem from="1645525891052" duration="18136000" />
     </task>
     <task id="LOCAL-00001" summary="updates Versions">
       <created>1639761190096</created>
@@ -357,7 +362,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645532615902</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="MultipleChoiceQuestion is now a full functional component">
+      <created>1645548807666</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1645548807666</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -365,7 +377,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Implemented Next Button" />
     <MESSAGE value="Basic Navigation" />
     <MESSAGE value="Cleanup" />
     <MESSAGE value="Improved Progress Bar" />
@@ -390,7 +401,8 @@
     <MESSAGE value="Minor NaviPage.js fix" />
     <MESSAGE value="Working on refactoring question.json's" />
     <MESSAGE value="Trying to make MultipleChoiceQuestion a functional component." />
-    <option name="LAST_COMMIT_MESSAGE" value="Trying to make MultipleChoiceQuestion a functional component." />
+    <MESSAGE value="MultipleChoiceQuestion is now a full functional component" />
+    <option name="LAST_COMMIT_MESSAGE" value="MultipleChoiceQuestion is now a full functional component" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
