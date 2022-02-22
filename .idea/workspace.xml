@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="40410a09-9383-4c8c-9e9e-3798d94570f9" name="Changes" comment="">
+    <list default="true" id="40410a09-9383-4c8c-9e9e-3798d94570f9" name="Changes" comment="Fixed findNextPage() bug.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/NaviPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/NaviPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,6 +44,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -110,7 +110,9 @@
       <workItem from="1645392057914" duration="4043000" />
       <workItem from="1645400121942" duration="7420000" />
       <workItem from="1645449706463" duration="6443000" />
-      <workItem from="1645474977948" duration="11700000" />
+      <workItem from="1645474977948" duration="12026000" />
+      <workItem from="1645487279434" duration="74000" />
+      <workItem from="1645487761477" duration="317000" />
     </task>
     <task id="LOCAL-00001" summary="updates Versions">
       <created>1639761190096</created>
@@ -322,7 +324,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645486110521</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Fixed findNextPage() bug.">
+      <created>1645487182081</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1645487182081</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -330,7 +339,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="SingleChoiceQuestion.js rudimentarily finished" />
     <MESSAGE value="MultipleChoiceQuestion.js rudimentarily finished" />
     <MESSAGE value="MultipleChoiceQuestion.js layout finished" />
     <MESSAGE value="Header finished" />
@@ -355,7 +363,8 @@
     <MESSAGE value="Updated header component" />
     <MESSAGE value="Added keys to most components to improve react performance&#10;Refactored Navi to App.js&#10;Minor updates to FrontPage.js" />
     <MESSAGE value="Added keys to most components to improve react performance&#10;Updated NaviPage.js&#10;Minor updates to FrontPage.js" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added keys to most components to improve react performance&#10;Updated NaviPage.js&#10;Minor updates to FrontPage.js" />
+    <MESSAGE value="Fixed findNextPage() bug." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed findNextPage() bug." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

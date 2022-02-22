@@ -17,9 +17,10 @@ export const NaviPage = ({progress, maxProgress, goTo, chapter, language}) => {
                     <AButton txt={language === "DE" ? "Weit entfernteste beantwortete Frage" : "Furthest answered question"}
                              onClick={() => goTo(maxProgress)}/>
                 </div>
+
                 <h3 className="text-center">Zum Kapitel:</h3>
                 {c.map(ch => {
-                    return (maxProgress > chapter[ch]) && <AButton txt={DataJSON[ch+1]["Title"]["Deutsch"]}
+                    return (maxProgress >= chapter[ch]) && <AButton txt={DataJSON[ch+1]["Title"]["Deutsch"]}
                                                                    onClick={(e) => goTo(e.target.value)}
                                                                    value={chapter[ch]}
                                                                    key={ch}
