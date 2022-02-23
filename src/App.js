@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import Container from 'react-bootstrap/Container';
 import './App.css';
 import {Header} from "./views/Header";
@@ -8,67 +8,54 @@ import {Router} from "./Router";
 import {NaviPage} from "./views/NaviPage";
 import {QuestionHandler} from "./questions/QuestionHandler";
 
-class App extends React.Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            position: [0,1],
-            furthestPosition: [0,1],
+const App = () => {
+    const [position, setPosition] = useState([0,1]);
+    const [furthestPosition, setFurthestPosition] = useState([0,1]);
+    const [current, setCurrent] = useState({"question": {"de":"The question will load shorty."}, "option": {"de":"Zur Umfrage"}});
+    const [questionType, setQuestionType] = useState("Front Page");
+    const [titles, setTitles] = useState(["Einführung"]);
+    const [language, toggleLanguage] = useState("de");
+    const [navi, toggleNavi] = useState(false);
 
-            current: {"question": {"de":"The question will load shorty."}, "option": {"de":"Zur Umfrage"}},
-            questionType: "Front Page",
-            title: "Please wait",
+    useEffect( () => {
+        //update the question & corresponding type
+        let q = QuestionHandler.getQuestion(position);
+        setCurrent(q);
+        setQuestionType(q["type"]);
 
-            next: null,
-            language: "de"
-        }
+        //update furthestPosition if necessary
+        if(position[0] > furthestPosition[0]) setFurthestPosition(position);
+        else if(position[0] === furthestPosition[0] && position[1] >= furthestPosition[1]) setFurthestPosition(position);
+    }, [furthestPosition, position])
 
-        this.goNext = this.goNext.bind(this)
-        this.goTo = this.goTo.bind(this)
-        this.changeLanguage = this.changeLanguage.bind(this)
+    useEffect(() => {
+        setTitles(QuestionHandler.getTitles(language));
+    }, [language])
+
+
+    function goToChapter(chapter) { //todo also accept subchapter for navi "go back to maxQuestion"
+        if(chapter === "navi") toggleNavi(true);
+        else setPosition([chapter][1]);
     }
 
-    loadPage(pageId) {
-        console.log("Previous Page loaded " + this.state.position, this.state.questionType, this.state.title, this.state.current)
-        console.log(pageId)
-        let q = QuestionHandler.getQuestion(pageId);
-        console.log(q)
-        //todo decide if position should be saved here or before, position has more than needed.
-        //todo update title
-        this.setState({
-            current: q,
-            position: pageId,
-            questionType: q["type"]
-        })
+    function goNext(prevAnswer) {
+        if(prevAnswer !== null) console.log("Given answer is: " + prevAnswer.target.value)
+        else console.log("Pressed next but no answer was given")
 
-        /*if(this.state.furthestPosition < pageId) {
-            this.setState({furthestPosition: pageId})
-        }*/
+        let q = QuestionHandler.getNextStep(position);
+        setPosition(q);
     }
 
-    goTo(pageId) {
-        if(pageId === "Navi") {
-            this.setState({questionType: "Navi", title: "Navigation"});
-        }
-        else {
-            this.loadPage(parseInt(pageId));
-        }
+    function goBack()  {
+        setPosition(QuestionHandler.getLastStep(position));
     }
 
-    goNext(newNext) {
-        console.log("Given answer is: ")
-        if(newNext !== null) console.log(newNext.target.value)
-        else console.log(null)
-
-        let q = QuestionHandler.getNextStep(this.state.position);
-        this.loadPage(q)
+    function swapLanguage() {
+        if(language === "de") toggleLanguage("en")
+        else toggleLanguage("de")
     }
 
-    changeLanguage() {
-        if(this.state.language === "de") this.setState({language: "en"})
-        else this.setState({language: "de"})
-    }
-
+    /*
     componentDidMount() {
         //todo remove state
         console.log(this.state.data)
@@ -81,42 +68,42 @@ class App extends React.Component {
         this.setState({data: localStorage.getItem("data")})
 
         this.loadPage(this.state.position);
-    }
+    }*/
 
-    render() {
-        return <Container>
-            {this.state.position === 0 || this.state.questionType === "Navi"  ?
-                <HeaderFrontPage language={this.state.language}
-                                 changeLanguage={this.changeLanguage}
-                />
-                : <Header className="head"
-                          now={this.state.position}
-                          max={/*this.state.qqs.length*/ 5}
-                          goTo={this.goTo}
-                          language={this.state.language}
-                          changeLanguage={this.changeLanguage}
-                />
-            }
-            <div className="p-3">
-                <h1 className="header">{this.state.title}</h1>
-                <div className="p-5 mb-4 white rounded-3">
-                    {this.state.questionType === "Navi" ?
-                        <NaviPage progress={this.state.position}
-                                  chapter={[1,5,6,15,25,35]/*todo make this generate automatically*/}
-                                  maxProgress={this.state.furthestPosition}
-                                  goTo={this.goTo}
-                                  language={this.state.language}
-                        />
-                        : <Router questionType={this.state.questionType}
-                                  question={this.state.current["question"][this.state.language]}
-                                  option={this.state.current["option"][this.state.language]}
-                                  goNext={this.goNext}
-                        />
-                    }
-                </div>
+    return <Container>
+        {(position[0] === 0 && position[1] === 1) || navi  ?
+            <HeaderFrontPage language={language}
+                             changeLanguage={swapLanguage}
+            />
+            : <Header className="head"
+                      now={position}
+                      max={5}
+                      goToChapter={goToChapter}
+                      goBack={goBack}
+                      language={language}
+                      changeLanguage={swapLanguage}
+            />
+        }
+        <div className="p-3">
+            <h1 className="header">{titles[position[0]]}</h1>
+            <div className="p-5 mb-4 white rounded-3">
+                {navi ?
+                    <NaviPage progress={5}
+                              maxProgress={[2,2]}
+                              titles={["einfürhug"]}
+                              goToChapter={goToChapter}
+                              toggleNavi={toggleNavi}
+                              language={language}
+                    />
+                    : <Router questionType={questionType}
+                              question={current["question"][language]}
+                              option={current["option"][language]}
+                              goNext={goNext}
+                    />
+                }
             </div>
-        </Container>
-    }
+        </div>
+    </Container>
 }
 
 export default App;

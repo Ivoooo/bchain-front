@@ -1,7 +1,7 @@
 {
-  "Title": {
-    "English": "Identify Benefits",
-    "Deutsch": "Mehrwerte Identifizieren"
+  "title": {
+    "en": "Identify Benefits",
+    "de": "Mehrwerte Identifizieren"
   },
   "Fragen": {
     "1": {

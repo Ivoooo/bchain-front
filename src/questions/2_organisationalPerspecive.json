@@ -1,7 +1,7 @@
 {
-  "Title": {
-    "English": "Organizational Perspective",
-    "Deutsch": "Organisatorische Perspektive"
+  "title": {
+    "en": "Organizational Perspective",
+    "de": "Organisatorische Perspektive"
   },
   "Fragen": {
     "1": {

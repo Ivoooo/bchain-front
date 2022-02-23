@@ -1,7 +1,7 @@
 {
-  "Title": {
-    "English": "Check Usability of Blockchain",
-    "Deutsch": "Eignung der Blockchain prüfen"
+  "title": {
+    "en": "Check Usability of Blockchain",
+    "de": "Eignung der Blockchain prüfen"
   },
   "Fragen": {
     "1": {

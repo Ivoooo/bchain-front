@@ -1,7 +1,7 @@
 {
-  "Title": {
-    "English": "Company Evaluation",
-    "Deutsch": "Beurteilung des Geschäfts"
+  "title": {
+    "en": "Company Evaluation",
+    "de": "Beurteilung des Geschäfts"
   },
   "Fragen": {
     "1": {

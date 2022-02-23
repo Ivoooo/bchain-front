@@ -22,7 +22,11 @@ export class QuestionHandler {
     }
 
     static getNextStep([chapter=0, part=0]) {
-        return getNextStep([chapter, part])
+        return getNextStep([chapter, part]);
+    }
+
+    static getLastStep([chapter, part]) {
+        return getLastStep([chapter, part]);
     }
 }
 
@@ -41,4 +45,13 @@ function getTitles(language="de") {
         t.push(q[i]["title"][language]);
     }
     return t;
+}
+
+function getLastStep([chapter, part]) {
+    if(part - 1 >= 1) return [chapter, part-1];
+    if(chapter-1 < 0) return [0,1];
+
+    let q = [chapter-1, 1];
+    while(getNextStep(q)[0] === q[0]) q=getNextStep(q);
+    return q;
 }
