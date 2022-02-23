@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="40410a09-9383-4c8c-9e9e-3798d94570f9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/questions/QuestionHandler.js" afterDir="false" />
+    <list default="true" id="40410a09-9383-4c8c-9e9e-3798d94570f9" name="Changes" comment="Finished QuestionHandler.js">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/MultipleChoiceQuestion.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/MultipleChoiceQuestion.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/questions/QuestionHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/questions/QuestionHandler.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +120,8 @@
       <workItem from="1645487279434" duration="74000" />
       <workItem from="1645487761477" duration="317000" />
       <workItem from="1645525128665" duration="755000" />
-      <workItem from="1645525891052" duration="18136000" />
+      <workItem from="1645525891052" duration="18210000" />
+      <workItem from="1645617057402" duration="703000" />
     </task>
     <task id="LOCAL-00001" summary="updates Versions">
       <created>1639761190096</created>
@@ -369,7 +368,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645548807666</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Working on renewing the way question.json is handled.">
+      <created>1645563239540</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1645563239540</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -377,8 +383,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Basic Navigation" />
-    <MESSAGE value="Cleanup" />
     <MESSAGE value="Improved Progress Bar" />
     <MESSAGE value="Improved Front and NotePage" />
     <MESSAGE value="New Header for FrontPage" />
@@ -402,7 +406,9 @@
     <MESSAGE value="Working on refactoring question.json's" />
     <MESSAGE value="Trying to make MultipleChoiceQuestion a functional component." />
     <MESSAGE value="MultipleChoiceQuestion is now a full functional component" />
-    <option name="LAST_COMMIT_MESSAGE" value="MultipleChoiceQuestion is now a full functional component" />
+    <MESSAGE value="Working on renewing the way question.json is handled." />
+    <MESSAGE value="Finished QuestionHandler.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished QuestionHandler.js" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

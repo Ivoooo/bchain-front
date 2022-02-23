@@ -7,11 +7,14 @@ import q5 from "./5_evaluateCompany.json";
 import q6 from "./6_telemetry.json";
 
 let q = [q0, q1, q2, q3, q4, q5, q6]; //IMPORTANT if you add a new step (q7), you NEED to extend this array!
+//GUIDELINES TO ADD NEW QUESTION: //todo edit questioncontainer name
 
 
 export class QuestionHandler {
-    static getA() {
-        return getA()
+    q = [q0, q1, q2, q3, q4, q5, q6];
+
+    static getQuestion([chapter, part], language) {
+        return getQuestion([chapter, part], language);
     }
 
     static getTitles(language="Deutsch") {
@@ -23,17 +26,12 @@ export class QuestionHandler {
     }
 }
 
-function getA() {
-    return 2342;
-}
-
-function getQuestion([a,b], language) {
-    return "json";
+function getQuestion([chapter, part], language) {
+    return language === "Deutsch" ? q[chapter]["Fragen"][part] : q[chapter]["Question"][part];
 }
 
 function getNextStep([chapter, part]) {
-    let e = part+1
-    if(q[chapter]["Fragen"]['"' + e + '"'] !== undefined) return [chapter, part+1] //todo why this no work
+    if(q[chapter]["Fragen"][part+1] !== undefined) return [chapter, part+1] //todo why this no work
     return [chapter+1,1] //todo check if end is reached
 }
 

@@ -73,7 +73,6 @@ class App extends React.Component {
     }
 
     componentDidMount() {
-        console.log("Next Step" + QuestionHandler.getNextStep([1,1]));
         this.constructQuestions();
 
         //todo remove state
