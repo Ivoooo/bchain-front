@@ -1,13 +1,25 @@
 {
-  "Title": {
-      "English": "Introduction",
-      "Deutsch": "Einführung"
-    },
-    "Fragen": {
-      "1": {
-        "Question": "Willkommen beim Blockchainguide. Dieser Fragebogen ist ein Tool für Privatpersonen, staatliche und private Einrichtungen um zu evaluieren ob für einen bestimmten Anwendungsfall der Gebrauch einer Blockchain einen Vorteil bringen könnte. \r Um die Umfrage ausfüllen zu können ist wissen über die Blockchain von Vorteil aber nicht nötig. \n Diese Website wurde von der Universität Zürich entwickelt und basiert auf dem von der Universität und Kanton Zürich erarbeiteten Blockchain-Leitfaden.",
-        "Options": ["Leitfaden anschauen","Zur Umfrage"],
-        "Type": "Front Page"
-      }
+  "title": {
+    "en": "Introduction",
+    "de": "Einführung"
+  },
+  "questionContainer": {
+    "1": {
+      "question": {
+        "de": "Willkommen beim Blockchainguide. Dieser Fragebogen ist ein Tool für Privatpersonen, staatliche und private Einrichtungen um zu evaluieren ob für einen bestimmten Anwendungsfall der Gebrauch einer Blockchain einen Vorteil bringen könnte. \r Um die Umfrage ausfüllen zu können ist wissen über die Blockchain von Vorteil aber nicht nötig. \n Diese Website wurde von der Universität Zürich entwickelt und basiert auf dem von der Universität und Kanton Zürich erarbeiteten Blockchain-Leitfaden.",
+        "en": "Coming soon"
+      },
+      "option": {
+        "de": [
+          "Leitfaden anschauen",
+          "Zur Umfrage"
+        ],
+        "en": [
+          "see soon",
+          "go ahead"
+        ]
+      },
+      "type": "Front Page"
+    }
   }
 }

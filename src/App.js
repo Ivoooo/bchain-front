@@ -1,7 +1,6 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
 import './App.css';
-import DataJSON from './components/data.json';
 import {Header} from "./views/Header";
 import {HeaderFrontPage} from "./views/HeaderFrontPage";
 import './views/Views.css';
@@ -13,17 +12,15 @@ class App extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            position: -1,
-            furthestPosition: 0,
-            current: {"Question": "The question will load shorty.",
-                "Options": "Zur Umfrage"},
-            next: null,
-            qqs: [[0,1]],
-            data: null,
+            position: [0,1],
+            furthestPosition: [0,1],
+
+            current: {"question": {"de":"The question will load shorty."}, "option": {"de":"Zur Umfrage"}},
             questionType: "Front Page",
-            title: "a",
-            goTo: 0,
-            language: "DE"
+            title: "Please wait",
+
+            next: null,
+            language: "de"
         }
 
         this.goNext = this.goNext.bind(this)
@@ -31,25 +28,22 @@ class App extends React.Component {
         this.changeLanguage = this.changeLanguage.bind(this)
     }
 
-    findNextPage(pageId) {
+    loadPage(pageId) {
         console.log("Previous Page loaded " + this.state.position, this.state.questionType, this.state.title, this.state.current)
-
-        let q = this.state.qqs[pageId];
-
-        this.setState({current: DataJSON[q[0]]["Fragen"][q[1]],
-            title: DataJSON[q[0]]["Title"]["Deutsch"],
+        console.log(pageId)
+        let q = QuestionHandler.getQuestion(pageId);
+        console.log(q)
+        //todo decide if position should be saved here or before, position has more than needed.
+        //todo update title
+        this.setState({
+            current: q,
             position: pageId,
-            questionType: DataJSON[q[0]]["Fragen"][q[1]]["Type"]
+            questionType: q["type"]
         })
 
-        if(this.state.furthestPosition < pageId) {
+        /*if(this.state.furthestPosition < pageId) {
             this.setState({furthestPosition: pageId})
-        }
-    }
-
-    constructQuestions() {
-        let qqs =  [[0,1],[1,1],[1,1.5],[1,2],[1,3],[2,1],[3,1],[3,2],[3,3],[3,4],[3,5],[3,6],[3,7],[3,8],[3,9],[4,1],[4,2],[4,3],[4,4],[4,5],[4,6],[4,7],[4,8],[4,9],[4,10],[5,1],[5,2],[5,3],[5,4],[5,5],[5,6],[5,7],[5,8],[5,9],[5,10],[6,1]];
-        this.setState({qqs: qqs})
+        }*/
     }
 
     goTo(pageId) {
@@ -57,37 +51,36 @@ class App extends React.Component {
             this.setState({questionType: "Navi", title: "Navigation"});
         }
         else {
-            this.findNextPage(parseInt(pageId));
+            this.loadPage(parseInt(pageId));
         }
     }
 
     goNext(newNext) {
         console.log("Given answer is: ")
         if(newNext !== null) console.log(newNext.target.value)
-        this.goTo(this.state.position + 1);
+        else console.log(null)
+
+        let q = QuestionHandler.getNextStep(this.state.position);
+        this.loadPage(q)
     }
 
     changeLanguage() {
-        if(this.state.language === "DE") this.setState({language: "EN"})
-        else this.setState({language: "DE"})
+        if(this.state.language === "de") this.setState({language: "en"})
+        else this.setState({language: "de"})
     }
 
     componentDidMount() {
-        this.constructQuestions();
-
         //todo remove state
         console.log(this.state.data)
         localStorage.clear() // todo REMOVE
         //if the user has never used the website before a new progress tracker will be created:
         if (!localStorage.getItem("data")) {
-            localStorage.setItem("data", DataJSON)
+            // todo localStorage.setItem("data", DataJSON)
             localStorage.setItem("version", "1.0") //if there are any major updates that could break compatibility this may be of use
         } //todo connect version to settings
         this.setState({data: localStorage.getItem("data")})
 
-        if(this.state.position < 0){
-            this.goNext(null);
-        }
+        this.loadPage(this.state.position);
     }
 
     render() {
@@ -98,7 +91,7 @@ class App extends React.Component {
                 />
                 : <Header className="head"
                           now={this.state.position}
-                          max={this.state.qqs.length}
+                          max={/*this.state.qqs.length*/ 5}
                           goTo={this.goTo}
                           language={this.state.language}
                           changeLanguage={this.changeLanguage}
@@ -115,8 +108,8 @@ class App extends React.Component {
                                   language={this.state.language}
                         />
                         : <Router questionType={this.state.questionType}
-                                  question={this.state.current.Question}
-                                  option={this.state.current.Options}
+                                  question={this.state.current["question"][this.state.language]}
+                                  option={this.state.current["option"][this.state.language]}
                                   goNext={this.goNext}
                         />
                     }

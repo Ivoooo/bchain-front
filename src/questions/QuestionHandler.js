@@ -7,17 +7,17 @@ import q5 from "./5_evaluateCompany.json";
 import q6 from "./6_telemetry.json";
 
 let q = [q0, q1, q2, q3, q4, q5, q6]; //IMPORTANT if you add a new step (q7), you NEED to extend this array!
-//GUIDELINES TO ADD NEW QUESTION: //todo edit questioncontainer name
+//GUIDELINES TO ADD NEW QUESTION: todo
 
 
 export class QuestionHandler {
     q = [q0, q1, q2, q3, q4, q5, q6];
 
-    static getQuestion([chapter, part], language) {
-        return getQuestion([chapter, part], language);
+    static getQuestion([chapter, part]) {
+        return getQuestion([chapter, part]);
     }
 
-    static getTitles(language="Deutsch") {
+    static getTitles(language="de") {
         return getTitles(language);
     }
 
@@ -26,19 +26,19 @@ export class QuestionHandler {
     }
 }
 
-function getQuestion([chapter, part], language) {
-    return language === "Deutsch" ? q[chapter]["Fragen"][part] : q[chapter]["Question"][part];
+function getQuestion([chapter, part]) {
+    return q[chapter]["questionContainer"][part];
 }
 
 function getNextStep([chapter, part]) {
-    if(q[chapter]["Fragen"][part+1] !== undefined) return [chapter, part+1] //todo why this no work
-    return [chapter+1,1] //todo check if end is reached
+    if(q[chapter]["questionContainer"][part+1] !== undefined) return [chapter, part+1];
+    return [chapter+1,1] //todo might do [n,0] for in between screen.
 }
 
-function getTitles(language="Deutsch") {
+function getTitles(language="de") {
     let t = []
     for(let i=0; i< q.length; i++) {
-        t.push(q[i]["Title"][language]);
+        t.push(q[i]["title"][language]);
     }
     return t;
 }
