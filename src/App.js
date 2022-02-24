@@ -7,6 +7,7 @@ import './views/Views.css';
 import {Router} from "./Router";
 import {NaviPage} from "./views/NaviPage";
 import {QuestionHandler} from "./questions/QuestionHandler";
+import {NaviHelper} from "./questions/NaviHelper";
 
 const App = () => {
     const [position, setPosition] = useState([0,1]);
@@ -17,6 +18,13 @@ const App = () => {
     const [language, toggleLanguage] = useState("de");
     const [navi, toggleNavi] = useState(false);
 
+
+    useEffect(() => {
+        console.log(NaviHelper.getMaxProgress())
+        if (!localStorage.getItem("data")) localStorage.setItem("version", "1.0") //todo get version from file
+    }) //since no variable is at the end here it's basically "componentDidMount". So this function is executed exactly
+        // once at the beginning of loading the file
+
     useEffect( () => {
         //update the question & corresponding type
         let q = QuestionHandler.getQuestion(position);
@@ -26,7 +34,8 @@ const App = () => {
         //update furthestPosition if necessary
         if(position[0] > furthestPosition[0]) setFurthestPosition(position);
         else if(position[0] === furthestPosition[0] && position[1] >= furthestPosition[1]) setFurthestPosition(position);
-    }, [furthestPosition, position])
+    }, [furthestPosition, position]) //here the function is executed every time furthestPosition or position
+        //is updated. Also, at the beginning since it goes from null to the given start state above
 
     useEffect(() => {
         setTitles(QuestionHandler.getTitles(language));
@@ -54,21 +63,6 @@ const App = () => {
         if(language === "de") toggleLanguage("en")
         else toggleLanguage("de")
     }
-
-    /*
-    componentDidMount() {
-        //todo remove state
-        console.log(this.state.data)
-        localStorage.clear() // todo REMOVE
-        //if the user has never used the website before a new progress tracker will be created:
-        if (!localStorage.getItem("data")) {
-            // todo localStorage.setItem("data", DataJSON)
-            localStorage.setItem("version", "1.0") //if there are any major updates that could break compatibility this may be of use
-        } //todo connect version to settings
-        this.setState({data: localStorage.getItem("data")})
-
-        this.loadPage(this.state.position);
-    }*/
 
     return <Container>
         {(position[0] === 0 && position[1] === 1) || navi  ?

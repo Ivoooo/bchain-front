@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="40410a09-9383-4c8c-9e9e-3798d94570f9" name="Changes" comment="Updating JSON format&#10;Updating QuestionHandler.js to accept new format">
+    <list default="true" id="40410a09-9383-4c8c-9e9e-3798d94570f9" name="Changes" comment="Made App.js into a functional component&#10;Fixed Header to work with new App.js&#10;Working on adjusting NaviPage to new JSON format style&#10;Continuing updating json-questions">
+      <change afterPath="$PROJECT_DIR$/src/questions/NaviHelper.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/questions/1_businessCase.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/questions/1_businessCase.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/questions/2_organisationalPerspecive.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/questions/2_organisationalPerspecive.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/questions/3_identifyBenefits.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/questions/3_identifyBenefits.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/questions/4_CheckUsability.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/questions/4_CheckUsability.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/questions/5_evaluateCompany.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/questions/5_evaluateCompany.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/questions/6_telemetry.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/questions/6_telemetry.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/questions/QuestionHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/questions/QuestionHandler.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/HeaderFrontPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HeaderFrontPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/NaviPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/NaviPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +41,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="22Mr2Ok9jeUplapgVIYAmnd3sMw" />
   <component name="ProjectLevelVcsManager">
@@ -131,7 +130,9 @@
       <workItem from="1645525891052" duration="18210000" />
       <workItem from="1645617057402" duration="1862000" />
       <workItem from="1645633949434" duration="2154000" />
-      <workItem from="1645636821819" duration="9388000" />
+      <workItem from="1645636821819" duration="14097000" />
+      <workItem from="1645698314290" duration="5868000" />
+      <workItem from="1645731940917" duration="3086000" />
     </task>
     <task id="LOCAL-00001" summary="updates Versions">
       <created>1639761190096</created>
@@ -399,7 +400,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645639926125</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Made App.js into a functional component&#10;Fixed Header to work with new App.js&#10;Working on adjusting NaviPage to new JSON format style&#10;Continuing updating json-questions">
+      <created>1645646582558</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1645646582558</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -407,7 +415,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Improved Front and NotePage" />
     <MESSAGE value="New Header for FrontPage" />
     <MESSAGE value="New LanguageButton.js&#10;Updated MultipleChoiceQuestion.js" />
     <MESSAGE value="Minor fixes" />
@@ -432,7 +439,8 @@
     <MESSAGE value="Working on renewing the way question.json is handled." />
     <MESSAGE value="Finished QuestionHandler.js" />
     <MESSAGE value="Updating JSON format&#10;Updating QuestionHandler.js to accept new format" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updating JSON format&#10;Updating QuestionHandler.js to accept new format" />
+    <MESSAGE value="Made App.js into a functional component&#10;Fixed Header to work with new App.js&#10;Working on adjusting NaviPage to new JSON format style&#10;Continuing updating json-questions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made App.js into a functional component&#10;Fixed Header to work with new App.js&#10;Working on adjusting NaviPage to new JSON format style&#10;Continuing updating json-questions" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

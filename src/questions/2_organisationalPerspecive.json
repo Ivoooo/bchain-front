@@ -3,7 +3,7 @@
     "en": "Organizational Perspective",
     "de": "Organisatorische Perspektive"
   },
-  "Fragen": {
+  "questionContainer": {
     "1": {
       "Question": "Den Geschäftsfall haben wir jetzt fertig vorgestellt und kategorisiert. Als nächstes müssen wir die organisatorische Perspektive prüfen. \n Welche Ziele verfolgen Sie? Sie können so viele Optionen anklicken wie Sie möchten.",
       "Options": {
@@ -13,7 +13,7 @@
         "4": "Verstärktes Vertrauen",
         "5": "Keine der oben genannten Optionen"
       },
-      "Type": "Multiple Choice or none"
+      "type": "Multiple Choice or none"
     }
   }
 }

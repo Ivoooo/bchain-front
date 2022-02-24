@@ -3,7 +3,7 @@
     "en": "Telemetry",
     "de": "Telemetrie"
   },
-  "Fragen": {
+  "questionContainer": {
     "1": {
       "Question": "Den Geschäftsfall haben wir jetzt fertig vorgestellt und kategorisiert. Als nächstes müssen wir die organisatorische Perspektive prüfen. \n Welche Ziele verfolgen Sie? Sie können so viele Option anklicken wie Sie möchten.",
       "Options": {
@@ -13,7 +13,7 @@
         "4": "Verstärktes Vertrauen",
         "5": "Keine der oben genannten Optionen"
       },
-      "Type": "Telemetry"
+      "type": "Telemetry"
     }
   }
 }

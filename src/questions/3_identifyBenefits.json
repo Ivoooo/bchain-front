@@ -3,11 +3,11 @@
     "en": "Identify Benefits",
     "de": "Mehrwerte Identifizieren"
   },
-  "Fragen": {
+  "questionContainer": {
     "1": {
       "Question": "Bevor wir bestimmen können ob die Benützung einer Blockchain für Sie Sinn ergibt müssen wir noch evaluieren auf welche die für Sie relevantesten Mehrwerte sind. Dazu müssen Sie 8 kurze Fragen beantworten.",
       "Options": "Weiter",
-      "Type": "Front Page"
+      "type": "Front Page"
     },
     "2": {
       "Question": "Ich möchte eine verbesserte Dokumentation und Haftung",
@@ -16,7 +16,7 @@
         "2": "Ja, mittlere Relevanz",
         "3": "Nein, kaum Relevanz"
       },
-      "Type": "Single Choice"
+      "type": "Single Choice"
     },
     "3": {
       "Question": "Ich möchte eine verbesserte Risikoabschätzung",
@@ -25,7 +25,7 @@
         "2": "Ja, mittlere Relevanz",
         "3": "Nein, kaum Relevanz"
       },
-      "Type": "Single Choice"
+      "type": "Single Choice"
     },
     "4": {
       "Question": "Ich möchte effizientere administrative Prozesse.",
@@ -34,7 +34,7 @@
         "2": "Ja, mittlere Relevanz",
         "3": "Nein, kaum Relevanz"
       },
-      "Type": "Single Choice"
+      "type": "Single Choice"
     },
     "5": {
       "Question": "Ich möchte reduzierte administrative Kosten",
@@ -43,7 +43,7 @@
         "2": "Ja, mittlere Relevanz",
         "3": "Nein, kaum Relevanz"
       },
-      "Type": "Single Choice"
+      "type": "Single Choice"
     },
     "6": {
       "Question": "Ich möchte eine verbesserte Datensicherheit und Redundanz.",
@@ -52,7 +52,7 @@
         "2": "Ja, mittlere Relevanz",
         "3": "Nein, kaum Relevanz"
       },
-      "Type": "Single Choice"
+      "type": "Single Choice"
     },
     "7": {
       "Question": "Ich möchte eine erhöhte Zuverlässigkeit der Daten.",
@@ -61,7 +61,7 @@
         "2": "Ja, mittlere Relevanz",
         "3": "Nein, kaum Relevanz"
       },
-      "Type": "Single Choice"
+      "type": "Single Choice"
     },
     "8": {
       "Question": "Ich möchte eine verstärkte Zusammenarbeit mit anderen Parteien.",
@@ -70,7 +70,7 @@
         "2": "Ja, mittlere Relevanz",
         "3": "Nein, kaum Relevanz"
       },
-      "Type": "Single Choice"
+      "type": "Single Choice"
     },
     "9": {
       "Question": "Ich möchte eine grössere Reichweite und Globalisierung.",
@@ -79,7 +79,7 @@
         "2": "Ja, mittlere Relevanz",
         "3": "Nein, kaum Relevanz"
       },
-      "Type": "Single Choice"
+      "type": "Single Choice"
     }
   }
 }

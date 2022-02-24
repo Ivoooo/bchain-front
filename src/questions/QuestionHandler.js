@@ -8,7 +8,8 @@ import q6 from "./6_telemetry.json";
 
 let q = [q0, q1, q2, q3, q4, q5, q6]; //IMPORTANT if you add a new step (q7), you NEED to extend this array!
 //GUIDELINES TO ADD NEW QUESTION: todo
-
+//merge with NaviHelper. => Check if arrays get built every time => if yes store in local storage
+//might be smart to save the version here because then only this file needs editing.
 
 export class QuestionHandler {
     q = [q0, q1, q2, q3, q4, q5, q6];
@@ -37,7 +38,7 @@ function getQuestion([chapter, part]) {
 function getNextStep([chapter, part]) {
     if(q[chapter]["questionContainer"][part+1] !== undefined) return [chapter, part+1];
     return [chapter+1,1] //todo might do [n,0] for in between screen.
-}
+} //todo add final end screen return
 
 function getTitles(language="de") {
     let t = []

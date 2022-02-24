@@ -32,7 +32,7 @@
           "1": "Staatlich",
           "2": "Geschäft oder Privatperson"
         },
-        "Type": "Dual Choice"
+        "type": "Dual Choice"
       },
       "4": {
         "Question": "Bitte wählen Sie die Kategorie, welche am besten zu Ihrem Geschäftsfall passt",
@@ -44,7 +44,7 @@
           "5": "Registerwesen",
           "6": "Anderes"
         },
-        "Type": "Single Choice with Other"
+        "type": "Single Choice with Other"
       }
     },
     "Questions": {
