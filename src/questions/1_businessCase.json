@@ -6,16 +6,16 @@
     "questionContainer": {
       "1": {
         "question": {
-          "de": "Der Blockchainguide ist in 5 unterschiedlich lange Teile unterteilt und es braucht total ungefähr Minuten um ihn auszufüllen. Am Ende werden sie erfahren ob für ihren spezifischen Geschäftsfall den Gebrauch einer Blockchain Sinn ergeben würde. Zudem bekommen Sie Hinweise wie Sie als nächstes vorgehen könnten.",
+          "de": "Der Blockchainguide ist in 7 unterschiedlich lange Teile unterteilt und es braucht total ungefähr 10 Minuten um ihn auszufüllen.",
           "en": "coming soon tbb"
         },
         "option": {
           "de": "Weiter",
           "en": "Continue"
         },
-        "type": "Front Page"
+        "type": "Overview"
       },
-      "2": {
+      "3": {
         "question": {
           "de": "Bevor wir aber starten müssen Sie zuerst einen genauen Geschäftsfall bestimmen bei dem Sie prüfen möchten ob der Gebrauch einer Blockchain sie unterstützen könnte. \n Beispiele dazu wären: \n Kund*innen möchten sich bei uns anmelden und beziehen eine Leistung. \n Kund*innen sollen sich einfacher in öffentliche Verzeichnisse eintragen können. \n Wir möchten die Zugriffsrechte auf Daten besser handhaben können.",
           "en": "coming soon tbb"
@@ -26,7 +26,7 @@
         },
         "type": "Text"
       },
-      "3": {
+      "2": {
         "question": {
           "de": "Sind sie Teil einer staatlichen Institution, eine Privatperson oder Teil eines Geschäftes",
           "en": "coming soon"
@@ -68,7 +68,7 @@
             "3"
           ]
         },
-        "type": "Single Choice with Other"
+        "type": "Single Choice"
       }
     }
   }

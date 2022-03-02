@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="40410a09-9383-4c8c-9e9e-3798d94570f9" name="Changes" comment="Continuing updating json-questions&#10;Started Implementing NaviHelper.js to fix Header Issue">
+    <list default="true" id="40410a09-9383-4c8c-9e9e-3798d94570f9" name="Changes" comment="Continuing updating json-questions&#10;Fixes to Header, NaviPage &amp; TwoOptionQuestion">
+      <change afterPath="$PROJECT_DIR$/src/views/Overview.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/questions/0_introduction.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/questions/0_introduction.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/questions/1_businessCase.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/questions/1_businessCase.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/questions/2_organisationalPerspecive.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/questions/2_organisationalPerspecive.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/questions/3_identifyBenefits.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/questions/3_identifyBenefits.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/questions/4_CheckUsability.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/questions/4_CheckUsability.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/questions/5_evaluateCompany.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/questions/5_evaluateCompany.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/questions/NaviHelper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/questions/NaviHelper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/questions/6_telemetry.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/questions/6_telemetry.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Header.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/NaviPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/NaviPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/TwoOptionQuestion.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/TwoOptionQuestion.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/SingleChoiceQuestion.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/SingleChoiceQuestion.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +138,7 @@
       <workItem from="1645698314290" duration="5868000" />
       <workItem from="1645731940917" duration="3162000" />
       <workItem from="1646056730569" duration="1575000" />
-      <workItem from="1646217744528" duration="4045000" />
+      <workItem from="1646217744528" duration="11044000" />
     </task>
     <task id="LOCAL-00001" summary="updates Versions">
       <created>1639761190096</created>
@@ -417,7 +420,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645736529645</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Continuing updating json-questions&#10;Fixes to Header, NaviPage &amp; TwoOptionQuestion">
+      <created>1646222058798</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1646222058798</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -425,7 +435,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="New LanguageButton.js&#10;Updated MultipleChoiceQuestion.js" />
     <MESSAGE value="Minor fixes" />
     <MESSAGE value="Unified CSS&#10;Added Back button" />
     <MESSAGE value="Implemented NaviPage.js&#10;Basic implementation of Telemetry.js" />
@@ -450,7 +459,8 @@
     <MESSAGE value="Updating JSON format&#10;Updating QuestionHandler.js to accept new format" />
     <MESSAGE value="Made App.js into a functional component&#10;Fixed Header to work with new App.js&#10;Working on adjusting NaviPage to new JSON format style&#10;Continuing updating json-questions" />
     <MESSAGE value="Continuing updating json-questions&#10;Started Implementing NaviHelper.js to fix Header Issue" />
-    <option name="LAST_COMMIT_MESSAGE" value="Continuing updating json-questions&#10;Started Implementing NaviHelper.js to fix Header Issue" />
+    <MESSAGE value="Continuing updating json-questions&#10;Fixes to Header, NaviPage &amp; TwoOptionQuestion" />
+    <option name="LAST_COMMIT_MESSAGE" value="Continuing updating json-questions&#10;Fixes to Header, NaviPage &amp; TwoOptionQuestion" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

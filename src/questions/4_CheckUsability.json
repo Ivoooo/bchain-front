@@ -6,14 +6,14 @@
   "questionContainer": {
     "1": {
       "question": {
-        "de": "Bis jetzt ergibt die Benützung einer Blockchain Sinn für Sie. Für eine definitive Entscheidung müssen nur noch ein paar wenige Fragen beantworten.",
+        "de": "[plan to delete] Bis jetzt ergibt die Benützung einer Blockchain Sinn für Sie. Für eine definitive Entscheidung müssen nur noch ein paar wenige Fragen beantworten.",
         "en": "tbd"
       },
       "option": {
         "de": "Weiter",
         "en": "Continue"
       },
-      "type": "Front Page"
+      "type": "Overview"
     },
     "2": {
       "question": {

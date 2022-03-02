@@ -94,6 +94,8 @@ const App = () => {
                               question={current["question"][language]}
                               option={current["option"][language]}
                               goNext={goNext}
+                              position={position}
+                              titles={titles}
                     />
                 }
             </div>

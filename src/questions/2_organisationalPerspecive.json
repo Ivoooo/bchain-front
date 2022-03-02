@@ -6,7 +6,18 @@
   "questionContainer": {
     "1": {
       "question": {
-        "de": "Den Geschäftsfall haben wir jetzt fertig vorgestellt und kategorisiert. Als nächstes müssen wir die organisatorische Perspektive prüfen. \n Welche Ziele verfolgen Sie? Sie können so viele Optionen anklicken wie Sie möchten.",
+        "de": "[plan to delete] Den Geschäftsfall haben wir jetzt fertig vorgestellt und kategorisiert. Als nächstes müssen wir die organisatorische Perspektive prüfen.",
+        "en": "234"
+      },
+      "option": {
+        "de": "Weiter",
+        "en": "Continue"
+      },
+      "type": "Overview"
+    },
+    "2": {
+      "question": {
+        "de": " Welche Ziele verfolgen Sie? Sie können so viele Optionen anklicken wie Sie möchten.",
         "en": "234"
       },
       "option": {

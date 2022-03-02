@@ -6,14 +6,14 @@
   "questionContainer": {
     "1": {
       "question": {
-        "de": "Bevor wir bestimmen können ob die Benützung einer Blockchain für Sie Sinn ergibt müssen wir noch evaluieren auf welche die für Sie relevantesten Mehrwerte sind. Dazu müssen Sie 8 kurze Fragen beantworten.",
+        "de": "[plan to delete] Bevor wir bestimmen können ob die Benützung einer Blockchain für Sie Sinn ergibt müssen wir noch evaluieren auf welche die für Sie relevantesten Mehrwerte sind. Dazu müssen Sie 8 kurze Fragen beantworten.",
         "en": "asdf"
       },
       "option": {
         "de": "Weiter",
         "en": "Continue"
       },
-      "type": "Front Page"
+      "type": "Overview"
     },
     "2": {
       "question": {

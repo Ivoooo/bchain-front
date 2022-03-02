@@ -1,11 +1,11 @@
 {
   "title": {
-    "en": "Telemetry",
-    "de": "Telemetrie"
+    "en": "Data Collection",
+    "de": "Datensammlung"
   },
   "questionContainer": {
     "1": {
-      "Question": "Den Geschäftsfall haben wir jetzt fertig vorgestellt und kategorisiert. Als nächstes müssen wir die organisatorische Perspektive prüfen. \n Welche Ziele verfolgen Sie? Sie können so viele Option anklicken wie Sie möchten.",
+      "Question": "[plan to delete] Den Geschäftsfall haben wir jetzt fertig vorgestellt und kategorisiert. Als nächstes müssen wir die organisatorische Perspektive prüfen. \n Welche Ziele verfolgen Sie? Sie können so viele Option anklicken wie Sie möchten.",
       "Options": {
         "1": "Organisationsübergreifende Zusammenarbeit",
         "2": "Dezentrale Verwaltung von Daten und Prozessen",
