@@ -5,79 +5,165 @@
   },
   "questionContainer": {
     "1": {
-      "Question": "Bevor wir bestimmen können ob die Benützung einer Blockchain für Sie Sinn ergibt müssen wir noch evaluieren auf welche die für Sie relevantesten Mehrwerte sind. Dazu müssen Sie 8 kurze Fragen beantworten.",
-      "Options": "Weiter",
+      "question": {
+        "de": "Bevor wir bestimmen können ob die Benützung einer Blockchain für Sie Sinn ergibt müssen wir noch evaluieren auf welche die für Sie relevantesten Mehrwerte sind. Dazu müssen Sie 8 kurze Fragen beantworten.",
+        "en": "asdf"
+      },
+      "option": {
+        "de": "Weiter",
+        "en": "Continue"
+      },
       "type": "Front Page"
     },
     "2": {
-      "Question": "Ich möchte eine verbesserte Dokumentation und Haftung",
-      "Options": {
-        "1": "Ja, hohe Relevanz",
-        "2": "Ja, mittlere Relevanz",
-        "3": "Nein, kaum Relevanz"
+      "question": {
+        "de": "Ich möchte eine verbesserte Dokumentation und Haftung",
+        "en": "awdf"
+      },
+      "option": {
+        "de": [
+          "Ja, hohe Relevanz",
+          "Ja, mittlere Relevanz",
+          "Nein, kaum Relevanz"
+        ],
+        "en": [
+          "e",
+          "r",
+          "t"
+        ]
       },
       "type": "Single Choice"
     },
     "3": {
-      "Question": "Ich möchte eine verbesserte Risikoabschätzung",
-      "Options": {
-        "1": "Ja, hohe Relevanz",
-        "2": "Ja, mittlere Relevanz",
-        "3": "Nein, kaum Relevanz"
+      "question": {
+        "de": "Ich möchte eine verbesserte Risikoabschätzung",
+        "en": "awdf"
+      },
+      "option": {
+        "de": [
+          "Ja, hohe Relevanz",
+          "Ja, mittlere Relevanz",
+          "Nein, kaum Relevanz"
+        ],
+        "en": [
+          "e",
+          "r",
+          "t"
+        ]
       },
       "type": "Single Choice"
     },
     "4": {
-      "Question": "Ich möchte effizientere administrative Prozesse.",
-      "Options": {
-        "1": "Ja, hohe Relevanz",
-        "2": "Ja, mittlere Relevanz",
-        "3": "Nein, kaum Relevanz"
+      "question": {
+        "de": "Ich möchte effizientere administrative Prozesse",
+        "en": "awdf"
+      },
+      "option": {
+        "de": [
+          "Ja, hohe Relevanz",
+          "Ja, mittlere Relevanz",
+          "Nein, kaum Relevanz"
+        ],
+        "en": [
+          "e",
+          "r",
+          "t"
+        ]
       },
       "type": "Single Choice"
     },
     "5": {
-      "Question": "Ich möchte reduzierte administrative Kosten",
-      "Options": {
-        "1": "Ja, hohe Relevanz",
-        "2": "Ja, mittlere Relevanz",
-        "3": "Nein, kaum Relevanz"
+      "question": {
+        "de": "Ich möchte reduzierte administrative Kosten",
+        "en": "awdf"
+      },
+      "option": {
+        "de": [
+          "Ja, hohe Relevanz",
+          "Ja, mittlere Relevanz",
+          "Nein, kaum Relevanz"
+        ],
+        "en": [
+          "e",
+          "r",
+          "t"
+        ]
       },
       "type": "Single Choice"
     },
     "6": {
-      "Question": "Ich möchte eine verbesserte Datensicherheit und Redundanz.",
-      "Options": {
-        "1": "Ja, hohe Relevanz",
-        "2": "Ja, mittlere Relevanz",
-        "3": "Nein, kaum Relevanz"
+      "question": {
+        "de": "Ich möchte eine verbesserte Datensicherheit und Redundanz.",
+        "en": "awdf"
+      },
+      "option": {
+        "de": [
+          "Ja, hohe Relevanz",
+          "Ja, mittlere Relevanz",
+          "Nein, kaum Relevanz"
+        ],
+        "en": [
+          "e",
+          "r",
+          "t"
+        ]
       },
       "type": "Single Choice"
     },
     "7": {
-      "Question": "Ich möchte eine erhöhte Zuverlässigkeit der Daten.",
-      "Options": {
-        "1": "Ja, hohe Relevanz",
-        "2": "Ja, mittlere Relevanz",
-        "3": "Nein, kaum Relevanz"
+      "question": {
+        "de": "Ich möchte eine erhöhte Zuverlässigkeit der Daten.",
+        "en": "awdf"
+      },
+      "option": {
+        "de": [
+          "Ja, hohe Relevanz",
+          "Ja, mittlere Relevanz",
+          "Nein, kaum Relevanz"
+        ],
+        "en": [
+          "e",
+          "r",
+          "t"
+        ]
       },
       "type": "Single Choice"
     },
     "8": {
-      "Question": "Ich möchte eine verstärkte Zusammenarbeit mit anderen Parteien.",
-      "Options": {
-        "1": "Ja, hohe Relevanz",
-        "2": "Ja, mittlere Relevanz",
-        "3": "Nein, kaum Relevanz"
+      "question": {
+        "de": "Ich möchte eine verstärkte Zusammenarbeit mit anderen Parteien.",
+        "en": "awdf"
+      },
+      "option": {
+        "de": [
+          "Ja, hohe Relevanz",
+          "Ja, mittlere Relevanz",
+          "Nein, kaum Relevanz"
+        ],
+        "en": [
+          "e",
+          "r",
+          "t"
+        ]
       },
       "type": "Single Choice"
     },
     "9": {
-      "Question": "Ich möchte eine grössere Reichweite und Globalisierung.",
-      "Options": {
-        "1": "Ja, hohe Relevanz",
-        "2": "Ja, mittlere Relevanz",
-        "3": "Nein, kaum Relevanz"
+      "question": {
+        "de": "Ich möchte eine grössere Reichweite und Globalisierung.",
+        "en": "awdf"
+      },
+      "option": {
+        "de": [
+          "Ja, hohe Relevanz",
+          "Ja, mittlere Relevanz",
+          "Nein, kaum Relevanz"
+        ],
+        "en": [
+          "e",
+          "r",
+          "t"
+        ]
       },
       "type": "Single Choice"
     }

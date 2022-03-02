@@ -5,13 +5,21 @@
   },
   "questionContainer": {
     "1": {
-      "Question": "Den Geschäftsfall haben wir jetzt fertig vorgestellt und kategorisiert. Als nächstes müssen wir die organisatorische Perspektive prüfen. \n Welche Ziele verfolgen Sie? Sie können so viele Optionen anklicken wie Sie möchten.",
-      "Options": {
-        "1": "Organisationsübergreifende Zusammenarbeit",
-        "2": "Dezentrale Verwaltung von Daten und Prozessen",
-        "3": "Verteilte Kontrolle",
-        "4": "Verstärktes Vertrauen",
-        "5": "Keine der oben genannten Optionen"
+      "question": {
+        "de": "Den Geschäftsfall haben wir jetzt fertig vorgestellt und kategorisiert. Als nächstes müssen wir die organisatorische Perspektive prüfen. \n Welche Ziele verfolgen Sie? Sie können so viele Optionen anklicken wie Sie möchten.",
+        "en": "234"
+      },
+      "option": {
+        "de": [
+          "Organisationsübergreifende Zusammenarbeit",
+          "Dezentrale Verwaltung von Daten und Prozessen",
+          "Verteilte Kontrolle",
+          "Verstärktes Vertrauen",
+          "Keine der oben genannten Optionen"
+        ],
+        "en": [
+          "1","1","1","1","1"
+        ]
       },
       "type": "Multiple Choice or none"
     }

@@ -5,17 +5,32 @@
   },
   "questionContainer": {
     "1": {
-      "Question": "Die Benützung einer Blockchain ergibt Sinn für Sie! Wir empfehlen die Benützung einer <public permissionless Blockchain>. Als letzten Schritt möchten wir nun beurteilen wie weit ihre Organisation in Bezug zur Blockchain-Technologie ist, um eine genauere Empfehlung geben zu können wie Sie weiter vorgehen sollten.",
-      "Options": "Weiter",
+      "question": {
+        "de": "Die Benützung einer Blockchain ergibt Sinn für Sie! Wir empfehlen die Benützung einer <public permissionless Blockchain>. Als letzten Schritt möchten wir nun beurteilen wie weit ihre Organisation in Bezug zur Blockchain-Technologie ist, um eine genauere Empfehlung geben zu können wie Sie weiter vorgehen sollten.",
+        "en": "tbd"
+      },
+      "option": {
+        "de": "Weiter",
+        "en": "Continue"
+      },
       "type": "Front Page"
     },
     "2": {
-      "Question": "Alle Prozesse und Dienstleistungen sind digital konzipiert.",
-      "Options": {
-        "1": "Wissensaufbau",
-        "2": "Experimente",
-        "3": "Pilotfähig",
-        "4": "Integration & Roll-out"
+      "question": {
+        "de": "Alle Prozesse und Dienstleistungen sind digital konzipiert.",
+        "en": "coming soon"
+      },
+      "option": {
+        "de": [
+          "Wissensaufbau",
+          "Experimente",
+          "Pilotfähig",
+          "Integration & Roll-out"
+        ],
+        "en": [
+          "Yes",
+          "No"
+        ]
       },
       "type": "Single Choice"
     },

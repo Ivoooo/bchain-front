@@ -20,16 +20,19 @@ const App = () => {
 
 
     useEffect(() => {
-        console.log(NaviHelper.getMaxProgress())
         if (!localStorage.getItem("data")) localStorage.setItem("version", "1.0") //todo get version from file
-    }) //since no variable is at the end here it's basically "componentDidMount". So this function is executed exactly
-        // once at the beginning of loading the file
+    }, []) //since no variable is at the end here it's basically "componentDidMount". So this function is executed
+    //just once at the beginning
+
 
     useEffect( () => {
+        console.log(position);
+
         //update the question & corresponding type
         let q = QuestionHandler.getQuestion(position);
         setCurrent(q);
         setQuestionType(q["type"]);
+        console.log(q)
 
         //update furthestPosition if necessary
         if(position[0] > furthestPosition[0]) setFurthestPosition(position);
@@ -44,7 +47,7 @@ const App = () => {
 
     function goToChapter(chapter) { //todo also accept subchapter for navi "go back to maxQuestion"
         if(chapter === "navi") toggleNavi(true);
-        else setPosition([chapter][1]);
+        else setPosition([chapter,1]);
     }
 
     function goNext(prevAnswer) {
@@ -70,8 +73,7 @@ const App = () => {
                              changeLanguage={swapLanguage}
             />
             : <Header className="head"
-                      now={position}
-                      max={5}
+                      position={position}
                       goToChapter={goToChapter}
                       goBack={goBack}
                       language={language}
@@ -82,9 +84,8 @@ const App = () => {
             <h1 className="header">{titles[position[0]]}</h1>
             <div className="p-5 mb-4 white rounded-3">
                 {navi ?
-                    <NaviPage progress={5}
-                              maxProgress={[2,2]}
-                              titles={["einfürhug"]}
+                    <NaviPage maxProgress={furthestPosition}
+                              titles={titles}
                               goToChapter={goToChapter}
                               toggleNavi={toggleNavi}
                               language={language}

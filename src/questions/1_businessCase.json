@@ -27,44 +27,48 @@
         "type": "Text"
       },
       "3": {
-        "Question": "Sind sie Teil einer staatlichen Institution, eine Privatperson oder Teil eines Geschäftes",
-        "Options": {
-          "1": "Staatlich",
-          "2": "Geschäft oder Privatperson"
+        "question": {
+          "de": "Sind sie Teil einer staatlichen Institution, eine Privatperson oder Teil eines Geschäftes",
+          "en": "coming soon"
         },
-        "type": "Dual Choice"
+        "option": {
+          "de": [
+            "Staatlich",
+            "Privatperson",
+            "Geschäft"
+          ],
+          "en": [
+            "see soon",
+            "go ahead",
+            "k"
+          ]
+        },
+        "type": "Single Choice"
       },
       "4": {
-        "Question": "Bitte wählen Sie die Kategorie, welche am besten zu Ihrem Geschäftsfall passt",
-        "Options": {
-          "1": "Anmeldeverfahren",
-          "2": "Antragsverfahren",
-          "3": "Deklarationsverfahren",
-          "4": "Verträge, Verfügungen und Gesetze:",
-          "5": "Registerwesen",
-          "6": "Anderes"
+        "question": {
+          "de": "Bitte wählen Sie die Kategorie, welche am besten zu Ihrem Geschäftsfall passt",
+          "en": "coming soon"
+        },
+        "option": {
+          "de": [
+            "Anmeldeverfahren",
+            "Antragsverfahren",
+            "Deklarationsverfahren",
+            "Verträge, Verfügungen und Gesetze",
+            "Registerwesen",
+            "Anderes"
+          ],
+          "en": [
+            "see soon",
+            "go ahead",
+            "k",
+            "2",
+            "3",
+            "3"
+          ]
         },
         "type": "Single Choice with Other"
-      }
-    },
-    "Questions": {
-      "1": {
-        "Question": "Bevor wir starten würde die Universität Zürich um den Blockchain zu verbessern und Statistiken zu erheben gerne ihre Daten in komplett anonymer Form sammeln. Sind Sie damit einverstanden?",
-        "Options": {
-          "1": "yes",
-          "2": "no"
-        },
-        "Answer": null,
-        "Notes": null
-      },
-      "2": {
-        "Question": "Bevor wir starten würde die Universität Zürich um den Blockchain zu verbessern und Statistiken zu erheben gerne ihre Daten in komplett anonymer Form sammeln. Sind Sie damit einverstanden?",
-        "Options": {
-          "1": "yes",
-          "2": "no"
-        },
-        "Answer": null,
-        "Notes": null
       }
     }
   }

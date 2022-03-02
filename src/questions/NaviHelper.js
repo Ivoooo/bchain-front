@@ -13,8 +13,14 @@ let values = buildProgressArray();
 
 
 export class NaviHelper {
-    static getCurrentProgress([chapter, part]) { //todo
-        return 10;
+    static getCurrentProgress([chapter, part]) { //todo make binary search
+        let a = [0,1];
+        let i = 1;
+        while(a[0] !== chapter || a[1] !== part) {
+            a = getNextStep(a);
+            ++i;
+        }
+        return values[i];
     }
 
     static getMaxProgress() {
@@ -46,6 +52,5 @@ function buildProgressArray() {
         //pushes value of last array plus value of current step
         c.push(c[c.length-1] + calculateProgress(q[a[0]]["questionContainer"][a[1]]["type"]));
     }
-    console.log(c);
     return c
 }
