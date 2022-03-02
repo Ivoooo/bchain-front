@@ -1,13 +1,13 @@
 {
   "title": {
     "en": "Identify Benefits",
-    "de": "Mehrwerte Identifizieren"
+    "de": "Mehrwerte identifizieren"
   },
   "questionContainer": {
     "1": {
       "question": {
-        "de": "[plan to delete] Bevor wir bestimmen können ob die Benützung einer Blockchain für Sie Sinn ergibt müssen wir noch evaluieren auf welche die für Sie relevantesten Mehrwerte sind. Dazu müssen Sie 8 kurze Fragen beantworten.",
-        "en": "asdf"
+        "de": "",
+        "en": ""
       },
       "option": {
         "de": "Weiter",

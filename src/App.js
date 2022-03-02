@@ -7,7 +7,6 @@ import './views/Views.css';
 import {Router} from "./Router";
 import {NaviPage} from "./views/NaviPage";
 import {QuestionHandler} from "./questions/QuestionHandler";
-import {NaviHelper} from "./questions/NaviHelper";
 
 const App = () => {
     const [position, setPosition] = useState([0,1]);
@@ -45,9 +44,9 @@ const App = () => {
     }, [language])
 
 
-    function goToChapter(chapter) { //todo also accept subchapter for navi "go back to maxQuestion"
-        if(chapter === "navi") toggleNavi(true);
-        else setPosition([chapter,1]);
+    function goTo([chapter, part=1]) {
+        setPosition([chapter,part]);
+        toggleNavi(false);
     }
 
     function goNext(prevAnswer) {
@@ -74,19 +73,19 @@ const App = () => {
             />
             : <Header className="head"
                       position={position}
-                      goToChapter={goToChapter}
                       goBack={goBack}
                       language={language}
                       changeLanguage={swapLanguage}
+                      toggleNavi={toggleNavi}
             />
         }
         <div className="p-3">
             <h1 className="header">{titles[position[0]]}</h1>
             <div className="p-5 mb-4 white rounded-3">
                 {navi ?
-                    <NaviPage maxProgress={furthestPosition}
+                    <NaviPage furthestPosition={furthestPosition}
                               titles={titles}
-                              goToChapter={goToChapter}
+                              goTo={goTo}
                               toggleNavi={toggleNavi}
                               language={language}
                     />

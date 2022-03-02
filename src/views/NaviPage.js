@@ -1,11 +1,10 @@
 import React from "react";
 import {AButton} from "../components/AButton";
 
-export const NaviPage = ({maxProgress, titles, language, goToChapter, toggleNavi}) => {
-    function onPress(c) { //todo
+export const NaviPage = ({furthestPosition, titles, language, goTo, toggleNavi}) => {
+    function onPress(c) {
         let x = titles.indexOf(c)
-        goToChapter(x);
-        toggleNavi(false);
+        goTo([x,1]);
     }
 
     return (
@@ -16,16 +15,19 @@ export const NaviPage = ({maxProgress, titles, language, goToChapter, toggleNavi
                     <AButton txt={language === "de" ? "Zurück zur jetzigen Frage" : "Back to the current question"}
                              onClick={() => toggleNavi(false)}/>
                     <AButton txt={language === "de" ? "Weit entfernteste beantwortete Frage" : "Furthest answered question"}
-                             onClick={() => goToChapter(maxProgress)}/>
+                             onClick={() => goTo(furthestPosition)}/>
                 </div>
 
                 <h3 className="text-center">Zum Kapitel:</h3>
-                {titles.map(ch => { //todo only appear if already passed maxProgress
-                    return <AButton txt={ch}
-                                    onClick={(e) => onPress(e.target.value)}
-                                    value={ch}
-                                    key={ch}
-                    />
+                {titles.map((ch, index) => {
+                    if(index <= furthestPosition[0]) {
+                        return <AButton txt={ch}
+                                        onClick={(e) => onPress(e.target.value)}
+                                        value={ch}
+                                        key={ch}
+                        />
+                    }
+                    return null
                 })}
             </div>
         </>

@@ -7,7 +7,6 @@ import q5 from "./5_evaluateCompany.json";
 import q6 from "./6_telemetry.json";
 
 let q = [q0, q1, q2, q3, q4, q5, q6]; //IMPORTANT if you add a new step (q7), you NEED to extend this array!
-//GUIDELINES TO ADD NEW QUESTION: todo
 
 let values = buildProgressArray();
 
@@ -30,13 +29,14 @@ export class NaviHelper {
 
 function getNextStep([chapter, part]) { //todo this is same as in QuestionHandler
     if(q[chapter]["questionContainer"][part+1] !== undefined) return [chapter, part+1];
-    return [chapter+1,1] //todo might do [n,0] for in between screen.
+    return [chapter+1,1]
 }
 
 function calculateProgress(type) {
     if (type === "Front Page") return 1;
     if (type === "Text") return 1;
     if (type === "Dual Choice") return 1;
+    if (type === "Overview") return 1;
     if (type === "Single Choice with Other" || type === "Single Choice") return 2;
     if (type === "Multiple Choice or none" || type === "Multiple Choice") return 4;
     if (type === "Telemetry") return 3;

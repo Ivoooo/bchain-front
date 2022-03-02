@@ -6,8 +6,8 @@
   "questionContainer": {
     "1": {
       "question": {
-        "de": "[plan to delete] Die Benützung einer Blockchain ergibt Sinn für Sie! Wir empfehlen die Benützung einer <public permissionless Blockchain>. Als letzten Schritt möchten wir nun beurteilen wie weit ihre Organisation in Bezug zur Blockchain-Technologie ist, um eine genauere Empfehlung geben zu können wie Sie weiter vorgehen sollten.",
-        "en": "tbd"
+        "de": "",
+        "en": ""
       },
       "option": {
         "de": "Weiter",
