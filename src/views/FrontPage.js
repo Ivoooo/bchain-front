@@ -24,7 +24,7 @@ export const FrontPage = ({question, option, handleClick, refer=false}) => {
                 { refer && <AButton txt={"Leitfaden anschauen"}/> }
             </a>
             <div style={{float: "right"}}>
-                <AButton txt={option} onClick={handleClick}/>
+                <AButton txt={option} onClick={(e) => handleClick(e.target.value)}/>
             </div>
         </>
     )

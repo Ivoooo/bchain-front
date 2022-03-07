@@ -1,8 +1,9 @@
 import {AButton} from "../components/AButton";
-import React from "react";
+import React, {useState} from "react";
 import {ATextArea} from "../components/ATextArea";
 
 export const NotePage = ({question, option, handleClick}) => {
+    const [answer, setAnswer] = useState("");
     question = question.split("\n");
     let q = question[0];
     question.shift();
@@ -14,10 +15,10 @@ export const NotePage = ({question, option, handleClick}) => {
                 <h4 className="text-center" key={q}>{q}</h4>
             )}
             <div style={{maxWidth: 800, margin:"auto"}}>
-                {ATextArea("Bitte geben Sie hier Ihren Geschäftsfall an.")}
+                <ATextArea txt={"Bitte geben Sie hier Ihren Geschäftsfall an."} saveAnswer={setAnswer}/>
             </div>
             <div style={{float: "right", padding: "12px"}}>
-                <AButton txt={option} onClick={handleClick} />
+                <AButton txt={option} onClick={() => handleClick(answer)} />
             </div>
         </>
     )

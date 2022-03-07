@@ -1,4 +1,3 @@
-import {ATextArea} from "../components/ATextArea";
 import React from "react";
 import {AButton} from "../components/AButton";
 
@@ -21,12 +20,9 @@ export const SingleChoiceQuestion = ({question, option, handleClick}) => {
                 </>
             }
             <div className="d-grid gap-2">
-                {o.map(x =>
-                    <AButton txt={x} onClick={handleClick} />
+                {o.map((x, id) =>
+                    <AButton txt={x} key={id} onClick={(e) => handleClick(e.target.value)} />
                 )}
-            </div>
-            <div style={{maxWidth: 800, margin:"auto", padding:10}}>
-                {ATextArea("Falls Sie wollen können Sie hier ihre Antwort erläutern.")}
             </div>
         </>
     )

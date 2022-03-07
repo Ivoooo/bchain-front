@@ -20,7 +20,7 @@ export const NaviPage = ({furthestPosition, titles, language, goTo, toggleNavi})
 
                 <h3 className="text-center">Zum Kapitel:</h3>
                 {titles.map((ch, index) => {
-                    if(index <= furthestPosition[0]) {
+                    if(index <= /*furthestPosition[0] todo tmp */ 10) {
                         return <AButton txt={ch}
                                         onClick={(e) => onPress(e.target.value)}
                                         value={ch}

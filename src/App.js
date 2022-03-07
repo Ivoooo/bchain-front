@@ -16,6 +16,7 @@ const App = () => {
     const [titles, setTitles] = useState(["Einführung"]);
     const [language, toggleLanguage] = useState("de");
     const [navi, toggleNavi] = useState(false);
+    const [answer, setAnswer] = useState({0:{}, 1: {}, 2: {}, 3:{}, 4:{}, 5:{}, 6:{}});
 
 
     useEffect(() => {
@@ -50,7 +51,13 @@ const App = () => {
     }
 
     function goNext(prevAnswer) {
-        if(prevAnswer !== null) console.log("Given answer is: " + prevAnswer.target.value)
+        if(prevAnswer !== null) {
+            console.log("Given answer is: " + prevAnswer);
+            let a = answer;
+            a[position[0]][position[1]] = prevAnswer;
+            setAnswer(a);
+            console.log(answer);
+        }
         else console.log("Pressed next but no answer was given")
 
         let q = QuestionHandler.getNextStep(position);
@@ -89,7 +96,8 @@ const App = () => {
                               toggleNavi={toggleNavi}
                               language={language}
                     />
-                    : <Router questionType={questionType}
+                    : <Router language={language}
+                              questionType={questionType}
                               question={current["question"][language]}
                               option={current["option"][language]}
                               goNext={goNext}

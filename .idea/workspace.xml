@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="40410a09-9383-4c8c-9e9e-3798d94570f9" name="Changes" comment="Continuing updating json-questions&#10;Fixes to Header, NaviPage &amp; TwoOptionQuestion">
+    <list default="true" id="40410a09-9383-4c8c-9e9e-3798d94570f9" name="Changes" comment="Fixed Navi&#10;Minor fixes in questions&#10;Cleaned up some todos and Overview">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/questions/1_businessCase.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/questions/1_businessCase.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/questions/2_organisationalPerspecive.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/questions/2_organisationalPerspecive.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/questions/3_identifyBenefits.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/questions/3_identifyBenefits.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/questions/4_CheckUsability.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/questions/4_CheckUsability.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/questions/5_evaluateCompany.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/questions/5_evaluateCompany.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/questions/NaviHelper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/questions/NaviHelper.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AButtonWithCommentOnClick.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AButtonWithCommentOnClick.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ATextArea.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ATextArea.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/BTextArea.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/data.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/questions/QuestionHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/questions/QuestionHandler.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/FrontPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/FrontPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/MultipleChoiceQuestion.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/MultipleChoiceQuestion.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/NaviPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/NaviPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/NotePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/NotePage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/Overview.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Overview.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/SingleChoiceQuestion.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/SingleChoiceQuestion.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/TwoOptionQuestion.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/TwoOptionQuestion.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +139,11 @@
       <workItem from="1645698314290" duration="5868000" />
       <workItem from="1645731940917" duration="3162000" />
       <workItem from="1646056730569" duration="1575000" />
-      <workItem from="1646217744528" duration="17539000" />
+      <workItem from="1646217744528" duration="18526000" />
+      <workItem from="1646312927557" duration="117000" />
+      <workItem from="1646329715531" duration="602000" />
+      <workItem from="1646477738588" duration="1650000" />
+      <workItem from="1646686617704" duration="8595000" />
     </task>
     <task id="LOCAL-00001" summary="updates Versions">
       <created>1639761190096</created>
@@ -431,15 +439,32 @@
       <option name="project" value="LOCAL" />
       <updated>1646229166024</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Fixed Navi&#10;Minor fixes in questions&#10;Cleaned up some todos and Overview">
+      <created>1646241030847</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1646241030847</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Unified CSS&#10;Added Back button" />
     <MESSAGE value="Implemented NaviPage.js&#10;Basic implementation of Telemetry.js" />
     <MESSAGE value="Deleted UZH logo" />
     <MESSAGE value="Exported logic to Router" />
@@ -464,7 +489,8 @@
     <MESSAGE value="Continuing updating json-questions&#10;Started Implementing NaviHelper.js to fix Header Issue" />
     <MESSAGE value="Continuing updating json-questions&#10;Fixes to Header, NaviPage &amp; TwoOptionQuestion" />
     <MESSAGE value="Added Overview Page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Overview Page" />
+    <MESSAGE value="Fixed Navi&#10;Minor fixes in questions&#10;Cleaned up some todos and Overview" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed Navi&#10;Minor fixes in questions&#10;Cleaned up some todos and Overview" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -11,8 +11,6 @@ let q = [q0, q1, q2, q3, q4, q5, q6]; //IMPORTANT if you add a new step (q7), yo
 //might be smart to save the version here because then only this file needs editing.
 
 export class QuestionHandler {
-    q = [q0, q1, q2, q3, q4, q5, q6];
-
     static getQuestion([chapter, part]) {
         return getQuestion([chapter, part]);
     }
