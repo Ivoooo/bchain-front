@@ -9,10 +9,10 @@ import {InfoPage} from "./views/InfoPage";
 import {Overview} from "./views/Overview";
 
 export const Router = ({language, questionType, question, option, goNext, position, titles, prevAnswer, prevNote}) => {
-    console.log("Loading..." +  questionType, option, goNext, question)
+    console.log("Loading..." +  questionType, option, prevAnswer, prevNote, question)
 
     if (questionType === "Front Page") return <InfoPage question={question} option={option} handleClick={goNext}/>
-    if (questionType === "Text") return <NotePage question={question} option={option} handleClick={goNext} prevNote={prevNote}/>
+    if (questionType === "Text") return <NotePage question={question} option={option} handleClick={goNext} prevNote={prevNote[0]}/>
     if (questionType === "Dual Choice") return <TwoOptionQuestion question={question} option={option} handleClick={goNext} prevAnswer={prevAnswer}/>
     if (questionType === "Single Choice with Other") return <SingleChoiceQuestion question={question} option={option} handleClick={goNext} prevAnswer={prevAnswer}/>
     if (questionType === "Single Choice") return <SingleChoiceQuestion question={question} option={option} handleClick={goNext} prevAnswer={prevAnswer}/>

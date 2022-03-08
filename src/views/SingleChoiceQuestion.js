@@ -2,9 +2,6 @@ import React from "react";
 import {AButton} from "../components/AButton";
 
 export const SingleChoiceQuestion = ({question, option, handleClick, prevAnswer}) => {
-    //todo decide on if comment is needed. Also update Text area if still needed
-    //todo clean up code below
-
     //convert answer 'option' into an iterable list to be able to apply .map
     let o = [];
     for (let i in option)

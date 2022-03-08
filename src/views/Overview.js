@@ -3,10 +3,11 @@ import {AButton} from "../components/AButton";
 
 export const Overview = ({question, position, titles, option, handleClick, language}) => {
     const [newTitles, setTitles] = useState([]);
-    
+
     useEffect(() => {
         let a = [...titles];
-        a.pop();
+        a.pop(); //getting rid of Final result step
+        a.pop(); //getting rid of data collection step
         setTitles(a);
     }, [titles])
 

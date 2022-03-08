@@ -5,10 +5,11 @@ import q3 from "./3_identifyBenefits.json";
 import q4 from "./4_CheckUsability.json";
 import q5 from "./5_evaluateCompany.json";
 import q6 from "./6_telemetry.json";
+import q7 from "./7_end.json"
 
-let q = [q0, q1, q2, q3, q4, q5, q6]; //IMPORTANT if you add a new step (q7), you NEED to extend this array!
-//merge with NaviHelper. => Check if arrays get built every time => if yes store in local storage todo
-//might be smart to save the version here because then only this file needs editing.
+const q = [q0, q1, q2, q3, q4, q5, q6, q7]; //IMPORTANT if you add a new step (q8), you NEED to extend this array!
+//ALSO, you need to import the new question above! (q8 recommended as name)
+//Likely it would make sense to change the order as Telemetry and End should probably be at the end.
 
 export class QuestionHandler {
     static getQuestion([chapter, part]) {
@@ -26,6 +27,10 @@ export class QuestionHandler {
     static getLastStep([chapter, part]) {
         return getLastStep([chapter, part]);
     }
+
+    static getQuestionArray() {
+        return q;
+    }
 }
 
 function getQuestion([chapter, part]) {
@@ -34,7 +39,12 @@ function getQuestion([chapter, part]) {
 
 function getNextStep([chapter, part]) {
     if(q[chapter]["questionContainer"][part+1] !== undefined) return [chapter, part+1];
-    return [chapter+1,1]
+    if(q[chapter+1] !== undefined) {
+        if(q[chapter+1]["questionContainer"][1] !== undefined) {
+            return [chapter+1, 1];
+        }
+    }
+    return null; //to signal end of questions
 }
 
 function getTitles(language="de") {
