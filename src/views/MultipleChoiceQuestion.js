@@ -1,8 +1,8 @@
-import React, {useEffect, useState} from "react";
+import React, {useCallback, useEffect, useState} from "react";
 import {AButtonWithCommentOnClick} from "../components/AButtonWithCommentOnClick";
 import {AButton} from "../components/AButton";
 
-export const MultipleChoiceQuestion = ({language, question, option, goNext}) =>{
+export const MultipleChoiceQuestion = ({language, question, option, goNext, prevAnswer, prevNote}) =>{
     //states
     const [newOption, setNewOption] = useState([]);
     const [newQuestion, setNewQuestion] = useState([]);
@@ -13,21 +13,19 @@ export const MultipleChoiceQuestion = ({language, question, option, goNext}) =>{
 
     useEffect(() => {
         //building iterable Option, Answer & Question
-        let x = [], y = [], z=[];
+        let x = [], y = [];
         for (let i in option) {
             x.push(option[i]);
             y.push(false);
-            z.push([])
         }
         setNewQuestion(question.split("\n"));
         setNewOption(x);
         setAnswer(y);
-        setNotes(z)
     }, [option, question]);
 
     //calculates if incorrect of next button should be disabled
     //can't use useEffect since size of array never changes and doesn't check content.
-    function checkDisabled() {
+    const checkDisabled = useCallback(() => {
         let hasTrues = false;
         for(let i=0; i < answer.length-1; i++) {
             if(answer[i]) {
@@ -39,11 +37,30 @@ export const MultipleChoiceQuestion = ({language, question, option, goNext}) =>{
 
         setIncorrect(hasTrues && last);
         setDisabled(!hasTrues && !last);
-    }
+    }, [answer])
+
+    useEffect(() => {
+        checkDisabled();
+    }, [answer, checkDisabled])
+
+    useEffect(() => {
+        let tmp = [], n = [];
+        if(prevAnswer !== []) {
+            for(let i=0; i<option.length; ++i) {
+                tmp.push(false);
+                n.push(null)
+            }
+            for(let i=0; i<prevAnswer.length; ++i) {
+                tmp[prevAnswer[i]] = true;
+                n[prevAnswer[i]] = prevNote[i];
+            }
+        }
+        console.log(n);
+        setAnswer(tmp);
+        setNotes(n);
+    }, [option.length, prevAnswer, prevNote])
 
     function handleClick(option, bool, note) {
-        console.log(option, bool, note);
-
         let idx = newOption.indexOf(option);
         let a = answer;
         a[idx] = bool;
@@ -51,7 +68,8 @@ export const MultipleChoiceQuestion = ({language, question, option, goNext}) =>{
 
         let b = notes;
         b[idx] = note;
-        setNotes(b)
+        console.log(b)
+        setNotes(b);
 
         checkDisabled();
     }
@@ -65,7 +83,7 @@ export const MultipleChoiceQuestion = ({language, question, option, goNext}) =>{
                 b.push(notes[i]);
             }
         }
-        goNext([a, b]);
+        goNext(a, b);
     }
 
     return <>
@@ -74,8 +92,8 @@ export const MultipleChoiceQuestion = ({language, question, option, goNext}) =>{
         )}
 
         <div className="d-grid gap-2">
-            {newOption.map((o, idx) =>
-                <AButtonWithCommentOnClick txt={o} key={idx} handleClick={handleClick} language={language}/>
+            {newOption.map((o, id) =>
+                <AButtonWithCommentOnClick txt={o} key={id} handleClick={handleClick} language={language} isClicked={answer[id]} prevNote={prevNote[id]}/>
             )}
         </div>
         <div style={{float: "right"}}>

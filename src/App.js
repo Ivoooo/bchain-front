@@ -17,10 +17,14 @@ const App = () => {
     const [language, toggleLanguage] = useState("de");
     const [navi, toggleNavi] = useState(false);
     const [answer, setAnswer] = useState({0:{}, 1: {}, 2: {}, 3:{}, 4:{}, 5:{}, 6:{}});
+    const [time, setTime] = useState(0)
 
 
     useEffect(() => {
         if (!localStorage.getItem("data")) localStorage.setItem("version", "1.0") //todo get version from file
+        const t = new Date();
+        let q = t.getTime()
+        setTime(q);
     }, []) //since no variable is at the end here it's basically "componentDidMount". So this function is executed
     //just once at the beginning
 
@@ -44,24 +48,58 @@ const App = () => {
         setTitles(QuestionHandler.getTitles(language));
     }, [language])
 
-
     function goTo([chapter, part=1]) {
         setPosition([chapter,part]);
         toggleNavi(false);
     }
 
-    function goNext(prevAnswer) {
-        if(prevAnswer !== null) {
-            console.log("Given answer is: " + prevAnswer);
-            let a = answer;
-            a[position[0]][position[1]] = prevAnswer;
-            setAnswer(a);
-            console.log(answer);
+    function goNext(prevAnswer, prevNotes=[""],) {
+        console.log("Given answer is: " + prevAnswer);
+        if(typeof prevAnswer === "string") prevAnswer = [prevAnswer];
+
+        //gathering answers to save
+        let d = {};
+        const t = new Date();
+        d["time"] = t.getTime() - time;
+        let f = t.getTime() //this line is needed, can't setTime directly
+        setTime(f);
+        d["language"] = language;
+        d["answer"] = prevAnswer;
+        if(questionType === "Text") prevNotes = prevAnswer; //technically it's notes; also needed for prefill if revisiting question
+        d["notes"] = prevNotes;
+        d["question"] = current["question"][language]; //just in case but technically not needed.
+
+        //generating normalized answer array
+        if(questionType === "Text" || prevAnswer === "null") d["normalized"] = "null";
+        else {
+            let ids = [];
+            for(let i = 0; i<current["option"][language].length; i++) {
+                if(prevAnswer.includes(current["option"][language][i])) {
+                    ids.push(i)
+                }
+            }
+            d["normalized"] = ids;
         }
-        else console.log("Pressed next but no answer was given")
+
+        //saving answer
+        let a = answer;
+        a[position[0]][position[1]] = d;
+        setAnswer(a); //todo save in local storage
+        console.log(a)
 
         let q = QuestionHandler.getNextStep(position);
         setPosition(q);
+    }
+
+    function getPrevAnswer() {
+        if(answer[position[0]][position[1]] === undefined) return [];
+        if(answer[position[0]][position[1]]["normalized"] === "null") return [];
+        return answer[position[0]][position[1]]["normalized"]
+    }
+
+    function getPrevNote() {
+        if(answer[position[0]][position[1]] === undefined) return ["",];
+        return answer[position[0]][position[1]]["notes"];
     }
 
     function goBack()  {
@@ -103,6 +141,8 @@ const App = () => {
                               goNext={goNext}
                               position={position}
                               titles={titles}
+                              prevAnswer={getPrevAnswer()}
+                              prevNote={getPrevNote()}
                     />
                 }
             </div>

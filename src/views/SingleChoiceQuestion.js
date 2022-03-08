@@ -1,7 +1,7 @@
 import React from "react";
 import {AButton} from "../components/AButton";
 
-export const SingleChoiceQuestion = ({question, option, handleClick}) => {
+export const SingleChoiceQuestion = ({question, option, handleClick, prevAnswer}) => {
     //todo decide on if comment is needed. Also update Text area if still needed
     //todo clean up code below
 
@@ -21,7 +21,7 @@ export const SingleChoiceQuestion = ({question, option, handleClick}) => {
             }
             <div className="d-grid gap-2">
                 {o.map((x, id) =>
-                    <AButton txt={x} key={id} onClick={(e) => handleClick(e.target.value)} />
+                    <AButton txt={x} key={id} onClick={(e) => handleClick(e.target.value)} isClicked={prevAnswer.includes(id)}/>
                 )}
             </div>
         </>

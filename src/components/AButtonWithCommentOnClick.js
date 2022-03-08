@@ -2,25 +2,23 @@ import React, {useEffect, useState} from "react";
 import {AButton} from "./AButton";
 import {ATextArea} from "./ATextArea";
 
-export const AButtonWithCommentOnClick = ({ txt="Placeholder AButtonWithCommentOnClick" , handleClick=null}) => {
-    const [answer, setAnswer] = useState("");
-    const [notes, setNotes] = useState("");
-    const [show, toggleShow] = useState(false);
+export const AButtonWithCommentOnClick = ({ txt="Placeholder AButtonWithCommentOnClick" , handleClick=null, isClicked=false, prevNote=""}) => {
+    const [notes, setNotes] = useState(prevNote);
+    const [show, toggleShow] = useState(isClicked);
 
     useEffect( () => {
-        if(answer !== "") handleClick(answer, show, notes)
-    }, [answer, handleClick, notes, show])
+        handleClick(txt, show, notes)
+    }, [handleClick, notes, show, txt])
 
     function change(e) {
         console.log("Clicked on: " + e.target.value);
         toggleShow(!show);
-        setAnswer(e.target.value)
     }
 
     return (
         <>
             <AButton txt={txt} onClick={(e) => change(e)}  isClicked={show}/>
-            {show && <ATextArea txt={"Bitte geben Sie hier Ihren Geschäftsfall an."} saveAnswer={setNotes}/>}
+            {show && <ATextArea saveAnswer={setNotes} prevAnswer={prevNote}/>}
         </>
     );
 };

@@ -2,11 +2,16 @@ import {AButton} from "../components/AButton";
 import React, {useState} from "react";
 import {ATextArea} from "../components/ATextArea";
 
-export const NotePage = ({question, option, handleClick}) => {
+export const NotePage = ({question, option, handleClick, prevNote}) => {
     const [answer, setAnswer] = useState("");
     question = question.split("\n");
     let q = question[0];
     question.shift();
+
+    function goNext() {
+        if(answer === "" && prevNote !== [""]) handleClick(prevNote) //if you don't edit the input. I.e. just checking again
+        else handleClick(answer)
+    }
 
     return (
         <>
@@ -15,10 +20,10 @@ export const NotePage = ({question, option, handleClick}) => {
                 <h4 className="text-center" key={q}>{q}</h4>
             )}
             <div style={{maxWidth: 800, margin:"auto"}}>
-                <ATextArea txt={"Bitte geben Sie hier Ihren Geschäftsfall an."} saveAnswer={setAnswer}/>
+                <ATextArea txt={"Bitte geben Sie hier Ihren Geschäftsfall an."} saveAnswer={setAnswer} prevAnswer={prevNote[0]}/>
             </div>
             <div style={{float: "right", padding: "12px"}}>
-                <AButton txt={option} onClick={() => handleClick(answer)} />
+                <AButton txt={option} onClick={goNext} />
             </div>
         </>
     )
