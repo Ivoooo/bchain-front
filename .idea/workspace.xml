@@ -3,14 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="40410a09-9383-4c8c-9e9e-3798d94570f9" name="Changes" comment="Saved answers are now displayed. MultipleChoiceQuestion.js has issues with notes.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AButtonWithCommentOnClick.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AButtonWithCommentOnClick.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ATextArea.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ATextArea.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/MultipleChoiceQuestion.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/MultipleChoiceQuestion.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/NotePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/NotePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/SingleChoiceQuestion.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/SingleChoiceQuestion.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/TwoOptionQuestion.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/TwoOptionQuestion.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +131,7 @@
       <workItem from="1646329715531" duration="602000" />
       <workItem from="1646477738588" duration="1650000" />
       <workItem from="1646686617704" duration="17489000" />
-      <workItem from="1646731802402" duration="2251000" />
+      <workItem from="1646731802402" duration="4018000" />
     </task>
     <task id="LOCAL-00001" summary="updates Versions">
       <created>1639761190096</created>
@@ -448,7 +441,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646696051891</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="Saved answers are now displayed. MultipleChoiceQuestion.js has issues with notes.">
+      <created>1646734125096</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1646734125096</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
