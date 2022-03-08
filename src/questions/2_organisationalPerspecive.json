@@ -18,7 +18,7 @@
     "2": {
       "question": {
         "de": " Welche Ziele verfolgen Sie? Sie können so viele Optionen anklicken wie Sie möchten.",
-        "en": "234"
+        "en": "What are your goals? You can click as many options as you like."
       },
       "option": {
         "de": [
@@ -29,7 +29,11 @@
           "Keine der oben genannten Optionen"
         ],
         "en": [
-          "1","1","1","1","1"
+          "Cross-organizational collaboration",
+          "Decentralized management of data and processes",
+          "Distributed control",
+          "Increased trust.",
+          "None of the above options"
         ]
       },
       "type": "Multiple Choice or none"

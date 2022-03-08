@@ -17,8 +17,8 @@
     },
     "2": {
       "question": {
-        "de": "Ich möchte eine verbesserte Dokumentation und Haftung",
-        "en": "awdf"
+        "de": "Ich möchte eine verbesserte Dokumentation und Haftung.",
+        "en": "I want improved documentation and liability."
       },
       "option": {
         "de": [
@@ -27,17 +27,17 @@
           "Nein, kaum Relevanz"
         ],
         "en": [
-          "e",
-          "r",
-          "t"
+          "Yes, high relevance",
+          "Yes, medium relevance",
+          "No, hardly any relevance"
         ]
       },
       "type": "Single Choice"
     },
     "3": {
       "question": {
-        "de": "Ich möchte eine verbesserte Risikoabschätzung",
-        "en": "awdf"
+        "de": "Ich möchte eine verbesserte Risikoabschätzung.",
+        "en": "I want improved risk assessment."
       },
       "option": {
         "de": [
@@ -46,17 +46,17 @@
           "Nein, kaum Relevanz"
         ],
         "en": [
-          "e",
-          "r",
-          "t"
+          "Yes, high relevance",
+          "Yes, medium relevance",
+          "No, hardly any relevance"
         ]
       },
       "type": "Single Choice"
     },
     "4": {
       "question": {
-        "de": "Ich möchte effizientere administrative Prozesse",
-        "en": "awdf"
+        "de": "Ich möchte effizientere administrative Prozesse.",
+        "en": "I want more efficient administrative processes."
       },
       "option": {
         "de": [
@@ -65,17 +65,17 @@
           "Nein, kaum Relevanz"
         ],
         "en": [
-          "e",
-          "r",
-          "t"
+          "Yes, high relevance",
+          "Yes, medium relevance",
+          "No, hardly any relevance"
         ]
       },
       "type": "Single Choice"
     },
     "5": {
       "question": {
-        "de": "Ich möchte reduzierte administrative Kosten",
-        "en": "awdf"
+        "de": "Ich möchte reduzierte administrative Kosten.",
+        "en": "I want reduced administrative costs."
       },
       "option": {
         "de": [
@@ -84,9 +84,9 @@
           "Nein, kaum Relevanz"
         ],
         "en": [
-          "e",
-          "r",
-          "t"
+          "Yes, high relevance",
+          "Yes, medium relevance",
+          "No, hardly any relevance"
         ]
       },
       "type": "Single Choice"
@@ -94,7 +94,7 @@
     "6": {
       "question": {
         "de": "Ich möchte eine verbesserte Datensicherheit und Redundanz.",
-        "en": "awdf"
+        "en": "I want improved data security and redundancy."
       },
       "option": {
         "de": [
@@ -103,9 +103,9 @@
           "Nein, kaum Relevanz"
         ],
         "en": [
-          "e",
-          "r",
-          "t"
+          "Yes, high relevance",
+          "Yes, medium relevance",
+          "No, hardly any relevance"
         ]
       },
       "type": "Single Choice"
@@ -113,7 +113,7 @@
     "7": {
       "question": {
         "de": "Ich möchte eine erhöhte Zuverlässigkeit der Daten.",
-        "en": "awdf"
+        "en": "I want increased reliability of the data."
       },
       "option": {
         "de": [
@@ -122,9 +122,9 @@
           "Nein, kaum Relevanz"
         ],
         "en": [
-          "e",
-          "r",
-          "t"
+          "Yes, high relevance",
+          "Yes, medium relevance",
+          "No, hardly any relevance"
         ]
       },
       "type": "Single Choice"
@@ -132,7 +132,7 @@
     "8": {
       "question": {
         "de": "Ich möchte eine verstärkte Zusammenarbeit mit anderen Parteien.",
-        "en": "awdf"
+        "en": "I want to see increased cooperation with other parties."
       },
       "option": {
         "de": [
@@ -141,9 +141,9 @@
           "Nein, kaum Relevanz"
         ],
         "en": [
-          "e",
-          "r",
-          "t"
+          "Yes, high relevance",
+          "Yes, medium relevance",
+          "No, hardly any relevance"
         ]
       },
       "type": "Single Choice"
@@ -151,7 +151,7 @@
     "9": {
       "question": {
         "de": "Ich möchte eine grössere Reichweite und Globalisierung.",
-        "en": "awdf"
+        "en": "I want a greater reach and globalization."
       },
       "option": {
         "de": [
@@ -160,9 +160,9 @@
           "Nein, kaum Relevanz"
         ],
         "en": [
-          "e",
-          "r",
-          "t"
+          "Yes, high relevance",
+          "Yes, medium relevance",
+          "No, hardly any relevance"
         ]
       },
       "type": "Single Choice"

@@ -36,7 +36,7 @@ export const MultipleChoiceQuestion = ({language, question, option, goNext, prev
         let a = [], n = [], o = [];
         for(let i=0; i<option.length; ++i) {
             a.push(false);
-            n.push(""); //todo
+            n.push("");
             o.push(option[i]);
         }
         console.log(prevAnswer)

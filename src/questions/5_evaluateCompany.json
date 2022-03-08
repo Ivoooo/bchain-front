@@ -18,7 +18,7 @@
     "2": {
       "question": {
         "de": "Geschäftsprozesse \n Alle Prozesse und Dienstleistungen sind digital konzipiert.",
-        "en": "coming soon"
+        "en": "Business processes \n All processes and services are designed digitally."
       },
       "option": {
         "de": [
@@ -28,18 +28,18 @@
           "Nicht erfüllt"
         ],
         "en": [
-          "Yes",
-          "No",
-          "I don't know",
-          "Can you repeat the question"
+          "Completely fulfilled.",
+          "Fulfilled",
+          "Little fulfilled",
+          "Not fulfilled"
         ]
       },
       "type": "Single Choice"
     },
     "3": {
       "question": {
-        "de": "Geschäftsprozesse \n Die Prozesse sind datengetrieben",
-        "en": "coming soon"
+        "de": "Geschäftsprozesse \n Die Prozesse sind datengetrieben.",
+        "en": "Business processes \n The processes are data-driven."
       },
       "option": {
         "de": [
@@ -49,10 +49,10 @@
           "Nicht erfüllt"
         ],
         "en": [
-          "Yes",
-          "No",
-          "I don't know",
-          "Can you repeat the question"
+          "Completely fulfilled.",
+          "Fulfilled",
+          "Little fulfilled",
+          "Not fulfilled"
         ]
       },
       "type": "Single Choice"
@@ -60,7 +60,7 @@
     "4": {
       "question": {
         "de": "Geschäftsprozesse \n Plattformdenken ist vorhanden.",
-        "en": "coming soon"
+        "en": "Business processes \n Platform thinking is existent."
       },
       "option": {
         "de": [
@@ -70,10 +70,10 @@
           "Nicht erfüllt"
         ],
         "en": [
-          "Yes",
-          "No",
-          "I don't know",
-          "Can you repeat the question"
+          "Completely fulfilled.",
+          "Fulfilled",
+          "Little fulfilled",
+          "Not fulfilled"
         ]
       },
       "type": "Single Choice"
@@ -81,7 +81,7 @@
     "5": {
       "question": {
         "de": "Organisation \n Innovationskultur im Team.",
-        "en": "coming soon"
+        "en": "Organization \n Innovation culture in the team."
       },
       "option": {
         "de": [
@@ -91,10 +91,10 @@
           "Nicht erfüllt"
         ],
         "en": [
-          "Yes",
-          "No",
-          "I don't know",
-          "Can you repeat the question"
+          "Completely fulfilled.",
+          "Fulfilled",
+          "Little fulfilled",
+          "Not fulfilled"
         ]
       },
       "type": "Single Choice"
@@ -102,7 +102,7 @@
     "6": {
       "question": {
         "de": "Organisation \n Interdisziplinäre Kompetenzen.",
-        "en": "coming soon"
+        "en": "Organization \n Interdisciplinary competences."
       },
       "option": {
         "de": [
@@ -112,10 +112,10 @@
           "Nicht erfüllt"
         ],
         "en": [
-          "Yes",
-          "No",
-          "I don't know",
-          "Can you repeat the question"
+          "Completely fulfilled.",
+          "Fulfilled",
+          "Little fulfilled",
+          "Not fulfilled"
         ]
       },
       "type": "Single Choice"
@@ -123,7 +123,7 @@
     "7": {
       "question": {
         "de": "Organisation \n Bereitschaft für kollaborative prozess- und organisationsübergreifende Zusammenarbeit.",
-        "en": "coming soon"
+        "en": "Organization \n Willingness to work collaboratively across processes and organizations."
       },
       "option": {
         "de": [
@@ -133,10 +133,10 @@
           "Nicht erfüllt"
         ],
         "en": [
-          "Yes",
-          "No",
-          "I don't know",
-          "Can you repeat the question"
+          "Completely fulfilled.",
+          "Fulfilled",
+          "Little fulfilled",
+          "Not fulfilled"
         ]
       },
       "type": "Single Choice"
@@ -144,7 +144,7 @@
     "8": {
       "question": {
         "de": "Organisation \n Agile Entwicklungsmethoden werden angewandt.",
-        "en": "coming soon"
+        "en": "Organization \n Agile development methods are applied."
       },
       "option": {
         "de": [
@@ -154,10 +154,10 @@
           "Nicht erfüllt"
         ],
         "en": [
-          "Yes",
-          "No",
-          "I don't know",
-          "Can you repeat the question"
+          "Completely fulfilled.",
+          "Fulfilled",
+          "Little fulfilled",
+          "Not fulfilled"
         ]
       },
       "type": "Single Choice"
@@ -165,7 +165,7 @@
     "9": {
       "question": {
         "de": "Rechtliches \n Identifikation der relevanten rechtlichen Bereiche.",
-        "en": "coming soon"
+        "en": "Legal \n Identification of the relevant legal areas."
       },
       "option": {
         "de": [
@@ -175,10 +175,10 @@
           "Nicht erfüllt"
         ],
         "en": [
-          "Yes",
-          "No",
-          "I don't know",
-          "Can you repeat the question"
+          "Completely fulfilled.",
+          "Fulfilled",
+          "Little fulfilled",
+          "Not fulfilled"
         ]
       },
       "type": "Single Choice"
@@ -186,7 +186,7 @@
     "10": {
       "question": {
         "de": "Rechtliches \n Einschätzung der relevanten rechtlichen Bereiche.",
-        "en": "coming soon"
+        "en": "Legal \n Assessment of the relevant legal areas."
       },
       "option": {
         "de": [
@@ -196,10 +196,10 @@
           "Nicht erfüllt"
         ],
         "en": [
-          "Yes",
-          "No",
-          "I don't know",
-          "Can you repeat the question"
+          "Completely fulfilled.",
+          "Fulfilled",
+          "Little fulfilled",
+          "Not fulfilled"
         ]
       },
       "type": "Single Choice"
