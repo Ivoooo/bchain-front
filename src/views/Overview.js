@@ -1,10 +1,10 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {AButton} from "../components/AButton";
 
-export const Overview = ({question, position, titles, option, handleClick}) => {
+export const Overview = ({question, position, titles, option, handleClick, language}) => {
     const [newTitles, setTitles] = useState([]);
-
-    useState(() => {
+    
+    useEffect(() => {
         let a = [...titles];
         a.pop();
         setTitles(a);
@@ -12,7 +12,7 @@ export const Overview = ({question, position, titles, option, handleClick}) => {
 
     return (
         <>
-            <h1 className="text-center">Fortschritt</h1>
+            <h1 className="text-center">{language === "de" ? "Fortschritt" : "Progress"}</h1>
             <h2 className="text-center" key={question}>{question}</h2>
             <div style={{maxWidth: 800, margin:"auto", padding:10}}>
                 {newTitles.map((ch, index) => {

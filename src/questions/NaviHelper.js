@@ -47,7 +47,7 @@ function calculateProgress(type) {
 function buildProgressArray() {
     let a = [0,1];
     let c = [calculateProgress(q[a[0]]["questionContainer"][a[1]]["type"])];
-    while(a[0] !== 6 || a[1] !== 1) {
+    while(a[0] !== 6 || a[1] !== 6) { //todo decect end
         a = getNextStep(a);
         //pushes value of last array plus value of current step
         c.push(c[c.length-1] + calculateProgress(q[a[0]]["questionContainer"][a[1]]["type"]));

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="40410a09-9383-4c8c-9e9e-3798d94570f9" name="Changes" comment="Fixed MultipleChoiceQuestion.js issues with notes.">
+    <list default="true" id="40410a09-9383-4c8c-9e9e-3798d94570f9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/questions/7_end.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/questions/0_introduction.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/questions/0_introduction.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/questions/1_businessCase.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/questions/1_businessCase.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/questions/2_organisationalPerspecive.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/questions/2_organisationalPerspecive.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/questions/3_identifyBenefits.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/questions/3_identifyBenefits.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/questions/4_CheckUsability.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/questions/4_CheckUsability.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/MultipleChoiceQuestion.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/MultipleChoiceQuestion.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/questions/5_evaluateCompany.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/questions/5_evaluateCompany.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/questions/6_telemetry.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/questions/6_telemetry.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/questions/NaviHelper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/questions/NaviHelper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Overview.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Overview.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +136,7 @@
       <workItem from="1646329715531" duration="602000" />
       <workItem from="1646477738588" duration="1650000" />
       <workItem from="1646686617704" duration="17489000" />
-      <workItem from="1646731802402" duration="7079000" />
+      <workItem from="1646731802402" duration="10545000" />
     </task>
     <task id="LOCAL-00001" summary="updates Versions">
       <created>1639761190096</created>
@@ -460,7 +460,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646735926702</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Translated questions to English.">
+      <created>1646767507843</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1646767507843</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -479,7 +486,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Working on fixing back button issues" />
     <MESSAGE value="Header is now a functional component" />
     <MESSAGE value="Fixed issue with Page loading previous state." />
     <MESSAGE value="Fixed various typos" />
@@ -504,7 +510,8 @@
     <MESSAGE value="Answers are now being saved." />
     <MESSAGE value="Saved answers are now displayed. MultipleChoiceQuestion.js has issues with notes." />
     <MESSAGE value="Fixed MultipleChoiceQuestion.js issues with notes." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed MultipleChoiceQuestion.js issues with notes." />
+    <MESSAGE value="Translated questions to English." />
+    <option name="LAST_COMMIT_MESSAGE" value="Translated questions to English." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

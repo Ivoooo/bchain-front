@@ -19,7 +19,7 @@ export const Router = ({language, questionType, question, option, goNext, positi
     if (questionType === "Multiple Choice") return <MultipleChoiceQuestion language={language} question={question} option={option} goNext={goNext} prevAnswer={prevAnswer} prevNote={prevNote}/>
     if (questionType === "Multiple Choice or none") return <MultipleChoiceQuestion language={language} question={question} option={option} goNext={goNext} prevAnswer={prevAnswer} prevNote={prevNote}/>
     if (questionType === "Telemetry") return <Telemetry/>
-    if (questionType === "Overview") return <Overview question={question} position={position} titles={titles} option={option} handleClick={goNext}/>
+    if (questionType === "Overview") return <Overview question={question} position={position} titles={titles} option={option} handleClick={goNext} language={language}/>
 
     return <>
         <h1> {questionType} </h1>
