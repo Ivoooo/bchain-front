@@ -1,16 +1,15 @@
 
 import {QuestionHandler} from "./QuestionHandler";
 
-let q = QuestionHandler.getQuestionArray(); //IMPORTANT if you add a new step (q8), you NEED to extend this array!
-
+let q = QuestionHandler.getQuestionArray();
 let values = buildProgressArray();
 
 
 export class NaviHelper {
     static getCurrentProgress([chapter, part]) { // this could be improved with binary search using an array
-        //similar to buildProgressArray. However, since there are only about ~50 questions the impact is minor.
+        //from QuestionHandler.getQuestionList(). However, since there are only about ~50 questions the impact is minor.
         let a = [0,1];
-        let i = 1;
+        let i = 0;
         while(a[0] !== chapter || a[1] !== part) {
             a = getNextStep(a);
             ++i;
@@ -41,12 +40,13 @@ function calculateProgress(type) {
 }
 
 function buildProgressArray() {
-    let a = [0,1];
-    let c = [calculateProgress(q[a[0]]["questionContainer"][a[1]]["type"])];
-    while(getNextStep(a) !== null) {
-        a = getNextStep(a);
-        //pushes value of last array plus value of current step
-        c.push(c[c.length-1] + calculateProgress(q[a[0]]["questionContainer"][a[1]]["type"]));
+    const lst = QuestionHandler.getQuestionList();
+    let c = [], a = [], prev = 0, next = 0;
+    for(let i=0; i<lst.length; ++i) {
+        a = lst[i];
+        next = calculateProgress(q[a[0]]["questionContainer"][a[1]]["type"]);
+        c.push(prev + next);
+        prev = prev + next;
     }
-    return c
+    return c;
 }

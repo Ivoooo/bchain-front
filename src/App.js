@@ -16,7 +16,7 @@ const App = () => {
     const [titles, setTitles] = useState(["Einführung"]);
     const [language, toggleLanguage] = useState("de");
     const [navi, toggleNavi] = useState(false);
-    const [answer, setAnswer] = useState({0:{}, 1: {}, 2: {}, 3:{}, 4:{}, 5:{}, 6:{}});
+    const [answer, setAnswer] = useState({0:{}, 1: {}, 2: {}, 3:{}, 4:{}, 5:{}, 6:{}, 7:{}});
     const [time, setTime] = useState(0)
 
 
@@ -92,6 +92,7 @@ const App = () => {
     }
 
     function getPrevAnswer() {
+        console.log(answer)
         if(answer[position[0]][position[1]] === undefined) return [];
         if(answer[position[0]][position[1]]["normalized"] === "null") return [];
         return answer[position[0]][position[1]]["normalized"]
@@ -143,6 +144,7 @@ const App = () => {
                               titles={titles}
                               prevAnswer={getPrevAnswer()}
                               prevNote={getPrevNote()}
+                              answeredQuestions={answer}
                     />
                 }
             </div>
