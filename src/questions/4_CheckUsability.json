@@ -153,8 +153,8 @@
     },
     "10": {
       "question": {
-        "de": "Können oder wollen die beteiligten Parteien den Einbezug einer dritten Stelle vermeiden?",
-        "en": "Can or do the parties involved want to avoid involving a third party?"
+        "de": "Darf jeder der beteiligten Parteien Daten eintragen?",
+        "en": "Is every involved party allowed to add data?"
       },
       "option": {
         "de": [

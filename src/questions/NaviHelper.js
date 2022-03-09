@@ -11,7 +11,7 @@ export class NaviHelper {
         let a = [0,1];
         let i = 0;
         while(a[0] !== chapter || a[1] !== part) {
-            a = getNextStep(a);
+            a = QuestionHandler.getNextStep(a);
             ++i;
         }
         return values[i];
@@ -20,10 +20,6 @@ export class NaviHelper {
     static getMaxProgress() {
         return values[values.length -1];
     }
-}
-
-function getNextStep([chapter, part]) {
-    return QuestionHandler.getNextStep([chapter, part]);
 }
 
 function calculateProgress(type) {

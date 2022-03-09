@@ -28,6 +28,10 @@ export class QuestionHandler {
         return getNextStep([chapter, part]);
     }
 
+    static getNextQuestion([chapter=0, part=0], answer) {
+        return getNextQuestion([chapter, part], answer);
+    }
+
     static getLastStep([chapter, part]) {
         return getLastStep([chapter, part]);
     }
@@ -53,6 +57,36 @@ function getNextStep([chapter, part]) {
         }
     }
     return null; //to signal end of questions
+}
+
+function getNextQuestion([chapter, part], answer) {
+    //[1,2]: check if a governmental entity at
+    if(chapter === 1 && part === 2) {
+        if(answer[1][2]["normalized"][0] !== 0) part += 1; //skipping question [1,3]
+    }
+
+    let a = getNextStep([chapter, part]);
+    //chapter 3: check if at least 1 thing is high relevance
+    if(a[0] === 4 && a[1] === 1) {
+        console.log(answer);
+        for(let i = 2; i <= part; ++i) {
+            if(answer[chapter][i]["normalized"][0] === 0) return [4,1];
+        }
+        return [7,1];
+    }
+
+    //chapter 4: check if answer was yes
+    if(chapter === 4 && part > 1) {
+        if(answer[chapter][part]["normalized"][0] !== 0) return [7,1];
+    }
+
+    //check if telemetry questions should be asked
+    if(chapter === 6 && part === 1) {
+        if(answer[chapter][part]["normalized"][0] !== 0) return [6,6];
+    }
+
+    //general case
+    return a;
 }
 
 function getTitles(language="de") {

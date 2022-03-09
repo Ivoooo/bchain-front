@@ -17,8 +17,7 @@ const App = () => {
     const [language, toggleLanguage] = useState("de");
     const [navi, toggleNavi] = useState(false);
     const [answer, setAnswer] = useState({0:{}, 1: {}, 2: {}, 3:{}, 4:{}, 5:{}, 6:{}, 7:{}});
-    const [time, setTime] = useState(0)
-
+    const [time, setTime] = useState(0);
 
     useEffect(() => {
         if (!localStorage.getItem("data")) localStorage.setItem("version", "1.0") //todo get version from file
@@ -87,7 +86,7 @@ const App = () => {
         setAnswer(a); //todo save in local storage
         console.log(a)
 
-        let q = QuestionHandler.getNextStep(position);
+        let q = QuestionHandler.getNextQuestion(position, answer);
         setPosition(q);
     }
 
