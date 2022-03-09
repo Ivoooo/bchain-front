@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="40410a09-9383-4c8c-9e9e-3798d94570f9" name="Changes" comment="Implemented logic when or if to skip next question">
+    <list default="true" id="40410a09-9383-4c8c-9e9e-3798d94570f9" name="Changes" comment="Fixed back button">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/questions/QuestionHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/questions/QuestionHandler.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/FinalPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/FinalPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/FrontPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/FrontPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Views.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Views.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/NaviPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/NaviPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,14 +134,7 @@
       <workItem from="1646477738588" duration="1650000" />
       <workItem from="1646686617704" duration="17489000" />
       <workItem from="1646731802402" duration="24677000" />
-      <workItem from="1646825560567" duration="6696000" />
-    </task>
-    <task id="LOCAL-00004" summary="connecting parent with children">
-      <created>1644077516453</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1644077516453</updated>
+      <workItem from="1646825560567" duration="11937000" />
     </task>
     <task id="LOCAL-00005" summary="yes no question class based component">
       <created>1644081957279</created>
@@ -481,7 +472,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646830198725</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="Fixed back button">
+      <created>1646832557713</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1646832557713</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -500,7 +498,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Updated header component" />
     <MESSAGE value="Added keys to most components to improve react performance&#10;Refactored Navi to App.js&#10;Minor updates to FrontPage.js" />
     <MESSAGE value="Added keys to most components to improve react performance&#10;Updated NaviPage.js&#10;Minor updates to FrontPage.js" />
     <MESSAGE value="Fixed findNextPage() bug." />
@@ -525,7 +522,8 @@
     <MESSAGE value="Started implementing FinalPage.js" />
     <MESSAGE value="Finished FinalPage.js" />
     <MESSAGE value="Implemented logic when or if to skip next question" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented logic when or if to skip next question" />
+    <MESSAGE value="Fixed back button" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed back button" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

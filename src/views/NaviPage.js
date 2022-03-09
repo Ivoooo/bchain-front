@@ -1,10 +1,20 @@
 import React from "react";
 import {AButton} from "../components/AButton";
+import {QuestionHandler} from "../questions/QuestionHandler";
 
-export const NaviPage = ({furthestPosition, titles, language, goTo, toggleNavi}) => {
+export const NaviPage = ({answer, titles, language, goTo, toggleNavi}) => {
+    let chapters = [0];
+    let tmp = [0,1];
+    while(tmp[0] !== 7 || tmp[1] !== 1) {
+        if(answer[tmp[0]][tmp[1]] === undefined) break; //if answer has never been answered
+
+        tmp = QuestionHandler.getNextQuestion(tmp, answer);
+        if(tmp[0] !== chapters[chapters.length-1]) chapters.push(tmp[0]);
+    }
+    const furthestPosition = tmp; //could also refactor but helps with readability above.
+
     function onPress(c) {
-        let x = titles.indexOf(c)
-        goTo([x,1]);
+        goTo([parseInt(c),1]);
     }
 
     return (
@@ -19,15 +29,12 @@ export const NaviPage = ({furthestPosition, titles, language, goTo, toggleNavi})
                 </div>
 
                 <h3 className="text-center">Zum Kapitel:</h3>
-                {titles.map((ch, index) => {
-                    if(index <= /*furthestPosition[0] todo tmp */ 10) {
-                        return <AButton txt={ch}
-                                        onClick={(e) => onPress(e.target.value)}
-                                        value={ch}
-                                        key={ch}
-                        />
-                    }
-                    return null
+                {chapters.map((ch) => {
+                    return <AButton txt={titles[ch]}
+                                    onClick={(e) => onPress(e.target.value)}
+                                    value={ch}
+                                    key={ch}
+                    />
                 })}
             </div>
         </>

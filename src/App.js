@@ -47,7 +47,7 @@ const App = () => {
         setTitles(QuestionHandler.getTitles(language));
     }, [language])
 
-    function goTo([chapter, part=1]) {
+    function goTo([chapter=1, part=1]) {
         setPosition([chapter,part]);
         toggleNavi(false);
     }
@@ -128,7 +128,7 @@ const App = () => {
             <h1 className="header">{titles[position[0]]}</h1>
             <div className="p-5 mb-4 white rounded-3">
                 {navi ?
-                    <NaviPage furthestPosition={furthestPosition}
+                    <NaviPage answer={answer}
                               titles={titles}
                               goTo={goTo}
                               toggleNavi={toggleNavi}

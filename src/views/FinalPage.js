@@ -5,6 +5,7 @@ import {Form} from "react-bootstrap";
 export const FinalPage = ({answer, language}) => {
     const q = QuestionHandler.getQuestionList();
     const style = {maxWidth: 1000, margin:"auto", padding: "30px"}
+    const lastQuestion = QuestionHandler.getLastStep([7,1], answer);
 
     function getPrevAnswer(position) {
         if(answer[position[0]][position[1]] === undefined) return [];
@@ -20,6 +21,7 @@ export const FinalPage = ({answer, language}) => {
     return (
         <>
             <h3 className="text-center" key={"Title"}>{"You failed successfully! (to be implemented)"}</h3>
+            <h3 className="text-center" key={"Title"}>{"The last question you answered was " + lastQuestion}</h3>
 
             <h3 className="text-center" style={{marginTop: "60px", marginBottom: "60px", marginLeft: "auto", marginRight:"auto"}} key={"Title"}>{"___________________________________"}</h3>
             <h3 className="text-center" key={"Title"}>{language === "de" ? "Liste an beantworteten Fragen:"
