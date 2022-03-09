@@ -10,7 +10,6 @@ import {QuestionHandler} from "./questions/QuestionHandler";
 
 const App = () => {
     const [position, setPosition] = useState([0,1]);
-    const [furthestPosition, setFurthestPosition] = useState([0,1]);
     const [current, setCurrent] = useState({"question": {"de":"The question will load shorty."}, "option": {"de":"Zur Umfrage"}});
     const [questionType, setQuestionType] = useState("Front Page");
     const [titles, setTitles] = useState(["Einführung"]);
@@ -36,11 +35,7 @@ const App = () => {
         setCurrent(q);
         setQuestionType(q["type"]);
         console.log(q)
-
-        //update furthestPosition if necessary
-        if(position[0] > furthestPosition[0]) setFurthestPosition(position);
-        else if(position[0] === furthestPosition[0] && position[1] >= furthestPosition[1]) setFurthestPosition(position);
-    }, [furthestPosition, position]) //here the function is executed every time furthestPosition or position
+    }, [position]) //here the function is executed every time furthestPosition or position
         //is updated. Also, at the beginning since it goes from null to the given start state above
 
     useEffect(() => {
@@ -91,7 +86,6 @@ const App = () => {
     }
 
     function getPrevAnswer() {
-        console.log(answer)
         if(answer[position[0]][position[1]] === undefined) return [];
         if(answer[position[0]][position[1]]["normalized"] === "null") return [];
         return answer[position[0]][position[1]]["normalized"]
