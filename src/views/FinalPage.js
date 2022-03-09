@@ -19,8 +19,11 @@ export const FinalPage = ({answer, language}) => {
 
     return (
         <>
-            <h3 className="text-center" key={"Title"}>{"Use this blockchain"}</h3>
+            <h3 className="text-center" key={"Title"}>{"You failed successfully! (to be implemented)"}</h3>
 
+            <h3 className="text-center" style={{marginTop: "60px", marginBottom: "60px", marginLeft: "auto", marginRight:"auto"}} key={"Title"}>{"___________________________________"}</h3>
+            <h3 className="text-center" key={"Title"}>{language === "de" ? "Liste an beantworteten Fragen:"
+                : "List of previously answered questions"}</h3>
             {q.map(qs => {
                 const key = qs[0].toString() + "." + qs[1].toString();
                 const q = QuestionHandler.getQuestion(qs);

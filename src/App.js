@@ -103,7 +103,7 @@ const App = () => {
     }
 
     function goBack()  {
-        setPosition(QuestionHandler.getLastStep(position));
+        setPosition(QuestionHandler.getLastStep(position, answer));
     }
 
     function swapLanguage() {

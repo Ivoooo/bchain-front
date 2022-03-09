@@ -32,8 +32,8 @@ export class QuestionHandler {
         return getNextQuestion([chapter, part], answer);
     }
 
-    static getLastStep([chapter, part]) {
-        return getLastStep([chapter, part]);
+    static getLastStep([chapter, part], answer) {
+        return getLastStep([chapter, part], answer);
     }
 
     static getQuestionArray() {
@@ -49,6 +49,7 @@ function getQuestion([chapter, part]) {
     return q[chapter]["questionContainer"][part];
 }
 
+//returns the next entry regardless of previous answers
 function getNextStep([chapter, part]) {
     if(q[chapter]["questionContainer"][part+1] !== undefined) return [chapter, part+1];
     if(q[chapter+1] !== undefined) {
@@ -59,6 +60,7 @@ function getNextStep([chapter, part]) {
     return null; //to signal end of questions
 }
 
+//returns the next question. Applies logic and skips questions given previous answers.
 function getNextQuestion([chapter, part], answer) {
     //[1,2]: check if a governmental entity at
     if(chapter === 1 && part === 2) {
@@ -97,13 +99,29 @@ function getTitles(language="de") {
     return t;
 }
 
-function getLastStep([chapter, part]) {
+function getLastStep([chapter, part], answer) {
+    //can't go back further but shouldn't be possible anyway.
+    if(chapter === 0 && part === 1) return [0,1];
+
+    let prev = [0,1];
+    let next = getNextQuestion(prev, answer);
+    while(next[0] !== chapter || next[1] !== part) {
+        prev = next;
+        next = getNextQuestion(prev, answer);
+    }
+    return prev;
+
+    /*
+    This solution below doesn't care about what the answers were. Might be useful again in the future as it's way faster
+
+    if(chapter === 0 && part === 1) return [0,1];
     if(part - 1 >= 1) return [chapter, part-1];
     if(chapter-1 < 0) return [0,1];
 
     let q = [chapter-1, 1];
     while(getNextStep(q)[0] === q[0]) q=getNextStep(q);
     return q;
+    */
 }
 
 function getQuestionList() {
